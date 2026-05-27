@@ -141,6 +141,18 @@ const initGlobalScripts = () => {
     desktopMq.addListener(handleViewportChange);
   }
 
+  const flushVisibleReveals = () => {
+    const viewportHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+
+    document.querySelectorAll(".reveal:not(.is-visible)").forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      if (rect.top < viewportHeight * 0.94 && rect.bottom > 0) {
+        element.classList.add("is-visible");
+      }
+    });
+  };
+
   const revealWithObserver = () => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -152,17 +164,21 @@ const initGlobalScripts = () => {
         });
       },
       {
-        threshold: useLightMotion ? 0.08 : 0.16,
-        rootMargin: useLightMotion ? "0px 0px 0px 0px" : "0px 0px -40px 0px",
+        threshold: useLightMotion ? 0.01 : 0.16,
+        rootMargin: useLightMotion
+          ? "0px 0px 8% 0px"
+          : "0px 0px -40px 0px",
       },
     );
     document
       .querySelectorAll(".reveal")
       .forEach((element) => observer.observe(element));
+
+    flushVisibleReveals();
   };
 
   const runHeroIntro = () => {
-    if (!hasGsap) return;
+    if (!hasGsap || useLightMotion) return;
 
     window.gsap.fromTo(
       ".hero-copy > *",
@@ -195,7 +211,8 @@ const initGlobalScripts = () => {
 
   if (useLightMotion) {
     revealWithObserver();
-    runHeroIntro();
+    window.addEventListener("load", flushVisibleReveals, { once: true });
+    requestAnimationFrame(flushVisibleReveals);
   } else if (hasGsap && hasScrollTrigger) {
     try {
       window.gsap.registerPlugin(window.ScrollTrigger);

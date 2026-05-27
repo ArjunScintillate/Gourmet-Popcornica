@@ -2794,6 +2794,11 @@ html.light-motion .js .journey-card {
   opacity: 1;
 }
 
+html.light-motion .js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 html.light-motion .reveal {
   transition-duration: 420ms;
 }
