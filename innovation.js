@@ -9,7 +9,7 @@ const initInnovationScripts = () => {
   const hasGsap = typeof window.gsap !== "undefined";
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
-  if (!hasGsap || reduceMotion || window.GP_LIGHT_MOTION) return;
+  if (!hasGsap || reduceMotion) return;
 
   if (hasScrollTrigger) {
     window.gsap.registerPlugin(window.ScrollTrigger);
