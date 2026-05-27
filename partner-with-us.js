@@ -58,7 +58,7 @@ const initPartnerWithUsScripts = () => {
     );
   });
 
-  if (!hasGsap || reduceMotion) return;
+  if (!hasGsap || reduceMotion || window.GP_LIGHT_MOTION) return;
 
   if (hasScrollTrigger) {
     window.gsap.registerPlugin(window.ScrollTrigger);

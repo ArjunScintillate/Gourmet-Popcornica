@@ -9,7 +9,7 @@ const initMediaScripts = () => {
   const hasGsap = typeof window.gsap !== "undefined";
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
-  if (!hasGsap || reduceMotion) return;
+  if (!hasGsap || reduceMotion || window.GP_LIGHT_MOTION) return;
 
   if (hasScrollTrigger) {
     window.gsap.registerPlugin(window.ScrollTrigger);

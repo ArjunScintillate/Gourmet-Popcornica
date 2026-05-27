@@ -26,7 +26,7 @@ const initIndexScripts = () => {
   prevButton?.addEventListener("click", () => scrollProducts(-1));
   nextButton?.addEventListener("click", () => scrollProducts(1));
 
-  if (hasGsap && hasScrollTrigger) {
+  if (hasGsap && hasScrollTrigger && !window.GP_LIGHT_MOTION) {
     // Metric Pill Animation (only on index)
     if (document.querySelector(".metric-strip")) {
       window.gsap.fromTo(

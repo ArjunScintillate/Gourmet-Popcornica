@@ -8,7 +8,7 @@ const initSolutionsScripts = () => {
   const motionScale = reduceMotion ? 0.65 : 1;
   const hasGsap = typeof window.gsap !== "undefined";
 
-  if (hasGsap && !reduceMotion) {
+  if (hasGsap && !reduceMotion && !window.GP_LIGHT_MOTION) {
     // Hero & Section Kernels Idle Drift
     window.gsap.to(".sol-kernel, .brand-kernel", {
       y: (i) => (i % 2 === 0 ? -40 : 40),

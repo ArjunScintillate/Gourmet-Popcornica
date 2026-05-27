@@ -8,6 +8,8 @@ const initFarmerEcosystemScripts = () => {
   const hasGsap = typeof window.gsap !== "undefined";
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
+  if (window.GP_LIGHT_MOTION) return;
+
   if (hasGsap && hasScrollTrigger) {
     // Scale Band Articles Animation
     if (document.querySelector(".farmer-scale-band")) {

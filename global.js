@@ -2,6 +2,18 @@
 
 document.documentElement.classList.add("js");
 
+const GP_PREFERS_REDUCED_MOTION = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+const GP_IS_TOUCH = window.matchMedia("(hover: none)").matches;
+const GP_IS_NARROW = window.matchMedia("(max-width: 768px)").matches;
+window.GP_LIGHT_MOTION =
+  GP_PREFERS_REDUCED_MOTION || GP_IS_TOUCH || GP_IS_NARROW;
+
+if (window.GP_LIGHT_MOTION) {
+  document.documentElement.classList.add("light-motion");
+}
+
 const initPreloader = () => {
   const preloader = document.getElementById("site-preloader");
   const progressText = document.getElementById("preloader-progress");
@@ -53,21 +65,30 @@ const initGlobalScripts = () => {
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const nav = document.querySelector(".primary-nav");
   const navScrim = document.querySelector("[data-nav-scrim]");
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-  const isTouch = window.matchMedia("(hover: none)").matches;
+  const reduceMotion = GP_PREFERS_REDUCED_MOTION;
+  const isTouch = GP_IS_TOUCH;
+  const useLightMotion = window.GP_LIGHT_MOTION;
   const motionScale = reduceMotion ? 0.65 : 1;
 
   const hasGsap = typeof window.gsap !== "undefined";
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
+  let headerTicking = false;
   const updateHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 12);
+    headerTicking = false;
   };
 
   updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (headerTicking) return;
+      headerTicking = true;
+      requestAnimationFrame(updateHeader);
+    },
+    { passive: true },
+  );
 
   const setNavOpen = (open) => {
     nav?.classList.toggle("is-open", open);
@@ -130,16 +151,58 @@ const initGlobalScripts = () => {
           }
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -40px 0px" },
+      {
+        threshold: useLightMotion ? 0.08 : 0.16,
+        rootMargin: useLightMotion ? "0px 0px 0px 0px" : "0px 0px -40px 0px",
+      },
     );
     document
       .querySelectorAll(".reveal")
       .forEach((element) => observer.observe(element));
   };
 
-  if (hasGsap && hasScrollTrigger) {
+  const runHeroIntro = () => {
+    if (!hasGsap) return;
+
+    window.gsap.fromTo(
+      ".hero-copy > *",
+      { y: useLightMotion ? 12 : 24, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: (useLightMotion ? 0.55 : 0.9) * motionScale,
+        stagger: useLightMotion ? 0.04 : 0.08,
+        ease: "power2.out",
+        delay: 0.08,
+      },
+    );
+
+    if (document.querySelector(".bucket")) {
+      window.gsap.fromTo(
+        ".bucket",
+        { y: useLightMotion ? 14 : 28, opacity: 0, scale: useLightMotion ? 1 : 0.94 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: (useLightMotion ? 0.65 : 1.1) * motionScale,
+          ease: "power3.out",
+          delay: 0.12,
+        },
+      );
+    }
+  };
+
+  if (useLightMotion) {
+    revealWithObserver();
+    runHeroIntro();
+  } else if (hasGsap && hasScrollTrigger) {
     try {
       window.gsap.registerPlugin(window.ScrollTrigger);
+      window.ScrollTrigger.config({
+        limitCallbacks: true,
+        ignoreMobileResize: true,
+      });
 
       window.gsap.utils.toArray(".reveal").forEach((element) => {
         window.gsap.fromTo(
@@ -159,31 +222,7 @@ const initGlobalScripts = () => {
         );
       });
 
-      window.gsap.fromTo(
-        ".hero-copy > *",
-        { y: 24, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.9 * motionScale,
-          stagger: 0.08,
-          ease: "power2.out",
-          delay: 0.08,
-        },
-      );
-
-      window.gsap.fromTo(
-        ".bucket",
-        { y: 28, opacity: 0, scale: 0.94 },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 1.1 * motionScale,
-          ease: "power3.out",
-          delay: 0.14,
-        },
-      );
+      runHeroIntro();
 
       window.gsap.fromTo(
         ".feature-card, .process-step, .product-card, .story-panel, .commitment-cards article, .intro-card, .ecosystem-feature, .reliability-card-bespoke, .industry-card, .pouch-frame, .metric-pill, .scale-stats article, .solution-highlights-editorial li, .innov-core-card, .innov-key-pill, .innov-eco-tile, .innov-visual-frame",
@@ -202,7 +241,7 @@ const initGlobalScripts = () => {
         },
       );
 
-      if (!reduceMotion) {
+      if (!reduceMotion && !isTouch) {
         window.gsap.utils
           .toArray(".float-kernel, .brand-kernel")
           .forEach((kernel, index) => {
@@ -378,7 +417,10 @@ const initGlobalScripts = () => {
     const headerOffset = 82;
     const y =
       target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
+    window.scrollTo({
+      top: y,
+      behavior: useLightMotion ? "auto" : "smooth",
+    });
   });
 };
 
