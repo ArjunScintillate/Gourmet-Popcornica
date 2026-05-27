@@ -52,6 +52,7 @@ const initGlobalScripts = () => {
   const header = document.querySelector("[data-header]");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const nav = document.querySelector(".primary-nav");
+  const navScrim = document.querySelector("[data-nav-scrim]");
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
@@ -68,19 +69,28 @@ const initGlobalScripts = () => {
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
 
-  const closeMenu = () => {
-    if (!nav?.classList.contains("is-open")) return;
-    nav.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("no-scroll");
+  const setNavOpen = (open) => {
+    nav?.classList.toggle("is-open", open);
+    header?.classList.toggle("is-nav-open", open);
+    menuToggle?.setAttribute("aria-expanded", String(open));
+    menuToggle?.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    navScrim?.classList.toggle("is-visible", open);
+    navScrim?.setAttribute("aria-hidden", String(!open));
+    document.documentElement.classList.toggle("no-scroll", open);
+    document.body.classList.toggle("no-scroll", open);
   };
 
-  menuToggle?.addEventListener("click", () => {
-    const willOpen = !nav?.classList.contains("is-open");
-    nav?.classList.toggle("is-open", willOpen);
-    menuToggle.setAttribute("aria-expanded", String(willOpen));
-    document.body.classList.toggle("no-scroll", willOpen);
+  const closeMenu = () => {
+    if (!nav?.classList.contains("is-open")) return;
+    setNavOpen(false);
+  };
+
+  menuToggle?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setNavOpen(!nav?.classList.contains("is-open"));
   });
+
+  navScrim?.addEventListener("click", closeMenu);
 
   nav?.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {

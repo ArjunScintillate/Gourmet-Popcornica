@@ -1,22 +1,26 @@
 <header class="site-header" data-header>
+  <div class="header-aurora" aria-hidden="true"></div>
+  <div class="header-beam" aria-hidden="true"></div>
   <div class="shell nav-shell">
     <a class="brand" href="index.html" aria-label="Gourmet Popcornica home">
+      <span class="brand-mark" aria-hidden="true"></span>
       <img
         class="brand-logo-placeholder"
         src="assets/popcornica-logo.png"
         alt="Gourmet Popcornica logo"
       />
     </a>
-    <nav class="primary-nav" aria-label="Primary navigation">
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
       <div class="primary-nav__links">
-        <a data-nav-id="about" href="about-us.html">About Us</a>
-        <a data-nav-id="solutions" href="solutions.html">Our Solutions</a>
-        <a data-nav-id="farmer" href="farmer-ecosystem.html">Sustainability</a>
-        <a data-nav-id="innovation" href="innovation.html">Innovation</a>
-        <a data-nav-id="media" href="media.html">Resources</a>
+        <a data-nav-id="about" href="about-us.html"><span class="nav-link-text">About Us</span></a>
+        <a data-nav-id="solutions" href="solutions.html"><span class="nav-link-text">Our Solutions</span></a>
+        <a data-nav-id="farmer" href="farmer-ecosystem.html"><span class="nav-link-text">Sustainability</span></a>
+        <a data-nav-id="innovation" href="innovation.html"><span class="nav-link-text">Innovation</span></a>
+        <a data-nav-id="media" href="media.html"><span class="nav-link-text">Resources</span></a>
       </div>
       <a class="header-cta" href="partner-with-us.html#contact">
-        <span>Contact</span>
+        <span class="header-cta__shine" aria-hidden="true"></span>
+        <span class="header-cta__label">Contact</span>
         <i data-lucide="message-circle" aria-hidden="true"></i>
       </a>
     </nav>
@@ -25,11 +29,16 @@
       type="button"
       aria-label="Open navigation"
       aria-expanded="false"
+      aria-controls="primary-navigation"
       data-menu-toggle
     >
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="menu-toggle__icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="menu-toggle__ring" aria-hidden="true"></span>
     </button>
   </div>
+  <div class="mobile-nav-scrim" data-nav-scrim aria-hidden="true"></div>
 </header>

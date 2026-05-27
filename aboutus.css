@@ -14,6 +14,7 @@ body[data-page="about"] .hero {
   padding-top: var(--header-h);
   padding-bottom: 0;
   overflow: hidden;
+  isolation: isolate;
 }
 
 body[data-page="about"] .hero::before,
@@ -248,41 +249,18 @@ body[data-page="about"] .about-kernel-12 {
   }
 }
 
-/* Final CTA - modernized to match solutions page */
-body[data-page="about"] #contact.final-cta {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
-}
+/* Final CTA — layout only; visual theme from pages-theme.css */
 
 body[data-page="about"] #contact .final-card {
   position: relative;
   max-width: min(920px, 100%);
   padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 48px);
-  border: none;
   border-radius: clamp(24px, 4vw, 36px);
-  background: linear-gradient(155deg,
-      rgba(255, 255, 255, 0.78) 0%,
-      rgba(247, 243, 236, 0.55) 45%,
-      rgba(223, 211, 227, 0.35) 100%);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.85) inset,
-    0 28px 60px rgba(12, 20, 51, 0.1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-body[data-page="about"] #contact .final-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  box-shadow:
-    0 0 0 1px rgba(206, 160, 59, 0.38) inset,
-    0 0 0 10px rgba(255, 255, 255, 0.12) inset;
-  pointer-events: none;
+  transition:
+    transform 480ms var(--ease-silk),
+    box-shadow 480ms var(--ease-silk),
+    border-color 480ms var(--ease-silk),
+    background 480ms var(--ease-silk);
 }
 
 body[data-page="about"] #contact .final-card>* {
