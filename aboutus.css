@@ -1,0 +1,320 @@
+/* About Us-specific styles */
+
+/* About page hero-specific hook scale and corn opacity */
+body[data-page="about"] .about-hero-hook h1 {
+  overflow-wrap: break-word;
+}
+
+body[data-page="about"] .about-hero-hook h1 .type-serif,
+body[data-page="about"] .about-hero-hook h1 .type-brand {
+  display: inline;
+}
+
+body[data-page="about"] .hero {
+  padding-top: var(--header-h);
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+body[data-page="about"] .hero::before,
+body[data-page="about"] .hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(42px);
+}
+
+body[data-page="about"] .hero::before {
+  left: -8%;
+  top: 18%;
+  width: 36vw;
+  height: 36vw;
+  background: radial-gradient(circle,
+      rgba(229, 184, 79, 0.22),
+      transparent 68%);
+}
+
+body[data-page="about"] .hero::after {
+  content: none;
+}
+
+body[data-page="about"] .hero .shell {
+  min-height: calc(100svh - var(--header-h));
+  display: grid;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+body[data-page="about"] .about-hero-hook.section-heading {
+  margin: 0 auto;
+}
+
+body[data-page="about"] .about-hero-hook.section-heading {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+body[data-page="about"] .about-hero-hook .hero-lede {
+  max-width: 720px;
+  margin-inline: auto;
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+body[data-page="about"] .about-hero-hook .hero-support {
+  max-width: 680px;
+  margin-inline: auto;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+body[data-page="about"] .hero .hero-corn-left,
+body[data-page="about"] .hero .corn-corner.corner-left,
+body[data-page="about"] .corn-corner.corner-left,
+body[data-page="about"] .corn-corner.corner-right {
+  opacity: 0.4;
+}
+
+body[data-page="about"] .about-kernel {
+  animation-duration: 9.2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: blur(1px);
+}
+
+body[data-page="about"] .about-kernel-1 {
+  left: -8%;
+  top: 10%;
+  width: clamp(120px, 14vw, 220px);
+  opacity: 0.78;
+  z-index: 1;
+  filter: drop-shadow(0 24px 36px rgba(12, 20, 51, 0.2)) blur(2.2px);
+  animation-delay: -0.8s;
+}
+
+body[data-page="about"] .about-kernel-2 {
+  left: 4%;
+  top: 54%;
+  width: clamp(86px, 10vw, 156px);
+  opacity: 0.9;
+  z-index: 1;
+  filter: drop-shadow(0 20px 30px rgba(12, 20, 51, 0.26)) blur(0.8px);
+  animation-delay: -2.1s;
+}
+
+body[data-page="about"] .about-kernel-3 {
+  right: -10%;
+  top: 8%;
+  width: clamp(140px, 16vw, 248px);
+  opacity: 0.76;
+  z-index: 1;
+  filter: drop-shadow(0 26px 36px rgba(12, 20, 51, 0.2)) blur(2.4px);
+  animation-delay: -1.4s;
+}
+
+body[data-page="about"] .about-kernel-4 {
+  right: 6%;
+  top: 58%;
+  width: clamp(96px, 11vw, 174px);
+  opacity: 0.88;
+  z-index: 1;
+  filter: drop-shadow(0 22px 32px rgba(12, 20, 51, 0.24)) blur(0.8px);
+  animation-delay: -3s;
+}
+
+body[data-page="about"] .about-kernel-5 {
+  left: 42%;
+  bottom: -6%;
+  width: clamp(140px, 18vw, 260px);
+  opacity: 0.5;
+  z-index: 0;
+  filter: drop-shadow(0 28px 40px rgba(12, 20, 51, 0.22)) blur(2.8px);
+  animation-delay: -2.6s;
+}
+
+body[data-page="about"] .about-kernel-6 {
+  left: 22%;
+  top: -4%;
+  width: clamp(100px, 12vw, 182px);
+  opacity: 0.62;
+  z-index: 1;
+  filter: drop-shadow(0 20px 28px rgba(12, 20, 51, 0.18)) blur(2px);
+  animation-delay: -4.1s;
+}
+
+body[data-page="about"] .about-kernel-7 {
+  right: 24%;
+  top: -8%;
+  width: clamp(108px, 13vw, 196px);
+  opacity: 0.58;
+  z-index: 1;
+  filter: drop-shadow(0 20px 30px rgba(12, 20, 51, 0.18)) blur(2px);
+  animation-delay: -1.9s;
+}
+
+body[data-page="about"] .about-kernel-8 {
+  left: 30%;
+  top: 66%;
+  width: clamp(80px, 9.6vw, 146px);
+  opacity: 0.86;
+  z-index: 1;
+  filter: drop-shadow(0 20px 28px rgba(12, 20, 51, 0.22)) blur(0.9px);
+  animation-delay: -5.2s;
+}
+
+body[data-page="about"] .about-kernel-9 {
+  right: 32%;
+  top: 62%;
+  width: clamp(72px, 8.8vw, 132px);
+  opacity: 0.82;
+  z-index: 1;
+  filter: drop-shadow(0 18px 24px rgba(12, 20, 51, 0.22)) blur(0.9px);
+  animation-delay: -3.6s;
+}
+
+body[data-page="about"] .about-kernel-10 {
+  left: -4%;
+  bottom: -4%;
+  width: clamp(120px, 14vw, 214px);
+  opacity: 0.56;
+  z-index: 0;
+  filter: drop-shadow(0 24px 34px rgba(12, 20, 51, 0.2)) blur(2.6px);
+  animation-delay: -2.8s;
+}
+
+body[data-page="about"] .about-kernel-11 {
+  right: -6%;
+  bottom: -6%;
+  width: clamp(128px, 14.5vw, 228px);
+  opacity: 0.54;
+  z-index: 0;
+  filter: drop-shadow(0 24px 34px rgba(12, 20, 51, 0.2)) blur(2.8px);
+  animation-delay: -4.7s;
+}
+
+body[data-page="about"] .about-kernel-12 {
+  left: 54%;
+  top: 6%;
+  width: clamp(64px, 7.4vw, 118px);
+  opacity: 0.74;
+  z-index: 1;
+  filter: drop-shadow(0 16px 22px rgba(12, 20, 51, 0.2)) blur(1px);
+  animation-delay: -6.2s;
+}
+
+/* ============== ABOUT RESPONSIVE BREAKPOINTS ============== */
+
+@media (max-width: 1024px) {
+  body[data-page="about"] .hero .shell {
+    min-height: auto;
+    padding-block: clamp(40px, 8vw, 60px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Reduce decorative kernel density on tablets */
+  body[data-page="about"] .about-kernel-6,
+  body[data-page="about"] .about-kernel-7,
+  body[data-page="about"] .about-kernel-12 {
+    display: none;
+  }
+
+  body[data-page="about"] .about-kernel-5,
+  body[data-page="about"] .about-kernel-10,
+  body[data-page="about"] .about-kernel-11 {
+    opacity: 0.36;
+  }
+}
+
+@media (max-width: 560px) {
+
+  /* Hero kernels become subtle backdrop on phones */
+  body[data-page="about"] .about-kernel-2,
+  body[data-page="about"] .about-kernel-4,
+  body[data-page="about"] .about-kernel-8,
+  body[data-page="about"] .about-kernel-9 {
+    display: none;
+  }
+
+  body[data-page="about"] .about-kernel-1,
+  body[data-page="about"] .about-kernel-3 {
+    opacity: 0.44;
+  }
+}
+
+/* Final CTA - modernized to match solutions page */
+body[data-page="about"] #contact.final-cta {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
+    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
+    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
+  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+}
+
+body[data-page="about"] #contact .final-card {
+  position: relative;
+  max-width: min(920px, 100%);
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 48px);
+  border: none;
+  border-radius: clamp(24px, 4vw, 36px);
+  background: linear-gradient(155deg,
+      rgba(255, 255, 255, 0.78) 0%,
+      rgba(247, 243, 236, 0.55) 45%,
+      rgba(223, 211, 227, 0.35) 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 28px 60px rgba(12, 20, 51, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+body[data-page="about"] #contact .final-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 1px rgba(206, 160, 59, 0.38) inset,
+    0 0 0 10px rgba(255, 255, 255, 0.12) inset;
+  pointer-events: none;
+}
+
+body[data-page="about"] #contact .final-card>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override global 4-col feature-rail to balance new 3-item content on desktop */
+@media (min-width: 1181px) {
+  body[data-page="about"] .commitment-section .feature-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Closing Section Decorative Clusters */
+.about-closing-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cluster-closing .bk-closing-a {
+  left: -6%;
+  top: 18%;
+  width: clamp(160px, 22vw, 300px);
+  opacity: 0.42;
+}
+
+.cluster-closing .bk-closing-b {
+  right: -4%;
+  bottom: 6%;
+  width: clamp(140px, 18vw, 260px);
+  opacity: 0.36;
+  animation-delay: -3.5s;
+}
