@@ -26,7 +26,7 @@ ____________________________________________________________________________
 TRUST / METRICS STRIP
 17,500+ farmers
 36,000+ acres under cultivation
-2,200+ cinema screens
+3,400 cinema screens
 Advanced processing & storage infrastructure
 Consistent high-quality output - at scale
 ____________________________________________________________________________
@@ -67,8 +67,8 @@ Scale. Infrastructure. Trust. Delivered consistently.
 
 Stats:
 9 states in India
-6+ state-of-the-art facilities
-100% commitment to quality
+29 MT processing capacity per day
+Consistent commitment to quality
 
 ____________________________________________________________________________
 
@@ -147,7 +147,7 @@ Heading:
 Building a Self-Reliant Popcorn Ecosystem
 
 Body Copy:
-Gourmet Popcornica is contributing to India’s transition towards a self-reliant popcorn ecosystem , reducing dependence on imports while creating sustainable opportunities for farmers and businesses.
+Gourmet Popcornica is contributing to India’s transition towards a self-reliant popcorn ecosystem, reducing dependence on imports while creating empowering growth opportunities for farmers and businesses.
 ____________________________________________________________________________
 
 FOUNDER SECTION
@@ -197,7 +197,7 @@ Redefining popcorn in India through world-class quality, infrastructure, and sca
 Quick Links:
 About Us
 Our Solutions (Solutions)
-Sustainability (Farmer Ecosystem)
+Sustainability (Farmer Ecosystem) -> Enhancing Farmer Lives (Farmer Ecosystem)
 Innovation (Innovation)
 Resources (Media Page)
 ___________________________________________________________________________
@@ -223,7 +223,7 @@ Heading:
 About Gourmet Popcornica
 
 Body Copy:
-Gourmet Popcornica is India’s largest producer of  popcorn maize, and the fifth largest in the world, , built with a vision to deliver world-class popcorn experiences through consistency, quality, and scale.
+Gourmet Popcornica is the 5th largest producer of popcorn in the world, built with a vision to deliver world-class popcorn experiences through consistency, quality, and scale.
 
 What began as a focused effort to improve popcorn quality in India has evolved into a growing ecosystem serving cinemas, institutional partners, and food businesses across the country.
 
@@ -286,7 +286,7 @@ SCALE / PROOF
 Content Blocks:
 17,500+ farmers engaged
 36,000+ acres under cultivation
-2,200+ cinema screens served
+3,400 cinema screens
 Nationwide institutional presence
 ___________________________________________________________________________
 
@@ -299,7 +299,7 @@ Built on Three Core Principles
 We believe consistency is the foundation of trust. Every kernel must perform.
 
 2. Farmer-Centric Growth:
-Strong partnerships with farmers ensure sustainability, reliability, and long-term value.
+Strong partnerships with farmers ensure livelihood support, operational reliability, and long-term value.
 
 3. Innovation at Scale:
 From seed development to processing, innovation drives efficiency and performance across the ecosystem.
@@ -465,7 +465,7 @@ Trusted at Scale
 Metrics:
 17,500+ Farmers Engaged
 36,000+ Acres Under Cultivation
-2,200+ Cinema Screens Served
+3,400 cinema screens
 Advanced Processing Infrastructure
 Nationwide Supply Capability
 
@@ -530,7 +530,7 @@ Buttons:
 Partner With Us
 Create Your Own Popcorn Experience
 ___________________________________________________________________________
-FARMER ECOSYSTEM (Trust and Operations)
+ENHANCING FARMER LIVES (Trust and Operations)
 ___________________________________________________________________________
 
 HERO SECTION
@@ -539,7 +539,7 @@ Heading:
 Powering India’s Largest Popcorn Farming Network
 
 Subheading:
-Creating a reliable and sustainable popcorn ecosystem through long-term farmer partnerships across India.
+Creating a reliable and empowering popcorn ecosystem through long-term farmer partnerships across India.
 
 Supporting Text:
 By investing in farming communities, quality cultivation practices, and transparent relationships, Gourmet Popcornica strengthens both agricultural growth and product consistency.
@@ -621,7 +621,7 @@ ___________________________________________________________________________
 ECOSYSTEM APPROACH
 
 Heading:
-Building a Sustainable Ecosystem
+Cultivating a Resilient Ecosystem
 
 Body Copy:
 Our farmer ecosystem is designed to create shared long-term growth across the value chain.
@@ -789,7 +789,7 @@ Heading:
 Building for the Future
 
 Body Copy:
-As the leading producer of popcorn maize in India,Gourmet Popcornica remains focused on strengthening infrastructure, improving operational systems, and driving long-term innovation across the ecosystem.
+As the 5th largest producer of popcorn in the world, Gourmet Popcornica remains focused on strengthening infrastructure, improving operational systems, and driving long-term innovation across the ecosystem.
 
 Our goal is to continue building scalable, future-ready solutions that support quality, consistency, and growth.
 ___________________________________________________________________________

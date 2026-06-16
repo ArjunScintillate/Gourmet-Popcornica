@@ -1,6 +1,6 @@
-/* Farmer Ecosystem-specific scripts */
+/* Enhancing Farmer Lives-specific scripts */
 
-const initFarmerEcosystemScripts = () => {
+const initEnhancingFarmerLivesScripts = () => {
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
@@ -72,7 +72,7 @@ const initFarmerEcosystemScripts = () => {
 };
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initFarmerEcosystemScripts);
+  document.addEventListener("DOMContentLoaded", initEnhancingFarmerLivesScripts);
 } else {
-  initFarmerEcosystemScripts();
+  initEnhancingFarmerLivesScripts();
 }

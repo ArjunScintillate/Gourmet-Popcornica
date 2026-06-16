@@ -1231,7 +1231,7 @@ body[data-page="solutions"] .solution-highlights-editorial li:hover i.lucide {
   transform: translateY(-2px) scale(1.06) !important;
 }
 
-/* Sustainability (Farmer Ecosystem) — elevated cards, readable text, strong hovers */
+/* Enhancing Farmer Lives (Farmer Ecosystem) — elevated cards, readable text, strong hovers */
 body[data-page="farmer"] {
   --farmer-card-bg: linear-gradient(165deg,
       rgba(96, 136, 204, 0.42) 0%,
@@ -2104,4 +2104,174 @@ body[data-page="partner"] .partner-trust-band .scale-stats strong {
 
 body[data-page="partner"] .partner-trust-band .scale-stats span {
   color: rgba(247, 238, 216, 0.88) !important;
+}
+
+/* ==========================================================================
+   Krug & Co Page Styles
+   ========================================================================== */
+body[data-page="krug-co"] :is(
+  .hero-copy,
+  .krug-about-content,
+  .section-heading
+) h2,
+body[data-page="krug-co"] :is(
+  .hero-copy,
+  .krug-about-content,
+  .section-heading
+) h2 .type-serif,
+body[data-page="krug-co"] .krug-capabilities-band h2,
+body[data-page="krug-co"] .krug-capabilities-band h2 .type-serif {
+  color: var(--brand-maize) !important;
+}
+
+body[data-page="krug-co"] :is(
+  .hero-copy,
+  .krug-about-content,
+  .section-heading
+) h2 .type-brand,
+body[data-page="krug-co"] .krug-capabilities-band h2 .type-brand {
+  color: var(--brand-tertiary) !important;
+}
+
+body[data-page="krug-co"] :is(
+  .krug-about-content p,
+  .section-heading p,
+  .krug-capabilities-band p
+) {
+  color: var(--brand-muted) !important;
+}
+
+body[data-page="krug-co"] .krug-about-content .editorial-lead {
+  color: var(--brand-maize) !important;
+}
+
+body[data-page="krug-co"] .hero-lede,
+body[data-page="krug-co"] .hero-support {
+  color: var(--brand-muted) !important;
+}
+
+/* Service Card visual theme mapping */
+body[data-page="krug-co"] :is(
+  .krug-service-card
+) {
+  background: var(--krug-card-bg) !important;
+  border: 1px solid rgba(88, 124, 180, 0.55) !important;
+  border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
+  box-shadow: var(--krug-card-shadow) !important;
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3.5vw, 36px) clamp(16px, 2.5vw, 28px);
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk),
+    background 420ms var(--ease-silk) !important;
+}
+
+body[data-page="krug-co"] :is(
+  .krug-service-card
+):hover {
+  transform: translateY(-8px) !important;
+  background: var(--krug-card-hover-bg) !important;
+  border-color: rgba(206, 160, 59, 0.55) !important;
+  box-shadow: var(--brand-glow-ring), 0 24px 48px rgba(0, 0, 0, 0.4) !important;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card) h3,
+body[data-page="krug-co"] :is(.krug-service-card) h3 .type-serif {
+  color: var(--brand-maize) !important;
+  font-size: var(--fs-h3);
+  margin-bottom: 12px;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card) h3 .type-brand {
+  color: var(--brand-tertiary) !important;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card) p {
+  color: var(--brand-muted) !important;
+  margin: 0;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card) .icon-badge {
+  background: linear-gradient(145deg,
+      rgba(112, 156, 224, 0.42) 0%,
+      rgba(52, 78, 140, 0.88) 100%) !important;
+  border: 1px solid rgba(206, 160, 59, 0.58) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(247, 238, 216, 0.14),
+    0 8px 22px rgba(0, 0, 0, 0.28) !important;
+  margin-bottom: 24px;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card) .icon-badge :is(i, .lucide) {
+  color: var(--brand-tertiary) !important;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card):hover .icon-badge {
+  color: var(--navy) !important;
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  box-shadow: var(--brand-glow-blast) !important;
+}
+
+body[data-page="krug-co"] :is(.krug-service-card):hover .icon-badge :is(i, .lucide) {
+  color: var(--navy) !important;
+}
+
+/* Capabilities Band */
+body[data-page="krug-co"] .krug-capabilities-band .scale-stats {
+  background: rgba(30, 45, 92, 0.36) !important;
+  border: 1px solid rgba(88, 124, 180, 0.38) !important;
+  box-shadow: inset 0 1px 0 rgba(247, 238, 216, 0.08) !important;
+  border-radius: clamp(20px, 3vw, 28px) !important;
+  padding: clamp(8px, 1.2vw, 14px) !important;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 18px) !important;
+  margin-top: 30px;
+}
+
+body[data-page="krug-co"] .krug-capabilities-band .scale-stats article {
+  background: var(--krug-card-bg) !important;
+  border: 1px solid rgba(88, 124, 180, 0.52) !important;
+  border-top: 2px solid rgba(241, 191, 87, 0.5) !important;
+  border-radius: clamp(14px, 2vw, 20px) !important;
+  padding: clamp(20px, 2.8vw, 28px) clamp(16px, 2.4vw, 24px) !important;
+  box-shadow: var(--krug-card-shadow) !important;
+  text-align: center;
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk),
+    background 420ms var(--ease-silk) !important;
+}
+
+body[data-page="krug-co"] .krug-capabilities-band .scale-stats article:hover {
+  transform: translateY(-8px) !important;
+  background: var(--krug-card-hover-bg) !important;
+  border-color: rgba(206, 160, 59, 0.58) !important;
+  box-shadow: var(--brand-glow-ring), 0 24px 48px rgba(0, 0, 0, 0.42) !important;
+}
+
+body[data-page="krug-co"] .krug-capabilities-band .scale-stats strong {
+  color: var(--brand-tertiary) !important;
+  display: block;
+  font-size: clamp(24px, 3.5vw, 42px);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  font-family: var(--font-serif-display);
+}
+
+body[data-page="krug-co"] .krug-capabilities-band .scale-stats span {
+  color: rgba(247, 238, 216, 0.9) !important;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  body[data-page="krug-co"] .krug-capabilities-band .scale-stats {
+    grid-template-columns: 1fr;
+  }
 }
