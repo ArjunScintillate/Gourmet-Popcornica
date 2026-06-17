@@ -26,50 +26,60 @@ body[data-page="solutions"] .home-kernel {
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-1 {
-  left: -2%;
-  top: 18%;
-  width: clamp(260px, 30vw, 420px);
-  opacity: 0.62;
+  left: -5%;
+  top: 28%;
+  width: clamp(220px, 26vw, 380px);
+  opacity: 0.46;
+  transform: rotate(-28deg);
   animation: floatKernel1 14s var(--ease-silk) infinite;
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-2 {
-  right: -4%;
-  top: 14%;
-  width: clamp(220px, 26vw, 360px);
-  opacity: 0.55;
+  right: -2%;
+  top: 42%;
+  width: clamp(180px, 22vw, 320px);
+  opacity: 0.4;
+  transform: rotate(18deg);
   animation: floatKernel2 18s var(--ease-silk) infinite;
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-3 {
-  left: 10%;
-  bottom: 6%;
-  width: clamp(180px, 22vw, 300px);
-  opacity: 0.7;
+  left: 8%;
+  bottom: -4%;
+  width: clamp(110px, 14vw, 200px);
+  opacity: 0.58;
+  transform: rotate(48deg);
+  filter: drop-shadow(0 18px 28px rgba(12, 20, 51, 0.16)) blur(0.4px);
   animation: floatKernel3 16s var(--ease-silk) infinite;
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-4 {
-  right: 18%;
-  bottom: -2%;
-  width: clamp(200px, 24vw, 320px);
-  opacity: 0.58;
+  right: 12%;
+  bottom: 6%;
+  width: clamp(200px, 24vw, 360px);
+  opacity: 0.35;
+  transform: rotate(-42deg);
+  filter: drop-shadow(0 18px 28px rgba(12, 20, 51, 0.16)) blur(2px);
   animation: floatKernel4 15s var(--ease-silk) infinite;
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-5 {
-  left: 40%;
-  top: -4%;
-  width: clamp(140px, 18vw, 220px);
-  opacity: 0.64;
+  left: 54%;
+  top: -5%;
+  width: clamp(80px, 10vw, 160px);
+  opacity: 0.56;
+  transform: rotate(58deg);
+  filter: drop-shadow(0 12px 20px rgba(12, 20, 51, 0.16)) blur(0.2px);
   animation: floatKernel5 13s var(--ease-silk) infinite;
 }
 
 body[data-page="solutions"] .home-kernel.home-kernel-6 {
-  right: 36%;
-  top: 4%;
-  width: clamp(120px, 16vw, 180px);
-  opacity: 0.52;
+  right: 26%;
+  top: 8%;
+  width: clamp(100px, 13vw, 180px);
+  opacity: 0.32;
+  transform: rotate(-16deg);
+  filter: drop-shadow(0 18px 28px rgba(12, 20, 51, 0.16)) blur(2.6px);
   animation: floatKernel6 17s var(--ease-silk) infinite;
 }
 
@@ -687,6 +697,181 @@ body[data-page="solutions"] #contact .final-card>* {
 }
 
 
+/* -------------------------------------------------------------------------
+   Solutions: Section containment + kernel cluster positioning
+   Matches Innovation/Media benchmark pattern.
+   ------------------------------------------------------------------------- */
+
+/* Section containment — kernels stay within their section boundaries */
+body[data-page="solutions"] .about-intro-section,
+body[data-page="solutions"] .solution-categories,
+body[data-page="solutions"] .ecosystem-editorial-section,
+body[data-page="solutions"] .solutions-scale-band,
+body[data-page="solutions"] .husk-legacy-section,
+body[data-page="solutions"] .solutions-industries,
+body[data-page="solutions"] .commitment-section,
+body[data-page="solutions"] .final-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Editorial section kernels — alternating left/right placement */
+.sol-bk-1 {
+  left: -200px;
+  top: 40px;
+  width: 460px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.sol-bk-2 {
+  right: -180px;
+  bottom: -30px;
+  width: 420px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.sol-bk-3 {
+  right: -220px;
+  top: 30px;
+  width: 500px;
+  opacity: 0.32;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.sol-bk-4 {
+  left: -190px;
+  bottom: -40px;
+  width: 440px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+.sol-bk-5 {
+  left: -210px;
+  top: 20%;
+  width: 480px;
+  opacity: 0.32;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.sol-bk-6 {
+  right: -200px;
+  bottom: 8%;
+  width: 460px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.sol-bk-7 {
+  right: -230px;
+  top: 15%;
+  width: 520px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.sol-bk-8 {
+  left: -200px;
+  bottom: -50px;
+  width: 460px;
+  opacity: 0.26;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+/* Ecosystem section kernels */
+.cluster-ecosystem .bk-eco-a {
+  left: -240px;
+  top: 30px;
+  width: 560px;
+  opacity: 0.36;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-ecosystem .bk-eco-b {
+  right: -220px;
+  bottom: -40px;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-ecosystem .bk-eco-c {
+  left: 40%;
+  top: -120px;
+  width: 420px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+/* Scale section kernels */
+.cluster-scale-solutions .bk-scale-sol-a {
+  left: -250px;
+  top: 22px;
+  width: 560px;
+  opacity: 0.40;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
+}
+
+.cluster-scale-solutions .bk-scale-sol-b {
+  right: -235px;
+  bottom: -24px;
+  width: 520px;
+  opacity: 0.38;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-scale-solutions .bk-scale-sol-c {
+  left: 48%;
+  bottom: -100px;
+  width: 440px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+/* Journey/process section kernels */
+.cluster-journey .bk-journey-a {
+  left: -220px;
+  top: 12%;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-journey .bk-journey-b {
+  right: -200px;
+  bottom: -30px;
+  width: 480px;
+  opacity: 0.32;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-journey .bk-journey-c {
+  left: 50%;
+  top: -80px;
+  width: 400px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+/* Partnership section kernels */
+.cluster-partnerships .bk-partner-a {
+  left: -230px;
+  top: 18%;
+  width: 540px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-partnerships .bk-partner-b {
+  right: -210px;
+  bottom: -40px;
+  width: 500px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
 
 /* Responsive breakpoints */
 @media (max-width: 1180px) {

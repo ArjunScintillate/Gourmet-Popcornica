@@ -64,129 +64,116 @@ body[data-page="about"] .corn-corner.corner-right {
 }
 
 body[data-page="about"] .about-kernel {
-  animation-duration: 9.2s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  backdrop-filter: blur(1px);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
 }
 
 body[data-page="about"] .about-kernel-1 {
-  left: -8%;
-  top: 10%;
-  width: clamp(120px, 14vw, 220px);
-  opacity: 0.78;
-  z-index: 1;
-  filter: drop-shadow(0 24px 36px rgba(12, 20, 51, 0.2)) blur(2.2px);
+  left: -3%;
+  bottom: 10%;
+  width: clamp(240px, 30vw, 420px);
+  opacity: 0.58;
+  z-index: 0;
+  transform: rotate(-18deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
   animation-delay: -0.8s;
 }
 
 body[data-page="about"] .about-kernel-2 {
-  left: 4%;
-  top: 54%;
-  width: clamp(86px, 10vw, 156px);
-  opacity: 0.9;
-  z-index: 1;
-  filter: drop-shadow(0 20px 30px rgba(12, 20, 51, 0.26)) blur(0.8px);
-  animation-delay: -2.1s;
+  right: -4%;
+  top: 18%;
+  width: clamp(200px, 26vw, 380px);
+  opacity: 0.54;
+  z-index: 0;
+  transform: rotate(14deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation-delay: -3.4s;
 }
 
 body[data-page="about"] .about-kernel-3 {
-  right: -10%;
-  top: 8%;
-  width: clamp(140px, 16vw, 248px);
-  opacity: 0.76;
-  z-index: 1;
-  filter: drop-shadow(0 26px 36px rgba(12, 20, 51, 0.2)) blur(2.4px);
+  left: 20%;
+  top: -12%;
+  width: clamp(160px, 20vw, 320px);
+  opacity: 0.46;
+  z-index: 0;
+  transform: rotate(42deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
   animation-delay: -1.4s;
 }
 
 body[data-page="about"] .about-kernel-4 {
-  right: 6%;
-  top: 58%;
-  width: clamp(96px, 11vw, 174px);
-  opacity: 0.88;
-  z-index: 1;
-  filter: drop-shadow(0 22px 32px rgba(12, 20, 51, 0.24)) blur(0.8px);
-  animation-delay: -3s;
+  right: 22%;
+  bottom: -10%;
+  width: clamp(180px, 22vw, 340px);
+  opacity: 0.50;
+  z-index: 0;
+  transform: rotate(-34deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+  animation-delay: -5.7s;
 }
 
 body[data-page="about"] .about-kernel-5 {
-  left: 42%;
-  bottom: -6%;
-  width: clamp(140px, 18vw, 260px);
-  opacity: 0.5;
+  left: 40%;
+  bottom: 2%;
+  width: clamp(140px, 18vw, 280px);
+  opacity: 0.42;
   z-index: 0;
-  filter: drop-shadow(0 28px 40px rgba(12, 20, 51, 0.22)) blur(2.8px);
+  transform: rotate(56deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
   animation-delay: -2.6s;
 }
 
 body[data-page="about"] .about-kernel-6 {
-  left: 22%;
-  top: -4%;
-  width: clamp(100px, 12vw, 182px);
-  opacity: 0.62;
-  z-index: 1;
-  filter: drop-shadow(0 20px 28px rgba(12, 20, 51, 0.18)) blur(2px);
+  right: 36%;
+  top: 4%;
+  width: clamp(120px, 16vw, 180px);
+  opacity: 0.52;
+  z-index: 0;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(0.8px);
   animation-delay: -4.1s;
 }
 
-body[data-page="about"] .about-kernel-7 {
-  right: 24%;
-  top: -8%;
-  width: clamp(108px, 13vw, 196px);
-  opacity: 0.58;
-  z-index: 1;
-  filter: drop-shadow(0 20px 30px rgba(12, 20, 51, 0.18)) blur(2px);
-  animation-delay: -1.9s;
-}
-
-body[data-page="about"] .about-kernel-8 {
-  left: 30%;
-  top: 66%;
-  width: clamp(80px, 9.6vw, 146px);
-  opacity: 0.86;
-  z-index: 1;
-  filter: drop-shadow(0 20px 28px rgba(12, 20, 51, 0.22)) blur(0.9px);
-  animation-delay: -5.2s;
-}
-
-body[data-page="about"] .about-kernel-9 {
-  right: 32%;
-  top: 62%;
-  width: clamp(72px, 8.8vw, 132px);
-  opacity: 0.82;
-  z-index: 1;
-  filter: drop-shadow(0 18px 24px rgba(12, 20, 51, 0.22)) blur(0.9px);
-  animation-delay: -3.6s;
-}
-
-body[data-page="about"] .about-kernel-10 {
-  left: -4%;
-  bottom: -4%;
-  width: clamp(120px, 14vw, 214px);
-  opacity: 0.56;
-  z-index: 0;
-  filter: drop-shadow(0 24px 34px rgba(12, 20, 51, 0.2)) blur(2.6px);
-  animation-delay: -2.8s;
-}
-
-body[data-page="about"] .about-kernel-11 {
-  right: -6%;
-  bottom: -6%;
-  width: clamp(128px, 14.5vw, 228px);
-  opacity: 0.54;
-  z-index: 0;
-  filter: drop-shadow(0 24px 34px rgba(12, 20, 51, 0.2)) blur(2.8px);
-  animation-delay: -4.7s;
-}
-
+/* Kernels 7-12 hidden — reduced density to match Innovation pattern */
+body[data-page="about"] .about-kernel-7,
+body[data-page="about"] .about-kernel-8,
+body[data-page="about"] .about-kernel-9,
+body[data-page="about"] .about-kernel-10,
+body[data-page="about"] .about-kernel-11,
 body[data-page="about"] .about-kernel-12 {
-  left: 54%;
-  top: 6%;
-  width: clamp(64px, 7.4vw, 118px);
-  opacity: 0.74;
-  z-index: 1;
-  filter: drop-shadow(0 16px 22px rgba(12, 20, 51, 0.2)) blur(1px);
-  animation-delay: -6.2s;
+  display: none;
+}
+
+/* About intro section kernels — large atmospheric (matches Innovation section kernels) */
+body[data-page="about"] .about-intro-kernel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  min-width: 340px;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+}
+
+.about-intro-kernel.kernel-a {
+  left: -210px;
+  top: 36px;
+  width: 520px;
+  opacity: 0.42;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.about-intro-kernel.kernel-b {
+  right: -200px;
+  bottom: -36px;
+  width: 480px;
+  opacity: 0.40;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.5px);
+}
+
+.about-intro-kernel.kernel-c {
+  left: 42%;
+  top: -100px;
+  width: 400px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
 }
 
 /* ============== ABOUT RESPONSIVE BREAKPOINTS ============== */
@@ -200,33 +187,34 @@ body[data-page="about"] .about-kernel-12 {
 
 @media (max-width: 768px) {
 
-  /* Reduce decorative kernel density on tablets */
-  body[data-page="about"] .about-kernel-6,
-  body[data-page="about"] .about-kernel-7,
-  body[data-page="about"] .about-kernel-12 {
+  /* Reduce to 2 hero kernels on tablets */
+  body[data-page="about"] .about-kernel-3,
+  body[data-page="about"] .about-kernel-4,
+  body[data-page="about"] .about-kernel-5,
+  body[data-page="about"] .about-kernel-6 {
     display: none;
   }
 
-  body[data-page="about"] .about-kernel-5,
-  body[data-page="about"] .about-kernel-10,
-  body[data-page="about"] .about-kernel-11 {
-    opacity: 0.36;
+  body[data-page="about"] .about-kernel-1 {
+    width: clamp(160px, 22vw, 260px);
+    opacity: 0.45;
+  }
+
+  body[data-page="about"] .about-kernel-2 {
+    width: clamp(140px, 20vw, 240px);
+    opacity: 0.40;
   }
 }
 
 @media (max-width: 560px) {
 
-  /* Hero kernels become subtle backdrop on phones */
-  body[data-page="about"] .about-kernel-2,
-  body[data-page="about"] .about-kernel-4,
-  body[data-page="about"] .about-kernel-8,
-  body[data-page="about"] .about-kernel-9 {
+  body[data-page="about"] .about-kernel-2 {
     display: none;
   }
 
-  body[data-page="about"] .about-kernel-1,
-  body[data-page="about"] .about-kernel-3 {
-    opacity: 0.44;
+  body[data-page="about"] .about-kernel-1 {
+    width: clamp(120px, 18vw, 200px);
+    opacity: 0.35;
   }
 }
 
@@ -256,13 +244,64 @@ body[data-page="about"] #contact .final-card>* {
   }
 }
 
-/* Closing Section Decorative Clusters */
-.about-closing-section {
+/* Section containment — kernels stay within their section boundaries */
+body[data-page="about"] .about-intro-section,
+body[data-page="about"] .founder-legacy-section,
+body[data-page="about"] .ecosystem-editorial-section,
+body[data-page="about"] .husk-legacy-section,
+body[data-page="about"] .scale-band,
+body[data-page="about"] .commitment-section,
+body[data-page="about"] .self-reliance-section,
+body[data-page="about"] .about-closing-section,
+body[data-page="about"] .final-cta {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
 
+/* Ecosystem kernel cluster positioning */
+.cluster-ecosystem .bk-eco-a {
+  left: -240px;
+  top: 30px;
+  width: 560px;
+  opacity: 0.36;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-ecosystem .bk-eco-b {
+  right: -220px;
+  bottom: -40px;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-ecosystem .bk-eco-c {
+  left: 40%;
+  top: -120px;
+  width: 420px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+/* Husk kernel cluster positioning */
+.cluster-husk .bk-husk-a {
+  left: -230px;
+  top: 20%;
+  width: 540px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-husk .bk-husk-b {
+  right: -210px;
+  bottom: -50px;
+  width: 500px;
+  opacity: 0.32;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+/* Closing kernel cluster positioning */
 .cluster-closing .bk-closing-a {
   left: -6%;
   top: 18%;

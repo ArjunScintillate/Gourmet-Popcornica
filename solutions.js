@@ -10,7 +10,7 @@ const initSolutionsScripts = () => {
 
   if (hasGsap && !reduceMotion) {
     // Hero & Section Kernels Idle Drift
-    window.gsap.to(".sol-kernel, .brand-kernel", {
+    window.gsap.to(".home-kernel, .brand-kernel", {
       y: (i) => (i % 2 === 0 ? -40 : 40),
       x: (i) => (i % 3 === 0 ? 20 : -20),
       rotation: (i) => (i % 2 === 0 ? 15 : -15),

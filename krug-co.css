@@ -310,6 +310,87 @@ body[data-page="krug-co"] .krug-kernel-4 {
   animation: floatKernel4 14s var(--ease-silk) infinite;
 }
 
+body[data-page="krug-co"] .krug-kernel-5 {
+  left: 40%;
+  bottom: 2%;
+  width: clamp(140px, 18vw, 280px);
+  opacity: 0.42;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
+  animation: floatKernel5 13s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-6 {
+  right: 36%;
+  top: 4%;
+  width: clamp(120px, 16vw, 180px);
+  opacity: 0.52;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(0.8px);
+  animation: floatKernel6 17s var(--ease-silk) infinite;
+}
+
+/* Section containment — matches Innovation/Media benchmark */
+body[data-page="krug-co"] .krug-about-section,
+body[data-page="krug-co"] .krug-products-section,
+body[data-page="krug-co"] .krug-kiosks-section,
+body[data-page="krug-co"] .krug-final-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Intro section kernel cluster positioning */
+.krug-cluster-intro .bk-krug-a {
+  left: -210px;
+  top: 36px;
+  width: 520px;
+  opacity: 0.42;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.krug-cluster-intro .bk-krug-b {
+  right: -200px;
+  bottom: -36px;
+  width: 480px;
+  opacity: 0.40;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.5px);
+}
+
+/* Products section kernel cluster positioning */
+.krug-cluster-services .bk-krug-c {
+  left: -250px;
+  bottom: 10%;
+  width: 580px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.krug-cluster-services .bk-krug-d {
+  right: -230px;
+  top: 12%;
+  width: 540px;
+  opacity: 0.36;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+/* Kiosks section kernel cluster positioning */
+.krug-cluster-kiosks .bk-krug-e {
+  left: -240px;
+  top: 20%;
+  width: 560px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.krug-cluster-kiosks .bk-krug-f {
+  right: -220px;
+  bottom: 8%;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
 /* Contact CTA layout constraints */
 body[data-page="krug-co"] #contact .final-card {
   position: relative;
@@ -359,7 +440,9 @@ body[data-page="krug-co"] #contact .final-card>* {
   }
   
   body[data-page="krug-co"] .krug-kernel-3,
-  body[data-page="krug-co"] .krug-kernel-4 {
+  body[data-page="krug-co"] .krug-kernel-4,
+  body[data-page="krug-co"] .krug-kernel-5,
+  body[data-page="krug-co"] .krug-kernel-6 {
     display: none;
   }
 

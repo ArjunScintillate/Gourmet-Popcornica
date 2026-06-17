@@ -10,6 +10,19 @@ const initAboutUsScripts = () => {
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
   if (hasGsap && hasScrollTrigger) {
+    /* Kernel idle-drift — matches Innovation/Media benchmark */
+    if (!reduceMotion) {
+      window.gsap.to(".about-kernel, .brand-kernel", {
+        y: (i) => (i % 2 === 0 ? -34 : 32),
+        x: (i) => (i % 3 === 0 ? 16 : -16),
+        rotation: (i) => (i % 2 === 0 ? 11 : -11),
+        duration: 9,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+    }
+
     // Scale Band Articles Animation
     if (document.querySelector(".scale-band")) {
       window.gsap.fromTo(

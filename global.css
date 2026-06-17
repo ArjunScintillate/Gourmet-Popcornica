@@ -861,7 +861,7 @@ h3 .type-brand {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -901,26 +901,29 @@ h3 .type-brand {
 }
 
 .kernel-a {
-  left: -10%;
-  top: 18px;
-  width: clamp(220px, 26vw, 430px);
-  opacity: 0.8;
-  filter: drop-shadow(0 22px 30px rgba(12, 20, 51, 0.2)) blur(1.8px);
+  left: -8%;
+  top: 32px;
+  width: clamp(200px, 24vw, 400px);
+  opacity: 0.45;
+  transform: rotate(-14deg);
+  filter: drop-shadow(0 22px 30px rgba(12, 20, 51, 0.2)) blur(2.2px);
 }
 
 .kernel-b {
-  right: -8%;
-  top: 126px;
-  width: clamp(180px, 22vw, 340px);
-  opacity: 0.8;
-  filter: drop-shadow(0 16px 24px rgba(12, 20, 51, 0.18)) blur(1.1px);
+  right: -6%;
+  top: 160px;
+  width: clamp(160px, 19vw, 300px);
+  opacity: 0.4;
+  transform: rotate(22deg);
+  filter: drop-shadow(0 16px 24px rgba(12, 20, 51, 0.18)) blur(1.6px);
   animation-delay: -1.8s;
 }
 
 .kernel-c {
-  left: 34%;
-  top: 106px;
-  width: clamp(48px, 5vw, 78px);
+  left: 38%;
+  top: 86px;
+  width: clamp(42px, 4.6vw, 72px);
+  transform: rotate(54deg);
   filter: drop-shadow(0 10px 14px rgba(12, 20, 51, 0.18)) blur(0.2px);
   animation-delay: -3s;
 }
@@ -2782,11 +2785,11 @@ section:has(> .about-intro-ambient)>.shell {
 
   0%,
   100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    translate: 0 0;
   }
 
   50% {
-    transform: translate3d(8px, -14px, 0) rotate(7deg);
+    translate: 6px -10px;
   }
 }
 
@@ -2794,12 +2797,42 @@ section:has(> .about-intro-ambient)>.shell {
 
   0%,
   100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    translate: 0 0;
   }
 
   50% {
-    transform: translate3d(6px, -12px, 0) rotate(8deg);
+    translate: -5px 8px;
   }
+}
+
+@keyframes floatKernel1 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: -8px -12px; }
+}
+
+@keyframes floatKernel2 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 6px -9px; }
+}
+
+@keyframes floatKernel3 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: -5px 8px; }
+}
+
+@keyframes floatKernel4 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 7px -6px; }
+}
+
+@keyframes floatKernel5 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: -4px 6px; }
+}
+
+@keyframes floatKernel6 {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 5px -4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

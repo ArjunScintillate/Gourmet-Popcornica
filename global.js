@@ -203,38 +203,9 @@ const initGlobalScripts = () => {
       );
 
       if (!reduceMotion) {
-        window.gsap.utils
-          .toArray(".float-kernel, .brand-kernel")
-          .forEach((kernel, index) => {
-            const isHeroKernel = kernel.closest(".hero") !== null;
-            const shift = isHeroKernel ? -20 : index % 2 === 0 ? -30 : -22;
-            window.gsap.to(kernel, {
-              yPercent: shift,
-              xPercent: isHeroKernel
-                ? index % 2 === 0
-                  ? 7
-                  : -6
-                : index % 3 === 0
-                  ? 10
-                  : -8,
-              rotate: isHeroKernel
-                ? index % 2 === 0
-                  ? 8
-                  : -7
-                : index % 2 === 0
-                  ? 14
-                  : -12,
-              ease: "none",
-              scrollTrigger: {
-                trigger: isHeroKernel
-                  ? ".hero"
-                  : kernel.closest("section, .final-cta") || kernel,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: isHeroKernel ? 1.1 : 1.4,
-              },
-            });
-          });
+        /* Kernel idle-drift animations are handled by each page's own JS
+           (index.js, aboutus.js, solutions.js, innovation.js, media.js, etc.)
+           using a unified GSAP yoyo sine.inOut loop. */
 
         if (!isTouch) {
           window.gsap.utils
