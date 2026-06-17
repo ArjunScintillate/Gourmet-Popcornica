@@ -1,54 +1,72 @@
 /* Partner With Us page-specific styles */
 
 @keyframes floatKernel1 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: -8px -12px;
   }
 }
 
 @keyframes floatKernel2 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: 6px -9px;
   }
 }
 
 @keyframes floatKernel3 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: -5px 8px;
   }
 }
 
 @keyframes floatKernel4 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: 7px -6px;
   }
 }
 
 @keyframes floatKernel5 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: -4px 6px;
   }
 }
 
 @keyframes floatKernel6 {
-  0%, 100% {
+
+  0%,
+  100% {
     translate: 0 0;
   }
+
   50% {
     translate: 5px -4px;
   }
@@ -232,18 +250,40 @@ body[data-page="partner"] #main .section-heading p {
   margin-inline: auto;
 }
 
-.partner-card--institutional { grid-column: span 5; }
-.partner-card--farming { grid-column: span 4; grid-row: span 2; }
-.partner-card--cinema { grid-column: span 3; }
-.partner-card--distribution { grid-column: span 5; }
-.partner-card--flavour { grid-column: span 3; }
-.partner-card--media { grid-column: span 7; }
-.partner-card--business { grid-column: span 5; }
+.partner-card--institutional {
+  grid-column: span 5;
+}
+
+.partner-card--farming {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.partner-card--cinema {
+  grid-column: span 3;
+}
+
+.partner-card--distribution {
+  grid-column: span 5;
+}
+
+.partner-card--flavour {
+  grid-column: span 3;
+}
+
+.partner-card--media {
+  grid-column: span 7;
+}
+
+.partner-card--business {
+  grid-column: span 5;
+}
 
 @media (max-width: 1024px) {
   .partner-category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .partner-card--institutional,
   .partner-card--farming,
   .partner-card--cinema,
@@ -254,6 +294,7 @@ body[data-page="partner"] #main .section-heading p {
     grid-column: span 1;
     grid-row: span 1;
   }
+
   .partner-card--business {
     grid-column: span 2;
   }
@@ -263,6 +304,7 @@ body[data-page="partner"] #main .section-heading p {
   .partner-category-grid {
     grid-template-columns: 1fr;
   }
+
   .partner-card--business {
     grid-column: span 1;
   }
@@ -324,7 +366,7 @@ body[data-page="partner"] #main .section-heading p {
 .partner-category-card:hover {
   transform: translateY(-5px);
   border-color: rgba(206, 160, 59, 0.5);
-  box-shadow: 
+  box-shadow:
     0 1px 0 rgba(255, 255, 255, 1) inset,
     0 28px 48px rgba(12, 20, 51, 0.12);
   background: linear-gradient(155deg,
@@ -339,7 +381,8 @@ body[data-page="partner"] #main .section-heading p {
 }
 
 .partner-category-card .feature-icon {
-  margin-bottom: auto; /* Pushes content to bottom */
+  margin-bottom: auto;
+  /* Pushes content to bottom */
   width: clamp(44px, 5vw, 56px);
   height: clamp(44px, 5vw, 56px);
   border-radius: 50%;
@@ -404,7 +447,7 @@ body[data-page="partner"] #main .section-heading p {
 
 .partner-category-card.is-active {
   border-color: rgba(206, 160, 59, 0.7);
-  box-shadow: 
+  box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.9) inset,
     0 0 0 1px rgba(206, 160, 59, 0.7) inset,
     0 24px 48px rgba(206, 160, 59, 0.18);
@@ -489,11 +532,10 @@ body[data-page="partner"] #main .section-heading p {
 .partner-showcase-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(12, 20, 51, 0.65) 0%,
-    rgba(12, 20, 51, 0.15) 35%,
-    transparent 60%);
+  background: linear-gradient(to top,
+      rgba(12, 20, 51, 0.65) 0%,
+      rgba(12, 20, 51, 0.15) 35%,
+      transparent 60%);
   pointer-events: none;
   display: flex;
   align-items: flex-end;
@@ -858,7 +900,7 @@ body[data-page="partner"] .partner-final-cta .final-card::before {
   pointer-events: none;
 }
 
-body[data-page="partner"] .partner-final-cta .final-card > * {
+body[data-page="partner"] .partner-final-cta .final-card>* {
   position: relative;
   z-index: 1;
 }
@@ -977,6 +1019,7 @@ body[data-page="partner"] .partner-final-cta .final-card::after {
 }
 
 @media (hover: none) {
+
   .partner-category-card:hover,
   .partner-business-card:hover {
     transform: none;

@@ -971,6 +971,7 @@ body[data-page="media"] .final-card::after {
 }
 
 @media (hover: none) {
+
   .media-feature-card:hover,
   .media-kit-item:hover,
   .media-update-card:hover,

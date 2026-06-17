@@ -74,11 +74,9 @@ body:not([data-page="home"]) .site-header.is-nav-open {
 }
 
 body:not([data-page="home"]) .primary-nav__links {
-  background: linear-gradient(180deg, rgba(30, 45, 92, 0.55) 0%, rgba(12, 20, 51, 0.72) 100%);
-  border-color: rgba(48, 80, 128, 0.45);
-  box-shadow:
-    inset 0 1px 0 rgba(247, 238, 216, 0.08),
-    0 10px 28px rgba(0, 0, 0, 0.22);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 body:not([data-page="home"]) .primary-nav__links a {
@@ -90,15 +88,12 @@ body:not([data-page="home"]) .primary-nav__links a::before {
 }
 
 body:not([data-page="home"]) .primary-nav__links a:hover,
-body:not([data-page="home"]) .primary-nav__links a:focus-visible,
-body:not([data-page="home"]) .primary-nav__links a.is-active {
+body:not([data-page="home"]) .primary-nav__links a:focus-visible {
   color: var(--brand-tertiary);
-  text-shadow: 0 0 18px rgba(241, 191, 87, 0.28);
 }
 
 body:not([data-page="home"]) .primary-nav__links a.is-active {
-  background: rgba(48, 80, 128, 0.28);
-  box-shadow: inset 0 0 0 1px rgba(206, 160, 59, 0.35);
+  color: var(--brand-tertiary);
 }
 
 body:not([data-page="home"]) .header-cta {
@@ -273,24 +268,22 @@ body:not([data-page="home"]) .hero-video-overlay {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(12, 20, 51, 0.75) 0%,
-    rgba(12, 20, 51, 0.6) 50%,
-    rgba(12, 20, 51, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(12, 20, 51, 0.75) 0%,
+      rgba(12, 20, 51, 0.6) 50%,
+      rgba(12, 20, 51, 0.8) 100%);
   pointer-events: none;
 }
 
 /* Hero content must sit above video (z:0) + overlay (z:1) */
-body:not([data-page="home"]) .hero > .shell,
-body:not([data-page="home"]) .hero > .hero-copy,
+body:not([data-page="home"]) .hero>.shell,
+body:not([data-page="home"]) .hero>.hero-copy,
 body:not([data-page="home"]) .hero .hero-grid {
   position: relative;
   z-index: 2;
 }
 
-body:not([data-page="home"]) .hero > .float-kernel {
+body:not([data-page="home"]) .hero>.float-kernel {
   z-index: 2;
 }
 
@@ -435,30 +428,24 @@ body:not([data-page="home"]) .founder-frame-inner {
 }
 
 /* Image overlay labels — gold badge + navy text (ivory token is dark on inner pages) */
-body:not([data-page="home"]) :is(
-  .farmer-frame-tag,
+body:not([data-page="home"]) :is(.farmer-frame-tag,
   .husk-label-tag,
-  .founder-signature-tag
-) {
+  .founder-signature-tag) {
   background: var(--gold) !important;
   border: none !important;
   box-shadow: 0 8px 20px rgba(206, 160, 59, 0.25) !important;
   color: var(--navy) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .farmer-frame-tag p,
+body:not([data-page="home"]) :is(.farmer-frame-tag p,
   .husk-label-tag p,
-  .founder-signature-tag p
-) {
+  .founder-signature-tag p) {
   color: var(--navy) !important;
   font-style: normal;
 }
 
-body:not([data-page="home"]) :is(
-  .farmer-frame-tag span,
-  .husk-label-tag .tag-dot
-) {
+body:not([data-page="home"]) :is(.farmer-frame-tag span,
+  .husk-label-tag .tag-dot) {
   background: var(--navy) !important;
   box-shadow: none !important;
 }
@@ -569,7 +556,7 @@ body:not([data-page="home"]) main {
 }
 
 /* Seamless section surfaces — no light bands or inset separators */
-body:not([data-page="home"]) main > section:not(.scale-band),
+body:not([data-page="home"]) main>section:not(.scale-band),
 body:not([data-page="home"]) main .section:not(.scale-band),
 body:not([data-page="home"]) .section-white,
 body:not([data-page="home"]) .solution-editorial,
@@ -628,8 +615,7 @@ body:not([data-page="home"]) .farmer-process-rail {
 }
 
 /* Dark glass cards — override white/cream page styles */
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .leadership-card,
@@ -648,16 +634,14 @@ body:not([data-page="home"]) :is(
   .farmer-highlight-card,
   .farmer-prose-card,
   .farmer-quote-card,
-  .commitment-cards article
-) {
+  .commitment-cards article) {
   background: var(--brand-card-bg) !important;
   border: 1px solid var(--brand-card-border) !important;
   border-top: 2px solid var(--brand-card-accent) !important;
   box-shadow: var(--brand-card-shadow) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .leadership-card,
@@ -676,16 +660,14 @@ body:not([data-page="home"]) :is(
   .farmer-highlight-card,
   .farmer-prose-card,
   .farmer-quote-card,
-  .commitment-cards article
-):hover,
+  .commitment-cards article):hover,
 body:not([data-page="home"]) .partner-category-card.is-active {
   background: var(--brand-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.45) !important;
   box-shadow: var(--brand-glow-ring), 0 22px 44px rgba(0, 0, 0, 0.32) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .reliability-card-bespoke,
@@ -697,14 +679,12 @@ body:not([data-page="home"]) :is(
   .media-press-item,
   .media-kit-item,
   .media-update-card,
-  .farmer-highlight-card
-) h3,
+  .farmer-highlight-card) h3,
 body:not([data-page="home"]) .partner-category-card .partner-category-title {
   color: var(--brand-maize) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .reliability-card-bespoke,
@@ -718,8 +698,7 @@ body:not([data-page="home"]) :is(
   .media-update-card,
   .farmer-highlight-card,
   .farmer-prose-card,
-  .farmer-quote-card
-) p,
+  .farmer-quote-card) p,
 body:not([data-page="home"]) .innov-key-pill p {
   color: var(--brand-muted) !important;
 }
@@ -742,8 +721,7 @@ body:not([data-page="home"]) .feature-icon .lucide {
   color: var(--brand-tertiary) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .leadership-card,
@@ -760,8 +738,7 @@ body:not([data-page="home"]) :is(
   .media-update-card,
   .farmer-highlight-card,
   .commitment-cards article,
-  .metric-pill
-):hover :is(.icon-badge, .feature-icon),
+  .metric-pill):hover :is(.icon-badge, .feature-icon),
 body:not([data-page="home"]) .partner-category-card.is-active :is(.icon-badge, .feature-icon) {
   color: var(--navy) !important;
   background: var(--gold) !important;
@@ -769,8 +746,7 @@ body:not([data-page="home"]) .partner-category-card.is-active :is(.icon-badge, .
   box-shadow: var(--brand-glow-blast) !important;
 }
 
-body:not([data-page="home"]) :is(
-  .intro-card,
+body:not([data-page="home"]) :is(.intro-card,
   .feature-card,
   .ecosystem-feature,
   .leadership-card,
@@ -787,8 +763,7 @@ body:not([data-page="home"]) :is(
   .media-update-card,
   .farmer-highlight-card,
   .commitment-cards article,
-  .metric-pill
-):hover :is(.icon-badge, .feature-icon) :is(i, .lucide),
+  .metric-pill):hover :is(.icon-badge, .feature-icon) :is(i, .lucide),
 body:not([data-page="home"]) .partner-category-card.is-active :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--navy) !important;
 }
@@ -839,41 +814,34 @@ body:not([data-page="home"]) .editorial-content .solution-highlights-editorial l
 }
 
 /* About Us — readable text on dark backgrounds */
-body[data-page="about"] :is(
-  .about-intro-header,
+body[data-page="about"] :is(.about-intro-header,
   .founder-header,
   .ecosystem-header,
   .husk-heading,
   .reliance-header,
   .section-heading,
-  .scale-content
-) h2,
-body[data-page="about"] :is(
-  .about-intro-header,
+  .scale-content) h2,
+body[data-page="about"] :is(.about-intro-header,
   .founder-header,
   .ecosystem-header,
   .husk-heading,
   .reliance-header,
   .section-heading,
-  .scale-content
-) h2 .type-serif {
+  .scale-content) h2 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="about"] :is(
-  .about-intro-header,
+body[data-page="about"] :is(.about-intro-header,
   .founder-header,
   .ecosystem-header,
   .husk-heading,
   .reliance-header,
   .section-heading,
-  .scale-content
-) h2 .type-brand {
+  .scale-content) h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="about"] :is(
-  .about-intro-lead,
+body[data-page="about"] :is(.about-intro-lead,
   .founder-prose p,
   .ecosystem-lead,
   .ecosystem-lead p,
@@ -885,16 +853,13 @@ body[data-page="about"] :is(
   .feature-card p,
   .leadership-card .card-content,
   .leadership-card blockquote,
-  .leadership-card .reliance-quote
-) {
+  .leadership-card .reliance-quote) {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="about"] :is(
-  .founder-prose .lead-text,
+body[data-page="about"] :is(.founder-prose .lead-text,
   .husk-intro,
-  .reliance-lead
-) {
+  .reliance-lead) {
   color: var(--brand-maize) !important;
 }
 
@@ -935,41 +900,31 @@ body[data-page="solutions"] {
     0 0 0 1px rgba(88, 124, 180, 0.32);
 }
 
-body[data-page="solutions"] :is(
-  .section-heading,
+body[data-page="solutions"] :is(.section-heading,
   .ecosystem-header,
-  .editorial-content
-) h2,
-body[data-page="solutions"] :is(
-  .section-heading,
-  .ecosystem-header
-) h2 .type-serif,
+  .editorial-content) h2,
+body[data-page="solutions"] :is(.section-heading,
+  .ecosystem-header) h2 .type-serif,
 body[data-page="solutions"] .editorial-content h3,
 body[data-page="solutions"] .editorial-content h3 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="solutions"] :is(
-  .section-heading,
-  .ecosystem-header
-) h2 .type-brand,
+body[data-page="solutions"] :is(.section-heading,
+  .ecosystem-header) h2 .type-brand,
 body[data-page="solutions"] .editorial-content h3 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="solutions"] :is(
-  .section-heading p,
+body[data-page="solutions"] :is(.section-heading p,
   .ecosystem-lead,
-  .editorial-lead
-) {
+  .editorial-lead) {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
+body[data-page="solutions"] :is(.reliability-card-bespoke,
   .industry-card,
-  #process .feature-card
-) {
+  #process .feature-card) {
   background: var(--solution-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -981,11 +936,9 @@ body[data-page="solutions"] :is(
     background 420ms var(--ease-silk) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
+body[data-page="solutions"] :is(.reliability-card-bespoke,
   .industry-card,
-  #process .feature-card
-):hover {
+  #process .feature-card):hover {
   transform: translateY(-8px) !important;
   background: var(--solution-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.55) !important;
@@ -996,31 +949,23 @@ body[data-page="solutions"] #process .feature-card:nth-child(even):hover {
   transform: translateY(-4px) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
+body[data-page="solutions"] :is(.reliability-card-bespoke,
   .industry-card,
-  #process .feature-card
-) h3,
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
+  #process .feature-card) h3,
+body[data-page="solutions"] :is(.reliability-card-bespoke,
   .industry-card,
-  #process .feature-card
-) h3 .type-serif {
+  #process .feature-card) h3 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
+body[data-page="solutions"] :is(.reliability-card-bespoke,
   .industry-card,
-  #process .feature-card
-) h3 .type-brand {
+  #process .feature-card) h3 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
-  #process .feature-card
-) p {
+body[data-page="solutions"] :is(.reliability-card-bespoke,
+  #process .feature-card) p {
   color: var(--brand-muted) !important;
 }
 
@@ -1036,10 +981,8 @@ body[data-page="solutions"] .reliability-card-bespoke:hover .card-number {
   border-color: rgba(206, 160, 59, 0.62) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
-  #process .feature-card
-) :is(.icon-badge, .feature-icon) {
+body[data-page="solutions"] :is(.reliability-card-bespoke,
+  #process .feature-card) :is(.icon-badge, .feature-icon) {
   background: linear-gradient(145deg,
       rgba(112, 156, 224, 0.42) 0%,
       rgba(52, 78, 140, 0.88) 100%) !important;
@@ -1049,27 +992,21 @@ body[data-page="solutions"] :is(
     0 8px 22px rgba(0, 0, 0, 0.28) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
-  #process .feature-card
-) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+body[data-page="solutions"] :is(.reliability-card-bespoke,
+  #process .feature-card) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
-  #process .feature-card
-):hover :is(.icon-badge, .feature-icon) {
+body[data-page="solutions"] :is(.reliability-card-bespoke,
+  #process .feature-card):hover :is(.icon-badge, .feature-icon) {
   color: var(--navy) !important;
   background: var(--gold) !important;
   border-color: var(--gold) !important;
   box-shadow: var(--brand-glow-blast) !important;
 }
 
-body[data-page="solutions"] :is(
-  .reliability-card-bespoke,
-  #process .feature-card
-):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+body[data-page="solutions"] :is(.reliability-card-bespoke,
+  #process .feature-card):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--navy) !important;
 }
 
@@ -1201,42 +1138,34 @@ body[data-page="farmer"] {
     0 0 0 1px rgba(88, 124, 180, 0.32);
 }
 
-body[data-page="farmer"] :is(
-  .about-intro-header,
+body[data-page="farmer"] :is(.about-intro-header,
   .farmer-editorial-content,
   .reliance-header,
   .ecosystem-header,
-  .section-heading
-) h2,
-body[data-page="farmer"] :is(
-  .about-intro-header,
+  .section-heading) h2,
+body[data-page="farmer"] :is(.about-intro-header,
   .farmer-editorial-content,
   .reliance-header,
   .ecosystem-header,
-  .section-heading
-) h2 .type-serif,
+  .section-heading) h2 .type-serif,
 body[data-page="farmer"] .farmer-scale-band h2,
 body[data-page="farmer"] .farmer-scale-band h2 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="farmer"] :is(
-  .about-intro-header,
+body[data-page="farmer"] :is(.about-intro-header,
   .farmer-editorial-content,
   .reliance-header,
   .ecosystem-header,
-  .section-heading
-) h2 .type-brand,
+  .section-heading) h2 .type-brand,
 body[data-page="farmer"] .farmer-scale-band h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="farmer"] :is(
-  .about-intro-lead,
+body[data-page="farmer"] :is(.about-intro-lead,
   .farmer-editorial-content p,
   .ecosystem-lead,
-  .section-heading p
-) {
+  .section-heading p) {
   color: var(--brand-muted) !important;
 }
 
@@ -1250,12 +1179,10 @@ body[data-page="farmer"] .hero-support {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
+body[data-page="farmer"] :is(.farmer-highlight-card,
   .farmer-prose-card,
   .farmer-quote-card,
-  .farmer-process-rail .feature-card
-) {
+  .farmer-process-rail .feature-card) {
   background: var(--farmer-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -1267,12 +1194,10 @@ body[data-page="farmer"] :is(
     background 420ms var(--ease-silk) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
+body[data-page="farmer"] :is(.farmer-highlight-card,
   .farmer-prose-card,
   .farmer-quote-card,
-  .farmer-process-rail .feature-card
-):hover {
+  .farmer-process-rail .feature-card):hover {
   transform: translateY(-8px) !important;
   background: var(--farmer-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.55) !important;
@@ -1283,36 +1208,26 @@ body[data-page="farmer"] .farmer-process-rail .feature-card:nth-child(even):hove
   transform: translateY(-4px) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-) h3,
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-) h3 .type-serif {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card) h3,
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card) h3 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-) h3 .type-brand {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card) h3 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
+body[data-page="farmer"] :is(.farmer-highlight-card,
   .farmer-prose-card,
-  .farmer-process-rail .feature-card
-) p {
+  .farmer-process-rail .feature-card) p {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-) :is(.icon-badge, .feature-icon) {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card) :is(.icon-badge, .feature-icon) {
   background: linear-gradient(145deg,
       rgba(112, 156, 224, 0.42) 0%,
       rgba(52, 78, 140, 0.88) 100%) !important;
@@ -1322,27 +1237,21 @@ body[data-page="farmer"] :is(
     0 8px 22px rgba(0, 0, 0, 0.28) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-):hover :is(.icon-badge, .feature-icon) {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card):hover :is(.icon-badge, .feature-icon) {
   color: var(--navy) !important;
   background: var(--gold) !important;
   border-color: var(--gold) !important;
   box-shadow: var(--brand-glow-blast) !important;
 }
 
-body[data-page="farmer"] :is(
-  .farmer-highlight-card,
-  .farmer-process-rail .feature-card
-):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+body[data-page="farmer"] :is(.farmer-highlight-card,
+  .farmer-process-rail .feature-card):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--navy) !important;
 }
 
@@ -1413,18 +1322,14 @@ body[data-page="innovation"] {
     0 0 0 1px rgba(88, 124, 180, 0.32);
 }
 
-body[data-page="innovation"] :is(
-  .about-intro-header,
+body[data-page="innovation"] :is(.about-intro-header,
   .section-heading,
   .ecosystem-header,
-  .innov-split-copy
-) h2,
-body[data-page="innovation"] :is(
-  .about-intro-header,
+  .innov-split-copy) h2,
+body[data-page="innovation"] :is(.about-intro-header,
   .section-heading,
   .ecosystem-header,
-  .innov-split-copy
-) h2 .type-serif,
+  .innov-split-copy) h2 .type-serif,
 body[data-page="innovation"] .innov-scale-band h2,
 body[data-page="innovation"] .innov-scale-band h2 .type-serif,
 body[data-page="innovation"] .innov-visual-section .section-heading h2,
@@ -1432,26 +1337,22 @@ body[data-page="innovation"] .innov-visual-section .section-heading h2 .type-ser
   color: var(--brand-maize) !important;
 }
 
-body[data-page="innovation"] :is(
-  .about-intro-header,
+body[data-page="innovation"] :is(.about-intro-header,
   .section-heading,
   .ecosystem-header,
-  .innov-split-copy
-) h2 .type-brand,
+  .innov-split-copy) h2 .type-brand,
 body[data-page="innovation"] .innov-scale-band h2 .type-brand,
 body[data-page="innovation"] .innov-visual-section .section-heading h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="innovation"] :is(
-  .about-intro-lead,
+body[data-page="innovation"] :is(.about-intro-lead,
   .ecosystem-lead,
   .editorial-lead,
   .innov-split-copy p,
   .section-heading p,
   .innov-scale-lede,
-  .innov-scale-support
-) {
+  .innov-scale-support) {
   color: var(--brand-muted) !important;
 }
 
@@ -1466,12 +1367,10 @@ body[data-page="innovation"] .innov-key-grid {
   box-shadow: inset 0 1px 0 rgba(247, 238, 216, 0.08) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
   .innov-process-rail .feature-card,
-  .innov-eco-tile
-) {
+  .innov-eco-tile) {
   background: var(--innov-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -1483,12 +1382,10 @@ body[data-page="innovation"] :is(
     background 420ms var(--ease-silk) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
   .innov-process-rail .feature-card,
-  .innov-eco-tile
-):hover {
+  .innov-eco-tile):hover {
   transform: translateY(-8px) !important;
   background: var(--innov-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.55) !important;
@@ -1499,40 +1396,30 @@ body[data-page="innovation"] .innov-process-rail .feature-card:nth-child(even):h
   transform: translateY(-4px) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-process-rail .feature-card,
-  .innov-eco-tile
-) h3,
-body[data-page="innovation"] :is(
-  .innov-core-card,
+  .innov-eco-tile) h3,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-process-rail .feature-card,
-  .innov-eco-tile
-) h3 .type-serif {
+  .innov-eco-tile) h3 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-process-rail .feature-card,
-  .innov-eco-tile
-) h3 .type-brand {
+  .innov-eco-tile) h3 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
-  .innov-process-rail .feature-card
-) p {
+  .innov-process-rail .feature-card) p {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
-  .innov-process-rail .feature-card
-) :is(.icon-badge, .feature-icon) {
+  .innov-process-rail .feature-card) :is(.icon-badge, .feature-icon) {
   background: linear-gradient(145deg,
       rgba(112, 156, 224, 0.42) 0%,
       rgba(52, 78, 140, 0.88) 100%) !important;
@@ -1542,31 +1429,25 @@ body[data-page="innovation"] :is(
     0 8px 22px rgba(0, 0, 0, 0.28) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
-  .innov-process-rail .feature-card
-) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+  .innov-process-rail .feature-card) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--brand-tertiary) !important;
   stroke: var(--brand-tertiary) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
-  .innov-process-rail .feature-card
-):hover :is(.icon-badge, .feature-icon) {
+  .innov-process-rail .feature-card):hover :is(.icon-badge, .feature-icon) {
   color: var(--navy) !important;
   background: var(--gold) !important;
   border-color: var(--gold) !important;
   box-shadow: var(--brand-glow-blast) !important;
 }
 
-body[data-page="innovation"] :is(
-  .innov-core-card,
+body[data-page="innovation"] :is(.innov-core-card,
   .innov-key-pill,
-  .innov-process-rail .feature-card
-):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+  .innov-process-rail .feature-card):hover :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--navy) !important;
   stroke: var(--navy) !important;
 }
@@ -1614,36 +1495,28 @@ body[data-page="media"] {
     0 0 0 1px rgba(88, 124, 180, 0.32);
 }
 
-body[data-page="media"] :is(
-  .about-intro-header,
+body[data-page="media"] :is(.about-intro-header,
   .section-heading,
   .husk-heading,
-  .media-contact-band
-) h2,
-body[data-page="media"] :is(
-  .about-intro-header,
+  .media-contact-band) h2,
+body[data-page="media"] :is(.about-intro-header,
   .section-heading,
   .husk-heading,
-  .media-contact-band
-) h2 .type-serif {
+  .media-contact-band) h2 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="media"] :is(
-  .about-intro-header,
+body[data-page="media"] :is(.about-intro-header,
   .section-heading,
   .husk-heading,
-  .media-contact-band
-) h2 .type-brand {
+  .media-contact-band) h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="media"] :is(
-  .about-intro-lead,
+body[data-page="media"] :is(.about-intro-lead,
   .section-heading p,
   .husk-prose p,
-  .media-contact-lede
-) {
+  .media-contact-lede) {
   color: var(--brand-muted) !important;
 }
 
@@ -1662,13 +1535,11 @@ body[data-page="media"] .media-press-list {
   box-shadow: inset 0 1px 0 rgba(247, 238, 216, 0.08) !important;
 }
 
-body[data-page="media"] :is(
-  .media-feature-card,
+body[data-page="media"] :is(.media-feature-card,
   .media-press-item,
   .media-kit-item,
   .media-update-card,
-  .media-leadership-quote
-) {
+  .media-leadership-quote) {
   background: var(--media-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -1680,13 +1551,11 @@ body[data-page="media"] :is(
     background 420ms var(--ease-silk) !important;
 }
 
-body[data-page="media"] :is(
-  .media-feature-card,
+body[data-page="media"] :is(.media-feature-card,
   .media-press-item,
   .media-kit-item,
   .media-update-card,
-  .media-leadership-quote
-):hover {
+  .media-leadership-quote):hover {
   transform: translateY(-8px) !important;
   background: var(--media-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.55) !important;
@@ -1712,21 +1581,15 @@ body[data-page="media"] .media-contact-band .media-contact-card:hover {
   box-shadow: var(--brand-glow-ring), 0 22px 44px rgba(0, 0, 0, 0.38) !important;
 }
 
-body[data-page="media"] :is(
-  .media-feature-body h3,
-  .media-update-card h3
-),
-body[data-page="media"] :is(
-  .media-feature-body h3,
-  .media-update-card h3
-) .type-serif {
+body[data-page="media"] :is(.media-feature-body h3,
+  .media-update-card h3),
+body[data-page="media"] :is(.media-feature-body h3,
+  .media-update-card h3) .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="media"] :is(
-  .media-feature-body h3,
-  .media-update-card h3
-) .type-brand {
+body[data-page="media"] :is(.media-feature-body h3,
+  .media-update-card h3) .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
@@ -1777,11 +1640,9 @@ body[data-page="media"] .media-kit-dl {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="media"] :is(
-  .media-press-item,
+body[data-page="media"] :is(.media-press-item,
   .media-kit-item,
-  .media-update-card
-) :is(.icon-badge, .feature-icon) {
+  .media-update-card) :is(.icon-badge, .feature-icon) {
   background: linear-gradient(145deg,
       rgba(112, 156, 224, 0.42) 0%,
       rgba(52, 78, 140, 0.88) 100%) !important;
@@ -1791,11 +1652,9 @@ body[data-page="media"] :is(
     0 8px 22px rgba(0, 0, 0, 0.28) !important;
 }
 
-body[data-page="media"] :is(
-  .media-press-item,
+body[data-page="media"] :is(.media-press-item,
   .media-kit-item,
-  .media-update-card
-) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+  .media-update-card) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--brand-tertiary) !important;
   stroke: var(--brand-tertiary) !important;
 }
@@ -1863,17 +1722,13 @@ body[data-page="partner"] .partner-trust-band h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="partner"] :is(
-  .hero-lede,
-  .partner-hero-lede
-) {
+body[data-page="partner"] :is(.hero-lede,
+  .partner-hero-lede) {
   color: var(--brand-muted) !important;
 }
 
-body[data-page="partner"] :is(
-  .partner-category-card,
-  .partner-business-card
-) {
+body[data-page="partner"] :is(.partner-category-card,
+  .partner-business-card) {
   background: var(--partner-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -1916,10 +1771,8 @@ body[data-page="partner"] .partner-category-card.is-active .card-number {
   border-color: rgba(206, 160, 59, 0.62) !important;
 }
 
-body[data-page="partner"] :is(
-  .partner-category-card,
-  .partner-business-card
-) :is(.icon-badge, .feature-icon) {
+body[data-page="partner"] :is(.partner-category-card,
+  .partner-business-card) :is(.icon-badge, .feature-icon) {
   background: linear-gradient(145deg,
       rgba(112, 156, 224, 0.42) 0%,
       rgba(52, 78, 140, 0.88) 100%) !important;
@@ -1929,10 +1782,8 @@ body[data-page="partner"] :is(
     0 8px 22px rgba(0, 0, 0, 0.28) !important;
 }
 
-body[data-page="partner"] :is(
-  .partner-category-card,
-  .partner-business-card
-) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
+body[data-page="partner"] :is(.partner-category-card,
+  .partner-business-card) :is(.icon-badge, .feature-icon) :is(i, .lucide) {
   color: var(--brand-tertiary) !important;
   stroke: var(--brand-tertiary) !important;
 }
@@ -2063,35 +1914,27 @@ body[data-page="partner"] .partner-trust-band .scale-stats span {
 /* ==========================================================================
    Krug & Co Page Styles
    ========================================================================== */
-body[data-page="krug-co"] :is(
-  .hero-copy,
+body[data-page="krug-co"] :is(.hero-copy,
   .krug-about-content,
-  .section-heading
-) h2,
-body[data-page="krug-co"] :is(
-  .hero-copy,
+  .section-heading) h2,
+body[data-page="krug-co"] :is(.hero-copy,
   .krug-about-content,
-  .section-heading
-) h2 .type-serif,
+  .section-heading) h2 .type-serif,
 body[data-page="krug-co"] .krug-capabilities-band h2,
 body[data-page="krug-co"] .krug-capabilities-band h2 .type-serif {
   color: var(--brand-maize) !important;
 }
 
-body[data-page="krug-co"] :is(
-  .hero-copy,
+body[data-page="krug-co"] :is(.hero-copy,
   .krug-about-content,
-  .section-heading
-) h2 .type-brand,
+  .section-heading) h2 .type-brand,
 body[data-page="krug-co"] .krug-capabilities-band h2 .type-brand {
   color: var(--brand-tertiary) !important;
 }
 
-body[data-page="krug-co"] :is(
-  .krug-about-content p,
+body[data-page="krug-co"] :is(.krug-about-content p,
   .section-heading p,
-  .krug-capabilities-band p
-) {
+  .krug-capabilities-band p) {
   color: var(--brand-muted) !important;
 }
 
@@ -2105,9 +1948,7 @@ body[data-page="krug-co"] .hero-support {
 }
 
 /* Service Card visual theme mapping */
-body[data-page="krug-co"] :is(
-  .krug-service-card
-) {
+body[data-page="krug-co"] :is(.krug-service-card) {
   background: var(--krug-card-bg) !important;
   border: 1px solid rgba(88, 124, 180, 0.55) !important;
   border-top: 2px solid rgba(241, 191, 87, 0.55) !important;
@@ -2121,9 +1962,7 @@ body[data-page="krug-co"] :is(
     background 420ms var(--ease-silk) !important;
 }
 
-body[data-page="krug-co"] :is(
-  .krug-service-card
-):hover {
+body[data-page="krug-co"] :is(.krug-service-card):hover {
   transform: translateY(-8px) !important;
   background: var(--krug-card-hover-bg) !important;
   border-color: rgba(206, 160, 59, 0.55) !important;

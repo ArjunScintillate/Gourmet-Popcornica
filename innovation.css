@@ -810,6 +810,7 @@ body[data-page="innovation"] #contact .final-card>* {
 }
 
 @media (hover: none) {
+
   .innov-core-card:hover,
   .innov-eco-tile:hover,
   .innov-key-pill:hover {

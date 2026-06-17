@@ -59,32 +59,22 @@ body[data-page="home"] .site-header.is-nav-open {
 }
 
 body[data-page="home"] .primary-nav__links {
-  background:
-    linear-gradient(180deg, rgba(30, 45, 92, 0.55) 0%, rgba(12, 20, 51, 0.72) 100%);
-  border-color: rgba(48, 80, 128, 0.45);
-  box-shadow:
-    inset 0 1px 0 rgba(247, 238, 216, 0.08),
-    0 10px 28px rgba(0, 0, 0, 0.22);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 body[data-page="home"] .primary-nav__links a {
   color: var(--nav-link);
 }
 
-body[data-page="home"] .primary-nav__links a::before {
-  background: linear-gradient(135deg, rgba(206, 160, 59, 0.22), rgba(48, 80, 128, 0.12));
+body[data-page="home"] .primary-nav__links a:hover,
+body[data-page="home"] .primary-nav__links a:focus-visible {
+  color: var(--home-tertiary);
 }
 
-body[data-page="home"] .primary-nav__links a:hover,
-body[data-page="home"] .primary-nav__links a:focus-visible,
 body[data-page="home"] .primary-nav__links a.is-active {
   color: var(--home-tertiary);
-  text-shadow: 0 0 18px rgba(241, 191, 87, 0.28);
-}
-
-body[data-page="home"] .primary-nav__links a.is-active {
-  background: rgba(48, 80, 128, 0.28);
-  box-shadow: inset 0 0 0 1px rgba(206, 160, 59, 0.35);
 }
 
 body[data-page="home"] .header-cta {
@@ -641,12 +631,10 @@ body[data-page="home"] .hero-video-overlay {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(12, 20, 51, 0.75) 0%,
-    rgba(12, 20, 51, 0.6) 50%,
-    rgba(12, 20, 51, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(12, 20, 51, 0.75) 0%,
+      rgba(12, 20, 51, 0.6) 50%,
+      rgba(12, 20, 51, 0.8) 100%);
   pointer-events: none;
 }
 
@@ -805,6 +793,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.38;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
 }
+
 .cluster-solutions .bk-sol-b {
   right: -200px;
   bottom: -40px;
@@ -821,6 +810,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.36;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
 }
+
 .cluster-packs .bk-pack-b {
   left: -210px;
   bottom: -50px;
@@ -837,6 +827,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.34;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
 }
+
 .cluster-process .bk-proc-b {
   right: -220px;
   top: 8%;
@@ -853,6 +844,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.36;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
 }
+
 .cluster-farmer .bk-farm-b {
   right: -230px;
   bottom: -60px;
@@ -869,6 +861,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.34;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
 }
+
 .cluster-institutional .bk-inst-b {
   left: -240px;
   bottom: 8%;
@@ -885,6 +878,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.32;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
 }
+
 .cluster-innov .bk-innov-b {
   right: -200px;
   bottom: -30px;
@@ -901,6 +895,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.36;
   filter: drop-shadow(0 28px 44px rgba(12, 20, 51, 0.28)) blur(1.4px);
 }
+
 .cluster-india .bk-india-b {
   left: -210px;
   top: 12%;
@@ -917,6 +912,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.34;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
 }
+
 .cluster-founder .bk-found-b {
   right: -220px;
   top: 15%;
@@ -933,6 +929,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.28;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
 }
+
 .cluster-clients .bk-cli-b {
   left: -220px;
   bottom: -40px;
@@ -949,6 +946,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
   opacity: 0.26;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
 }
+
 .cluster-testimonials .bk-test-b {
   right: -230px;
   bottom: -60px;
@@ -994,6 +992,7 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
 
 /* ── Respect reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
+
   body[data-page="home"] .home-kernel,
   body[data-page="home"] .kernel-cluster .brand-kernel {
     animation: none !important;

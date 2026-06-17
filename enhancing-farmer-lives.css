@@ -375,7 +375,7 @@ body[data-page="farmer"] .hero-actions {
   line-height: 1.65;
 }
 
-.farmer-highlight-card > div {
+.farmer-highlight-card>div {
   max-width: 28rem;
 }
 
@@ -648,7 +648,7 @@ body[data-page="farmer"] .hero-actions {
   pointer-events: none;
 }
 
-.farmer-quote-card > * {
+.farmer-quote-card>* {
   position: relative;
   z-index: 1;
 }
@@ -717,7 +717,7 @@ body[data-page="farmer"] #contact .final-card::before {
   pointer-events: none;
 }
 
-body[data-page="farmer"] #contact .final-card > * {
+body[data-page="farmer"] #contact .final-card>* {
   position: relative;
   z-index: 1;
 }
@@ -751,7 +751,7 @@ body[data-page="farmer"] #contact .final-card > * {
   }
 
   .farmer-editorial-content,
-  .farmer-editorial-content > *,
+  .farmer-editorial-content>*,
   .farmer-narrative-layout .reliance-header,
   .farmer-quality-section .husk-heading {
     text-align: center;
@@ -788,6 +788,7 @@ body[data-page="farmer"] #contact .final-card > * {
 }
 
 @media (max-width: 768px) {
+
   body[data-page="farmer"] .home-kernel.home-kernel-1,
   body[data-page="farmer"] .home-kernel.home-kernel-2 {
     width: clamp(220px, 42vw, 320px);

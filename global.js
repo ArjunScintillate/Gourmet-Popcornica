@@ -2,16 +2,62 @@
 
 document.documentElement.classList.add("js");
 
+/* ── Lenis Smooth Scroll — Premium scrolling engine ── */
+const initLenis = () => {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (reduceMotion || typeof globalThis.Lenis === "undefined") return null;
+
+  const lenis = new Lenis({
+    lerp: 0.08,
+    duration: 1.4,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: "vertical",
+    gestureOrientation: "vertical",
+    smoothWheel: true,
+    wheelMultiplier: 0.9,
+    touchMultiplier: 1.6,
+    infinite: false,
+    autoResize: true,
+  });
+
+  /* Bridge Lenis → GSAP ScrollTrigger so scroll-driven
+     animations stay in perfect sync with interpolated scroll. */
+  if (typeof window.ScrollTrigger !== "undefined" && typeof window.gsap !== "undefined") {
+    lenis.on("scroll", window.ScrollTrigger.update);
+
+    window.gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    window.gsap.ticker.lagSmoothing(0);
+  } else {
+    /* Fallback — run Lenis off rAF */
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  /* Expose globally so page-specific scripts can use lenis.scrollTo() */
+  window.lenis = lenis;
+  return lenis;
+};
+
+const siteLenis = initLenis();
+
 const initPreloader = () => {
   const preloader = document.getElementById("site-preloader");
   const progressText = document.getElementById("preloader-progress");
   if (!preloader) return;
 
   document.body.classList.add("is-loading");
-  
+
   let progress = 0;
   let isLoaded = false;
-  
+
   // Fake progress animation
   const interval = setInterval(() => {
     if (progress < 90) {
@@ -25,9 +71,9 @@ const initPreloader = () => {
     if (isLoaded) return;
     isLoaded = true;
     clearInterval(interval);
-    
+
     if (progressText) progressText.textContent = '100%';
-    
+
     setTimeout(() => {
       preloader.classList.add("is-hidden");
       document.body.classList.remove("is-loading");
@@ -78,6 +124,11 @@ const initGlobalScripts = () => {
     navScrim?.setAttribute("aria-hidden", String(!open));
     document.documentElement.classList.toggle("no-scroll", open);
     document.body.classList.toggle("no-scroll", open);
+
+    /* Pause/resume Lenis so scroll doesn't bleed through nav overlay */
+    if (window.lenis) {
+      open ? window.lenis.stop() : window.lenis.start();
+    }
   };
 
   const closeMenu = () => {
@@ -325,9 +376,14 @@ const initGlobalScripts = () => {
     event.preventDefault();
 
     const headerOffset = 82;
-    const y =
-      target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
+
+    if (window.lenis) {
+      window.lenis.scrollTo(target, { offset: -headerOffset, duration: 1.6 });
+    } else {
+      const y =
+        target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   });
 };
 

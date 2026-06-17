@@ -423,7 +423,7 @@ body[data-page="krug-co"] #contact .final-card>* {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .krug-about-content,
   .krug-kiosks-content {
     padding-left: 0;
@@ -438,7 +438,7 @@ body[data-page="krug-co"] #contact .final-card>* {
   .krug-tins-grid {
     grid-template-columns: 1fr;
   }
-  
+
   body[data-page="krug-co"] .krug-kernel-3,
   body[data-page="krug-co"] .krug-kernel-4,
   body[data-page="krug-co"] .krug-kernel-5,
@@ -473,7 +473,7 @@ body[data-page="krug-co"] #contact .final-card>* {
     gap: 10px;
     padding: 16px;
   }
-  
+
   .expanded-flavor-tag {
     gap: 6px;
     padding: 8px 14px;
