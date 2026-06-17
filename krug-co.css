@@ -215,7 +215,19 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
 }
 
 .expanded-flavor-tag .flavor-emoji {
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.expanded-flavor-tag .flavor-emoji svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
 }
 
 /* Kiosks Section */
