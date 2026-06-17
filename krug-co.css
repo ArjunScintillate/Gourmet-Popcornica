@@ -19,114 +19,47 @@ body[data-page="krug-co"] {
 body[data-page="krug-co"] .hero {
   padding-top: var(--header-h);
   padding-bottom: 0;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  isolation: isolate;
+  position: relative;
+}
+
+body[data-page="krug-co"] .hero .shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
 body[data-page="krug-co"] .krug-hero-hook.section-heading {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-  width: 100%;
 }
 
-body[data-page="krug-co"] .krug-hero-hook .hero-lede,
-body[data-page="krug-co"] .krug-hero-hook .hero-support {
+body[data-page="krug-co"] .krug-hero-hook h1 {
+  max-width: 1200px;
   margin-inline: auto;
-  max-width: 720px;
-}
-
-body[data-page="krug-co"] .krug-hero-hook .hero-actions {
-  justify-content: center;
-}
-
-/* Premium placeholders styling */
-.placeholder-asset-frame {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px var(--card-pad);
-  width: 100%;
-  color: var(--gold-warm);
-  text-align: center;
-  border: 2px dashed rgba(206, 160, 59, 0.45);
-  border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(12, 20, 51, 0.6) 0%, rgba(30, 45, 92, 0.3) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), var(--shadow-soft);
-  transition:
-    transform 480ms var(--ease-silk),
-    box-shadow 480ms var(--ease-silk),
-    border-color 480ms var(--ease-silk),
-    background 480ms var(--ease-silk);
-  cursor: pointer;
-  min-height: 280px;
-}
-
-.placeholder-asset-frame:hover {
-  transform: scale(1.02) translateY(-4px);
-  border-color: var(--gold);
-  box-shadow: var(--krug-gold-glow), var(--shadow-card);
-  background: linear-gradient(135deg, rgba(12, 20, 51, 0.72) 0%, rgba(30, 45, 92, 0.45) 100%);
-}
-
-.placeholder-asset-frame .placeholder-icon-badge {
-  display: grid;
-  place-items: center;
-  width: 64px;
-  height: 64px;
   margin-bottom: 20px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, rgba(206, 160, 59, 0.15) 0%, rgba(206, 160, 59, 0.05) 100%);
-  border: 1px solid rgba(206, 160, 59, 0.3);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  color: var(--gold);
-  transition:
-    transform 420ms var(--ease-silk),
-    background 420ms var(--ease-silk);
+  font-size: clamp(36px, 4.8vw + 12px, 84px);
 }
 
-.placeholder-asset-frame:hover .placeholder-icon-badge {
-  transform: scale(1.1) rotate(6deg);
-  background: var(--gold);
-  color: var(--navy);
-  box-shadow: 0 0 15px rgba(206, 160, 59, 0.4);
-}
-
-.placeholder-asset-frame .placeholder-icon-badge i,
-.placeholder-asset-frame .placeholder-icon-badge svg {
-  width: 28px;
-  height: 28px;
-  stroke-width: 1.5px;
-}
-
-.placeholder-asset-frame .placeholder-title {
-  margin: 0 0 8px;
-  font-family: var(--font-serif-display);
+body[data-page="krug-co"] .krug-hero-hook .hero-lede {
+  max-width: 800px;
+  margin-inline: auto;
   font-size: var(--fs-lead);
-  font-weight: 500;
-  color: var(--ivory);
+  line-height: 1.6;
+  margin-bottom: 32px;
 }
 
-.placeholder-asset-frame .placeholder-meta {
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--beige-muted);
-  opacity: 0.85;
+body[data-page="krug-co"] .hero-actions {
+  justify-content: center;
 }
 
 
-
-.placeholder-asset-frame.inline-placeholder {
-  min-height: 360px;
-}
-
-.placeholder-asset-frame.wide-placeholder {
-  min-height: 340px;
-}
 
 /* About Section layouts */
 .krug-about-grid {
@@ -140,30 +73,194 @@ body[data-page="krug-co"] .krug-hero-hook .hero-actions {
   padding-left: clamp(20px, 3vw, 40px);
 }
 
-/* Service Card grid layout */
-.krug-services-grid {
+body[data-page="krug-co"] .krug-about-content.section-heading {
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+
+body[data-page="krug-co"] .krug-about-content.section-heading .heading-rule.align-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body[data-page="krug-co"] .krug-about-content.section-heading p {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body[data-page="krug-co"] .krug-about-content .editorial-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Product Showcase & Tins Layout */
+.krug-product-showcase {
+  margin-top: 32px;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.krug-lineup-img {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin-inline: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.krug-tins-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--grid-gap);
+  margin-top: 24px;
 }
 
-/* Capabilities section */
-.krug-capabilities-layout {
+.krug-tin-card {
+  background: var(--krug-card-bg);
+  border: 1px solid rgba(88, 124, 180, 0.4);
+  border-top: 2px solid rgba(241, 191, 87, 0.55);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--krug-card-shadow);
+  transition: transform 420ms var(--ease-silk), box-shadow 420ms var(--ease-silk), background 420ms var(--ease-silk);
+}
+
+.krug-tin-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--krug-card-hover-bg);
+  box-shadow: var(--krug-gold-glow), var(--shadow-card);
+}
+
+.krug-tin-card .tin-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(206, 160, 59, 0.12);
+  border: 1px solid rgba(206, 160, 59, 0.3);
+  color: var(--home-tertiary);
+  transition: transform 380ms var(--ease-silk);
+}
+
+.krug-tin-card:hover .tin-icon {
+  transform: scale(1.1) rotate(4deg);
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.krug-tin-card .tin-icon i,
+.krug-tin-card .tin-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.krug-tin-card h4 {
+  margin: 0 0 10px;
+  font-family: var(--font-serif-display);
+  font-size: 20px;
+  color: var(--home-maize);
+}
+
+.krug-tin-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--home-muted);
+  line-height: 1.5;
+}
+
+/* Expanded Flavors Tag Cloud */
+.krug-expanded-flavors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(12, 20, 51, 0.4);
+  border: 1px solid rgba(48, 80, 128, 0.28);
+  border-radius: var(--radius-xl);
+}
+
+.expanded-flavor-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(30, 45, 92, 0.65);
+  border: 1px solid rgba(88, 124, 180, 0.35);
+  border-radius: var(--radius-pill);
+  color: var(--home-maize);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 380ms var(--ease-silk);
+}
+
+.expanded-flavor-tag:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: rgba(48, 80, 128, 0.85);
+  border-color: var(--gold);
+  color: var(--home-tertiary);
+  box-shadow: 0 8px 20px rgba(206, 160, 59, 0.2);
+}
+
+.expanded-flavor-tag .flavor-emoji {
+  font-size: 18px;
+}
+
+/* Kiosks Section */
+.krug-kiosks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--grid-gap);
+  margin-top: 32px;
 }
 
-/* Gallery Grid */
-.krug-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--grid-gap);
+.krug-kiosk-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
 }
 
-.krug-gallery-grid .gallery-placeholder {
-  min-height: 250px;
+.krug-kiosks-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-left: clamp(20px, 3vw, 40px);
+}
+
+.krug-kiosk-feature h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-serif-display);
+  font-size: 24px;
+}
+
+.krug-kiosk-feature h3 .type-serif {
+  color: var(--home-maize);
+}
+
+.krug-kiosk-feature h3 .type-brand {
+  color: var(--home-tertiary);
+}
+
+.krug-kiosk-feature p {
+  margin: 0;
+  font-size: var(--fs-body);
+  color: var(--home-muted);
+  line-height: 1.6;
 }
 
 /* Floating kernels page positions */
@@ -176,60 +273,127 @@ body[data-page="krug-co"] .krug-kernel {
 body[data-page="krug-co"] .krug-kernel-1 {
   left: -5%;
   top: 15%;
-  width: clamp(100px, 12vw, 190px);
-  opacity: 0.65;
+  width: clamp(240px, 30vw, 420px);
+  opacity: 0.55;
   z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
   animation: floatKernel1 15s var(--ease-silk) infinite;
 }
 
 body[data-page="krug-co"] .krug-kernel-2 {
-  right: 2%;
+  right: -4%;
   top: 55%;
-  width: clamp(80px, 9vw, 140px);
-  opacity: 0.75;
+  width: clamp(200px, 26vw, 380px);
+  opacity: 0.50;
   z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
   animation: floatKernel2 18s var(--ease-silk) infinite;
 }
 
 body[data-page="krug-co"] .krug-kernel-3 {
   left: 35%;
   top: -8%;
-  width: clamp(90px, 10vw, 160px);
-  opacity: 0.5;
+  width: clamp(160px, 20vw, 320px);
+  opacity: 0.42;
   z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
   animation: floatKernel3 16s var(--ease-silk) infinite;
 }
 
 body[data-page="krug-co"] .krug-kernel-4 {
   right: -6%;
   top: 8%;
-  width: clamp(110px, 13vw, 210px);
-  opacity: 0.6;
+  width: clamp(180px, 22vw, 340px);
+  opacity: 0.48;
   z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
   animation: floatKernel4 14s var(--ease-silk) infinite;
+}
+
+/* Contact CTA layout constraints */
+body[data-page="krug-co"] #contact .final-card {
+  position: relative;
+  max-width: min(920px, 100%);
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 48px);
+  border-radius: clamp(24px, 4vw, 36px);
+  transition:
+    transform 480ms var(--ease-silk),
+    box-shadow 480ms var(--ease-silk),
+    border-color 480ms var(--ease-silk),
+    background 480ms var(--ease-silk);
+}
+
+body[data-page="krug-co"] #contact .final-card>* {
+  position: relative;
+  z-index: 1;
 }
 
 /* Media Breakpoints */
 @media (max-width: 1024px) {
+  body[data-page="krug-co"] .hero {
+    min-height: auto;
+    padding-top: clamp(96px, 14vw, 120px);
+    padding-bottom: clamp(44px, 7vw, 70px);
+  }
+
   .krug-about-grid,
-  .krug-capabilities-layout {
+  .krug-kiosks-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   
-  .krug-about-content {
+  .krug-about-content,
+  .krug-kiosks-content {
     padding-left: 0;
+  }
+
+  .krug-tins-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .krug-services-grid,
-  .krug-gallery-grid {
+  .krug-tins-grid {
     grid-template-columns: 1fr;
   }
   
   body[data-page="krug-co"] .krug-kernel-3,
   body[data-page="krug-co"] .krug-kernel-4 {
     display: none;
+  }
+
+  body[data-page="krug-co"] :is(.krug-about-content.section-heading, .krug-kiosks-content) {
+    text-align: center;
+  }
+
+  body[data-page="krug-co"] .krug-about-content.section-heading .heading-rule.align-left {
+    margin-inline: auto;
+  }
+
+  body[data-page="krug-co"] .krug-about-content.section-heading p {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  body[data-page="krug-co"] .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  body[data-page="krug-co"] .hero-actions .btn {
+    width: 100%;
+  }
+
+  .krug-expanded-flavors {
+    gap: 10px;
+    padding: 16px;
+  }
+  
+  .expanded-flavor-tag {
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
   }
 }

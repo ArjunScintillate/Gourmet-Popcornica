@@ -13,44 +13,11 @@ body[data-page="farmer"] .hero {
 
 body[data-page="farmer"] .hero::before,
 body[data-page="farmer"] .hero::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  border-radius: 50%;
-  filter: blur(44px);
-}
-
-body[data-page="farmer"] .hero::before {
-  left: -10%;
-  top: 16%;
-  width: 38vw;
-  height: 38vw;
-  background: radial-gradient(circle,
-      rgba(229, 184, 79, 0.24),
-      transparent 68%);
-}
-
-body[data-page="farmer"] .hero::after {
-  right: -12%;
-  bottom: -8%;
-  width: 44vw;
-  height: 44vw;
-  background: radial-gradient(circle, rgba(12, 20, 51, 0.08), transparent 70%);
+  content: none;
 }
 
 body[data-page="farmer"] .hero-glow {
-  position: absolute;
-  inset: auto;
-  z-index: 1;
-  left: 50%;
-  bottom: -10%;
-  width: 130%;
-  aspect-ratio: 16 / 10;
-  transform: translateX(-50%);
-  background: radial-gradient(circle at 50% 0%, rgba(12, 20, 51, 0.06), transparent 65%);
-  pointer-events: none;
-  opacity: 0.9;
+  display: none;
 }
 
 body[data-page="farmer"] .home-kernel {
@@ -158,28 +125,14 @@ body[data-page="farmer"] .hero-actions {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 .farmer-partnership-section {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 88% 16%,
-      rgba(229, 184, 79, 0.1),
-      transparent 38%),
-    linear-gradient(180deg, #e8e1d6 0%, #e2d9cc 48%, #ddd4c6 100%);
-  box-shadow:
-    inset 0 28px 40px -28px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: transparent;
 }
 
 .farmer-matter-section {
@@ -230,10 +183,6 @@ body[data-page="farmer"] .hero-actions {
   display: grid;
   align-items: center;
   color: #f7f3ec;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
   box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
   overflow: hidden;
   isolation: isolate;
@@ -243,14 +192,7 @@ body[data-page="farmer"] .hero-actions {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 50% 0%,
-      rgba(229, 184, 79, 0.12),
-      transparent 46%),
-    linear-gradient(180deg, #e9e2da 0%, #e3dcd3 55%, #ded6cc 100%);
-  box-shadow:
-    inset 0 30px 42px -28px rgba(12, 20, 51, 0.055),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.28);
+  background: transparent;
 }
 
 .farmer-quality-section {
@@ -263,28 +205,14 @@ body[data-page="farmer"] .hero-actions {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 .farmer-india-section {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 88% 16%,
-      rgba(229, 184, 79, 0.1),
-      transparent 38%),
-    linear-gradient(180deg, #e8e1d6 0%, #e2d9cc 48%, #ddd4c6 100%);
-  box-shadow:
-    inset 0 28px 40px -28px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: transparent;
 }
 
 .farmer-process-section {
@@ -297,27 +225,14 @@ body[data-page="farmer"] .hero-actions {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 12% 18%,
-      rgba(229, 184, 79, 0.34),
-      transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+  background: transparent;
 }
 
 .farmer-closing-section {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 /* Farmer partnership visual frame - exactly like pouch-frame */
@@ -334,50 +249,7 @@ body[data-page="farmer"] .hero-actions {
   place-items: center;
 }
 
-.farmer-image-frame {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1.1;
-  padding: 16px;
-  background:
-    linear-gradient(145deg,
-      rgba(12, 20, 51, 0.96) 0%,
-      rgba(12, 20, 51, 0.88) 42%,
-      rgba(7, 13, 34, 0.82) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: clamp(24px, 3.5vw, 32px);
-  box-shadow:
-    0 30px 60px rgba(12, 20, 51, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-  transition:
-    transform 420ms var(--ease-silk),
-    box-shadow 420ms var(--ease-silk);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
-}
 
-.farmer-image-frame img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: clamp(12px, 2vw, 18px);
-  transition: transform 520ms var(--ease-silk);
-}
-
-.farmer-image-frame:hover img {
-  transform: scale(1.04);
-}
-
-.farmer-image-frame:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 40px 80px rgba(12, 20, 51, 0.45);
-}
 
 .farmer-frame-tag {
   position: absolute;
@@ -513,18 +385,6 @@ body[data-page="farmer"] .hero-actions {
   min-height: clamp(240px, 30vw, 320px);
   display: grid;
   align-items: center;
-  background:
-    radial-gradient(circle at 2% 100%,
-      rgba(229, 184, 79, 0.28),
-      transparent 18rem),
-    radial-gradient(circle at 98% 98%,
-      rgba(229, 184, 79, 0.25),
-      transparent 18rem),
-    linear-gradient(to bottom,
-      rgba(12, 20, 51, 0) 0%,
-      rgba(12, 20, 51, 0.72) 15%),
-    linear-gradient(to top, rgba(12, 20, 51, 0) 0%, rgba(12, 20, 51, 0.9) 15%),
-    linear-gradient(rgba(12, 20, 51, 0.72), rgba(12, 20, 51, 0.9)), #0c1433;
   overflow: hidden;
 }
 
@@ -826,11 +686,7 @@ body[data-page="farmer"] .hero-actions {
 
 /* Final CTA - modernized like solutions */
 body[data-page="farmer"] #contact.final-cta {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+  background: transparent;
 }
 
 body[data-page="farmer"] #contact .final-card {
@@ -1154,51 +1010,7 @@ body[data-page="farmer"] #contact .final-card > * {
   pointer-events: none;
 }
 
-/* Fix husk frame styling - exactly like pouch-frame */
-.farmer-quality-section .husk-frame {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1.1;
-  padding: 16px;
-  margin-inline: auto;
-  background:
-    linear-gradient(145deg,
-      rgba(12, 20, 51, 0.96) 0%,
-      rgba(12, 20, 51, 0.88) 42%,
-      rgba(7, 13, 34, 0.82) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: clamp(24px, 3.5vw, 32px);
-  box-shadow:
-    0 30px 60px rgba(12, 20, 51, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-  transition:
-    transform 420ms var(--ease-silk),
-    box-shadow 420ms var(--ease-silk);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.farmer-quality-section .husk-portrait {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: clamp(12px, 2vw, 18px);
-  transition: transform 520ms var(--ease-silk);
-}
-
-.farmer-quality-section .husk-frame:hover .husk-portrait {
-  transform: scale(1.04);
-}
-
-.farmer-quality-section .husk-frame:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 40px 80px rgba(12, 20, 51, 0.45);
-}
 
 .farmer-quality-section .husk-label-tag {
   position: absolute;

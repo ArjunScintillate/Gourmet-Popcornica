@@ -9,39 +9,12 @@ body[data-page="innovation"] .hero {
   align-items: center;
   overflow: hidden;
   position: relative;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.16),
-      transparent 40%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 60%, #ebe4d8 100%);
+  background: transparent;
 }
 
 body[data-page="innovation"] .hero::before,
 body[data-page="innovation"] .hero::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  border-radius: 50%;
-  filter: blur(48px);
-}
-
-body[data-page="innovation"] .hero::before {
-  left: -8%;
-  top: 18%;
-  width: 40vw;
-  height: 40vw;
-  background: radial-gradient(circle,
-      rgba(229, 184, 79, 0.3),
-      transparent 70%);
-}
-
-body[data-page="innovation"] .hero::after {
-  right: -12%;
-  bottom: -8%;
-  width: 44vw;
-  height: 44vw;
-  background: radial-gradient(circle, rgba(12, 20, 51, 0.12), transparent 72%);
+  content: none;
 }
 
 body[data-page="innovation"] .home-kernel {
@@ -135,30 +108,7 @@ body[data-page="innovation"] .hero-actions {
 
 body[data-page="innovation"] .hero::before,
 body[data-page="innovation"] .hero::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  border-radius: 50%;
-  filter: blur(48px);
-}
-
-body[data-page="innovation"] .hero::before {
-  left: -10%;
-  top: 10%;
-  width: 44vw;
-  height: 44vw;
-  background: radial-gradient(circle,
-      rgba(229, 184, 79, 0.28),
-      transparent 72%);
-}
-
-body[data-page="innovation"] .hero::after {
-  right: -12%;
-  bottom: -10%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, rgba(12, 20, 51, 0.12), transparent 76%);
+  content: none;
 }
 
 body[data-page="innovation"] .hero .shell {
@@ -207,14 +157,7 @@ body[data-page="innovation"] .hero-actions {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #e8e1d6 0%, #e2d9cc 48%, #ddd4c6 100%);
-  box-shadow:
-    inset 0 28px 40px -28px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: transparent;
 }
 
 /* Core innovation section */
@@ -234,14 +177,7 @@ body[data-page="innovation"] #contact.final-cta {
 }
 
 .innov-core-section {
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 .innov-core-grid {
@@ -403,25 +339,11 @@ body[data-page="innovation"] #contact.final-cta {
 }
 
 .innov-split-section {
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 .innov-quality-wrap {
-  background:
-    radial-gradient(circle at 88% 16%,
-      rgba(229, 184, 79, 0.1),
-      transparent 38%),
-    linear-gradient(180deg, #e8e1d6 0%, #e2d9cc 48%, #ddd4c6 100%);
-  box-shadow:
-    inset 0 28px 40px -28px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: transparent;
 }
 
 .innov-split-grid {
@@ -445,50 +367,7 @@ body[data-page="innovation"] #contact.final-cta {
   place-items: center;
 }
 
-.innov-visual-frame {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1.1;
-  padding: 16px;
-  margin-inline: auto;
-  background:
-    linear-gradient(145deg,
-      rgba(12, 20, 51, 0.96) 0%,
-      rgba(12, 20, 51, 0.88) 42%,
-      rgba(7, 13, 34, 0.82) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: clamp(24px, 3.5vw, 32px);
-  box-shadow:
-    0 30px 60px rgba(12, 20, 51, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-  transition:
-    transform 420ms var(--ease-silk),
-    box-shadow 420ms var(--ease-silk);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.innov-visual-frame img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: clamp(12px, 2vw, 18px);
-  transition: transform 520ms var(--ease-silk);
-}
-
-.innov-visual-frame:hover img {
-  transform: scale(1.04);
-}
-
-.innov-visual-frame:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 40px 80px rgba(12, 20, 51, 0.45);
-}
 
 .innov-split-copy h2 {
   margin: 10px 0 16px;
@@ -526,18 +405,7 @@ body[data-page="innovation"] #contact.final-cta {
   min-height: clamp(240px, 30vw, 320px);
   display: grid;
   align-items: center;
-  background:
-    radial-gradient(circle at 2% 100%,
-      rgba(229, 184, 79, 0.28),
-      transparent 18rem),
-    radial-gradient(circle at 98% 98%,
-      rgba(229, 184, 79, 0.25),
-      transparent 18rem),
-    linear-gradient(to bottom,
-      rgba(12, 20, 51, 0) 0%,
-      rgba(12, 20, 51, 0.72) 15%),
-    linear-gradient(to top, rgba(12, 20, 51, 0) 0%, rgba(12, 20, 51, 0.9) 15%),
-    linear-gradient(rgba(12, 20, 51, 0.72), rgba(12, 20, 51, 0.9)), #0c1433;
+  background: #0c1433;
   overflow: hidden;
 }
 
@@ -587,24 +455,13 @@ body[data-page="innovation"] #contact.final-cta {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 /* Ecosystem grid section */
 .innov-visual-section {
   position: relative;
-  background:
-    radial-gradient(circle at 12% 20%,
-      rgba(229, 184, 79, 0.12),
-      transparent 40%),
-    linear-gradient(180deg, #0c1433 0%, #070d22 100%);
+  background: #0c1433;
   color: #f7f3ec;
   overflow: hidden;
   isolation: isolate;
@@ -649,66 +506,6 @@ body[data-page="innovation"] #contact.final-cta {
     box-shadow 420ms var(--ease-silk);
 }
 
-.innov-eco-tile:nth-child(1) {
-  background:
-    radial-gradient(circle at 30% 20%,
-      rgba(229, 184, 79, 0.18),
-      transparent 45%),
-    linear-gradient(180deg,
-      #ffffff,
-      #f9f3e7);
-}
-
-.innov-eco-tile:nth-child(2) {
-  background:
-    radial-gradient(circle at 70% 80%,
-      rgba(229, 184, 79, 0.15),
-      transparent 45%),
-    linear-gradient(180deg,
-      #fdfbf5,
-      #f5efe2);
-}
-
-.innov-eco-tile:nth-child(3) {
-  background:
-    radial-gradient(circle at 20% 70%,
-      rgba(229, 184, 79, 0.16),
-      transparent 45%),
-    linear-gradient(180deg,
-      #ffffff,
-      #f8f2e4);
-}
-
-.innov-eco-tile:nth-child(4) {
-  background:
-    radial-gradient(circle at 80% 30%,
-      rgba(229, 184, 79, 0.16),
-      transparent 45%),
-    linear-gradient(180deg,
-      #fdfaf3,
-      #f3ede0);
-}
-
-.innov-eco-tile:nth-child(5) {
-  background:
-    radial-gradient(circle at 40% 60%,
-      rgba(229, 184, 79, 0.15),
-      transparent 45%),
-    linear-gradient(180deg,
-      #ffffff,
-      #f7f1e5);
-}
-
-.innov-eco-tile:nth-child(6) {
-  background:
-    radial-gradient(circle at 60% 40%,
-      rgba(229, 184, 79, 0.18),
-      transparent 45%),
-    linear-gradient(180deg,
-      #fdfbf5,
-      #f4eee1);
-}
-
 .innov-eco-tile h3 {
   color: var(--brown) !important;
 }
@@ -748,14 +545,7 @@ body[data-page="innovation"] .innov-eco-tile i {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 /* Kernels positioning */
@@ -905,11 +695,7 @@ body[data-page="innovation"] .innov-eco-tile i {
 
 /* Final CTA - modernized */
 body[data-page="innovation"] #contact.final-cta {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+  background: transparent;
 }
 
 body[data-page="innovation"] #contact .final-card {

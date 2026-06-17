@@ -9,10 +9,10 @@ const initKrugCoScripts = () => {
   const hasScrollTrigger = typeof window.ScrollTrigger !== "undefined";
 
   if (hasGsap && hasScrollTrigger) {
-    // Services Cards stagger animation
-    if (document.querySelector(".krug-services-grid")) {
+    // Tins Cards stagger animation
+    if (document.querySelector(".krug-tins-grid")) {
       window.gsap.fromTo(
-        ".krug-service-card",
+        ".krug-tin-card",
         { y: 30, opacity: 0 },
         {
           y: 0,
@@ -21,7 +21,7 @@ const initKrugCoScripts = () => {
           stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ".krug-services-grid",
+            trigger: ".krug-tins-grid",
             start: "top 85%",
             once: true,
           },
@@ -29,40 +29,40 @@ const initKrugCoScripts = () => {
       );
     }
 
-    // Scale stats stagger animation in capabilities section
-    if (document.querySelector(".krug-capabilities-band")) {
+    // Expanded flavors tag cloud stagger
+    if (document.querySelector(".krug-expanded-flavors")) {
       window.gsap.fromTo(
-        ".krug-capabilities-band .scale-stats article",
-        { y: 30, opacity: 0 },
+        ".expanded-flavor-tag",
+        { scale: 0.85, opacity: 0 },
         {
-          y: 0,
+          scale: 1,
           opacity: 1,
-          duration: 0.75 * motionScale,
-          stagger: 0.08,
-          ease: "power2.out",
+          duration: 0.6 * motionScale,
+          stagger: 0.05,
+          ease: "back.out(1.7)",
           scrollTrigger: {
-            trigger: ".krug-capabilities-band",
-            start: "top 85%",
+            trigger: ".krug-expanded-flavors",
+            start: "top 90%",
             once: true,
           },
         },
       );
     }
 
-    // Gallery placeholders stagger animation
-    if (document.querySelector(".krug-gallery-grid")) {
+    // Kiosks features animation
+    if (document.querySelector(".krug-kiosks-grid")) {
       window.gsap.fromTo(
-        ".krug-gallery-grid .gallery-placeholder",
-        { y: 30, opacity: 0 },
+        ".krug-kiosk-feature",
+        { x: 30, opacity: 0 },
         {
-          y: 0,
+          x: 0,
           opacity: 1,
-          duration: 0.8 * motionScale,
-          stagger: 0.1,
+          duration: 0.85 * motionScale,
+          stagger: 0.12,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: ".krug-gallery-grid",
-            start: "top 85%",
+            trigger: ".krug-kiosks-grid",
+            start: "top 80%",
             once: true,
           },
         },

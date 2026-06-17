@@ -186,7 +186,7 @@ const initGlobalScripts = () => {
       );
 
       window.gsap.fromTo(
-        ".feature-card, .process-step, .product-card, .story-panel, .commitment-cards article, .intro-card, .ecosystem-feature, .reliability-card-bespoke, .industry-card, .pouch-frame, .metric-pill, .scale-stats article, .solution-highlights-editorial li, .innov-core-card, .innov-key-pill, .innov-eco-tile, .innov-visual-frame",
+        ".feature-card, .process-step, .product-card, .story-panel, .commitment-cards article, .intro-card, .ecosystem-feature, .reliability-card-bespoke, .industry-card, .pouch-frame, .metric-pill, .scale-stats article, .solution-highlights-editorial li, .innov-core-card, .innov-key-pill, .innov-eco-tile, .innov-visual-frame, .testimonial-card",
         { y: 26, opacity: 0 },
         {
           y: 0,
@@ -238,7 +238,7 @@ const initGlobalScripts = () => {
 
         if (!isTouch) {
           window.gsap.utils
-            .toArray(".feature-card, .product-card, .story-panel, .final-card, .reliability-card-bespoke, .industry-card, .pouch-frame, .intro-card, .ecosystem-feature, .leadership-card, .journey-card, .metric-pill, .scale-stats article, .solution-highlights-editorial li, .process-step, .farmer-highlight-card, .farmer-prose-card, .farmer-quote-card, .innov-core-card, .innov-key-pill, .innov-eco-tile, .innov-visual-frame")
+            .toArray(".feature-card, .product-card, .story-panel, .final-card, .reliability-card-bespoke, .industry-card, .pouch-frame, .intro-card, .ecosystem-feature, .leadership-card, .journey-card, .metric-pill, .scale-stats article, .solution-highlights-editorial li, .process-step, .farmer-highlight-card, .farmer-prose-card, .farmer-quote-card, .innov-core-card, .innov-key-pill, .innov-eco-tile, .innov-visual-frame, .testimonial-card")
             .forEach((card) => {
               card.addEventListener("pointermove", (event) => {
                 if (event.pointerType === "touch") return;
@@ -268,29 +268,7 @@ const initGlobalScripts = () => {
             });
         }
 
-        // Husk Section Specific Interactions
-        if (document.querySelector(".husk-legacy-section")) {
-          window.gsap.to(".husk-portrait", {
-            scale: 1.1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".husk-legacy-section",
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
 
-          window.gsap.to(".husk-frame", {
-            rotate: 0,
-            scrollTrigger: {
-              trigger: ".husk-legacy-section",
-              start: "top 80%",
-              end: "top 20%",
-              scrub: 1,
-            },
-          });
-        }
 
         // About Intro Section Specific Interactions
         if (document.querySelector(".about-intro-section")) {

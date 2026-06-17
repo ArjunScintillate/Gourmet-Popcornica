@@ -13,44 +13,11 @@ body[data-page="solutions"] .hero {
 
 body[data-page="solutions"] .hero::before,
 body[data-page="solutions"] .hero::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  border-radius: 50%;
-  filter: blur(48px);
-}
-
-body[data-page="solutions"] .hero::before {
-  left: -8%;
-  top: 18%;
-  width: 36vw;
-  height: 36vw;
-  background: radial-gradient(circle,
-      rgba(229, 184, 79, 0.26),
-      transparent 68%);
-}
-
-body[data-page="solutions"] .hero::after {
-  right: -8%;
-  bottom: 8%;
-  width: 28vw;
-  height: 28vw;
-  background: radial-gradient(circle, rgba(12, 20, 51, 0.14), transparent 70%);
+  content: none;
 }
 
 body[data-page="solutions"] .hero-glow {
-  position: absolute;
-  inset: auto;
-  z-index: 1;
-  left: 50%;
-  bottom: -10%;
-  width: 130%;
-  aspect-ratio: 16 / 10;
-  transform: translateX(-50%);
-  background: radial-gradient(circle at 50% 0%, rgba(12, 20, 51, 0.06), transparent 65%);
-  pointer-events: none;
-  opacity: 0.9;
+  display: none;
 }
 
 body[data-page="solutions"] .home-kernel {
@@ -161,25 +128,11 @@ body[data-page="solutions"] .hero-actions {
 }
 
 .solution-editorial:nth-child(odd) {
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.12),
-      transparent 38%),
-    linear-gradient(180deg, #faf7f0 0%, #f3efe8 52%, #ebe4d8 100%);
-  box-shadow:
-    inset 0 36px 48px -36px rgba(12, 20, 51, 0.07),
-    inset 0 -1px 0 rgba(206, 160, 59, 0.12);
+  background: transparent;
 }
 
 .solution-editorial:nth-child(even) {
-  background:
-    radial-gradient(circle at 88% 16%,
-      rgba(229, 184, 79, 0.1),
-      transparent 38%),
-    linear-gradient(180deg, #e8e1d6 0%, #e2d9cc 48%, #ddd4c6 100%);
-  box-shadow:
-    inset 0 28px 40px -28px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  background: transparent;
 }
 
 .editorial-grid {
@@ -203,60 +156,7 @@ body[data-page="solutions"] .hero-actions {
   place-items: center;
 }
 
-.pouch-frame {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1.1;
-  padding: 16px;
-  background:
-    linear-gradient(145deg,
-      rgba(12, 20, 51, 0.96) 0%,
-      rgba(12, 20, 51, 0.88) 42%,
-      rgba(7, 13, 34, 0.82) 100%);
-  border: 1px solid rgba(229, 184, 79, 0.4);
-  border-radius: clamp(24px, 3.5vw, 32px);
-  box-shadow:
-    0 30px 60px rgba(12, 20, 51, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-  transition:
-    transform 420ms var(--ease-silk),
-    box-shadow 420ms var(--ease-silk);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
-}
 
-.pouch-frame::before {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(229, 184, 79, 0.2);
-  border-radius: clamp(18px, 2.8vw, 24px);
-  pointer-events: none;
-  z-index: 3;
-}
-
-.pouch-img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: clamp(12px, 2vw, 18px);
-  transition: transform 520ms var(--ease-silk);
-}
-
-.pouch-frame:hover .pouch-img {
-  transform: scale(1.04);
-}
-
-.pouch-frame:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 40px 80px rgba(12, 20, 51, 0.45);
-}
 
 .editorial-content {
   position: relative;
@@ -454,11 +354,7 @@ body[data-page="solutions"] .solutions-scale-band {
   display: grid;
   align-items: center;
   color: #f7f3ec;
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+  background: var(--ivory);
   overflow: hidden;
   isolation: isolate;
 }
@@ -544,13 +440,7 @@ body[data-page="solutions"] .solutions-scale-band .scale-stats span {
 
 /* Structured Approach section - modernized */
 body[data-page="solutions"] #process {
-  background:
-    radial-gradient(ellipse 80% 60% at 75% 0%, rgba(12, 20, 51, 0.045), transparent 50%),
-    radial-gradient(circle at 12% 88%, rgba(229, 184, 79, 0.06), transparent 45%),
-    linear-gradient(180deg, #f5f6fa 0%, #eef1f7 38%, #f6f4ef 100%);
-  box-shadow:
-    inset 0 32px 44px -32px rgba(12, 20, 51, 0.055),
-    inset 0 -1px 0 rgba(12, 20, 51, 0.06);
+  background: transparent;
 }
 
 body[data-page="solutions"] #process .feature-rail {
@@ -654,13 +544,7 @@ body[data-page="solutions"] #process .feature-card:nth-child(even):hover {
 
 /* Solutions industries section - modernized */
 body[data-page="solutions"] .solutions-industries {
-  background:
-    linear-gradient(185deg, rgba(229, 184, 79, 0.07) 0%, transparent 26%),
-    radial-gradient(circle at 80% 10%, rgba(12, 20, 51, 0.035), transparent 45%),
-    linear-gradient(180deg, #f0ecf7 0%, #e9edf5 55%, #f4f0ea 100%);
-  box-shadow:
-    inset 0 34px 48px -32px rgba(12, 20, 51, 0.06),
-    inset 0 -1px 0 rgba(12, 20, 51, 0.05);
+  background: transparent;
 }
 
 .industry-grid {
@@ -681,11 +565,6 @@ body[data-page="solutions"] .solutions-industries {
   align-content: center;
   gap: 14px;
   min-height: clamp(168px, 20vw, 198px);
-  background:
-    radial-gradient(circle at 18% 16%,
-      rgba(229, 184, 79, 0.22),
-      transparent 38%),
-    linear-gradient(180deg, var(--paper-strong) 0%, var(--ivory) 100%);
   padding: clamp(22px, 2.6vw, 30px) clamp(20px, 2.8vw, 28px) clamp(20px, 2.6vw, 26px);
   border-radius: clamp(18px, 2.4vw, 26px);
   text-align: center;
@@ -745,7 +624,6 @@ body[data-page="solutions"] .solutions-industries {
   color: var(--ink);
   padding: clamp(10px, 1.4vw, 14px);
   border-radius: 50%;
-  background: radial-gradient(circle at 28% 28%, #f7f3ec, #e5b84f);
   border: 1px solid rgba(206, 160, 59, 0.42);
   box-shadow: 0 10px 30px rgba(12, 20, 51, 0.08);
   transition:
@@ -767,23 +645,12 @@ body[data-page="solutions"] .solutions-industries {
 
 /* Built for Long-Term Partnerships section - modernized */
 body[data-page="solutions"] #partnerships {
-  background:
-    radial-gradient(circle at 50% 0%,
-      rgba(229, 184, 79, 0.12),
-      transparent 46%),
-    linear-gradient(180deg, #e9e2da 0%, #e3dcd3 55%, #ded6cc 100%);
-  box-shadow:
-    inset 0 30px 42px -28px rgba(12, 20, 51, 0.055),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.28);
+  background: transparent;
 }
 
 /* Final CTA - modernized */
 body[data-page="solutions"] #contact.final-cta {
-  background:
-    radial-gradient(circle at 12% 18%, rgba(229, 184, 79, 0.34), transparent 44%),
-    radial-gradient(circle at 88% 85%, rgba(12, 20, 51, 0.12), transparent 46%),
-    linear-gradient(180deg, #ebe6df 0%, #f4efe8 38%, #f7f3ec 100%);
-  box-shadow: inset 0 32px 48px -28px rgba(12, 20, 51, 0.06);
+  background: transparent;
 }
 
 body[data-page="solutions"] #contact .final-card {
