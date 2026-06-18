@@ -69,6 +69,11 @@ body[data-page="krug-co"] .hero-actions {
   gap: var(--grid-gap);
 }
 
+/* Portrait aspect ratio for the Krug & Co poster in the brand story section */
+.krug-about-visual .krug-image-frame {
+  aspect-ratio: 0.68;
+}
+
 .krug-about-content {
   padding-left: clamp(20px, 3vw, 40px);
 }
@@ -102,6 +107,12 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
   width: 100%;
   max-width: 1000px;
   margin-inline: auto;
+}
+
+/* Enlarge the product showcase frame for hero packshot presentation */
+.krug-product-showcase .krug-image-frame {
+  max-width: 560px;
+  aspect-ratio: 0.72;
 }
 
 .krug-lineup-img {
@@ -237,6 +248,11 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
   align-items: center;
   gap: var(--grid-gap);
   margin-top: 32px;
+}
+
+/* Portrait aspect ratio for the Krug & Co branded box packshot */
+.krug-kiosks-visual .krug-image-frame {
+  aspect-ratio: 0.78;
 }
 
 .krug-kiosk-img {

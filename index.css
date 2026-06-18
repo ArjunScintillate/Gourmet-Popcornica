@@ -1927,6 +1927,93 @@ body[data-page="home"] .founder-header h2 {
     z-index: 41;
   }
 
+  /* ── MOBILE HERO RESTRUCTURE ──
+     On mobile, the hero is a true full-screen section containing ONLY
+     headline, description, and CTA buttons. The bucket image is hidden.
+     The metric strip is pulled below the hero viewport boundary via
+     absolute positioning, appearing as its own dedicated section.
+     The hero's overflow:visible + margin-bottom make space for it. */
+
+  /* 1. Hero container: fixed 100dvh, overflow-visible for stats overflow */
+  body[data-page="home"] .hero {
+    height: 100dvh;
+    height: 100svh; /* fallback for browsers without dvh */
+    min-height: 0;
+    max-height: 100dvh;
+    overflow: visible;
+    position: relative;
+    padding-top: var(--header-h);
+    padding-bottom: 0;
+    /* Space below hero for the metric strip that overflows.
+       3-col × 2 rows ≈ 280px at 1024px. Adjusted at smaller breakpoints. */
+    margin-bottom: clamp(240px, 32vw, 300px);
+  }
+
+  /* 2. Hero grid: only center the text content, ignore art + metrics */
+  body[data-page="home"] .hero .shell.hero-grid {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    min-height: 0;
+    height: 100%;
+  }
+
+  /* 3. Hero copy: vertically centered, well-spaced */
+  body[data-page="home"] .hero .hero-copy {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(16px, 3vh, 32px) 0;
+    max-width: 600px;
+  }
+
+  /* 4. Hide the bucket image entirely on mobile */
+  body[data-page="home"] .hero .hero-art {
+    display: none !important;
+  }
+
+  /* 5. Metric strip: positioned just below the hero viewport,
+        creating its own visual "section" below the hero */
+  body[data-page="home"] .hero .metric-strip {
+    position: absolute;
+    top: 100%; /* sits right below the 100dvh hero */
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 10;
+    width: 100%;
+    padding: clamp(24px, 4vw, 40px) var(--shell-pad);
+    margin: 0;
+    /* Dark surface to visually separate from hero */
+    background: linear-gradient(180deg,
+        rgba(12, 20, 51, 0.98) 0%,
+        #0c1433 100%);
+  }
+
+  body[data-page="home"] .hero .metric-strip .metric-pill {
+    min-height: 0;
+  }
+
+  /* 6. Video background: lock to 100dvh so it covers the hero perfectly */
+  body[data-page="home"] .hero-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    height: 100svh; /* fallback */
+  }
+
+  body[data-page="home"] .hero-video-overlay {
+    height: 100dvh;
+    height: 100svh;
+  }
+
   .metric-strip {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1961,10 +2048,6 @@ body[data-page="home"] .founder-header h2 {
   body[data-page="home"] #process .process-step:nth-child(even) {
     transform: none;
   }
-
-  body[data-page="home"] .bucket {
-    width: min(420px, 85%);
-  }
 }
 
 /* Large mobile / small tablet */
@@ -1972,6 +2055,16 @@ body[data-page="home"] .founder-header h2 {
   .metric-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 24px;
+  }
+
+  /* Mobile hero: metric strip goes 2-col, taller overflow area needed */
+  body[data-page="home"] .hero .metric-strip {
+    margin-top: 0;
+  }
+
+  /* 2-col × 3 rows ≈ 400px: increase overflow space */
+  body[data-page="home"] .hero {
+    margin-bottom: clamp(360px, 50vw, 440px);
   }
 
   .story-grid {
@@ -2027,8 +2120,6 @@ body[data-page="home"] .founder-header h2 {
   .story-panel>* {
     margin-inline: auto;
   }
-
-
 }
 
 /* Mobile */
@@ -2038,7 +2129,15 @@ body[data-page="home"] .founder-header h2 {
     margin-top: 32px;
   }
 
-  /* (Handled by 768px query) */
+  /* Mobile hero: metric strip goes single-column on small phones */
+  body[data-page="home"] .hero .metric-strip {
+    margin-top: 0;
+  }
+
+  /* 1-col × 5 rows ≈ 560px: maximum overflow space */
+  body[data-page="home"] .hero {
+    margin-bottom: clamp(520px, 85vw, 620px);
+  }
 
   .process-line {
     grid-template-columns: 1fr;
@@ -2055,8 +2154,6 @@ body[data-page="home"] .founder-header h2 {
     padding-inline: clamp(16px, 6vw, 36px);
   }
 
-
-
   body[data-page="home"] #farmer-ecosystem .husk-prose .intro-card {
     grid-template-columns: 1fr;
     justify-items: start;
@@ -2064,10 +2161,6 @@ body[data-page="home"] .founder-header h2 {
 
   body[data-page="home"] #farmer-ecosystem .husk-prose .intro-card .feature-icon {
     justify-self: start;
-  }
-
-  body[data-page="home"] .bucket {
-    width: min(300px, 80%);
   }
 }
 
