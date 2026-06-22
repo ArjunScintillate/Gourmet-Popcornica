@@ -89,18 +89,73 @@ const initIndexScripts = () => {
     const homepageContent = document.getElementById("homepage-content");
     if (!overlay || !container) return;
 
-    // Preload & Autoplay the YouTube iframe immediately
+    // Preload & Autoplay the local video immediately
     container.innerHTML = `
-      <iframe
-        src="https://www.youtube.com/embed/5ZYw6NsFQTw?autoplay=1&amp;mute=1&amp;loop=0&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0&amp;playsinline=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media"></iframe>
+      <video src="assets/home-video.mp4" autoplay muted playsinline></video>
     `;
+
+    // Create Brand Reveal overlay elements
+    const revealWrapper = document.createElement("div");
+    revealWrapper.className = "intro-brand-reveal-wrapper";
+    revealWrapper.innerHTML = `
+      <div class="intro-brand-reveal-scrim"></div>
+      <div class="intro-brand-reveal">
+        <h1 class="brand-reveal-text">
+          <span class="type-serif" id="reveal-serif"></span><span class="type-brand" id="reveal-brand"></span><span class="reveal-cursor"></span>
+        </h1>
+      </div>
+    `;
+    overlay.appendChild(revealWrapper);
 
     const handleLoaderComplete = () => {
       // Ensure scrolling is disabled during intro
       document.body.classList.add("is-playing-intro");
+
+      // Step 1: Fade-in the brand reveal wrapper (takes 400ms-500ms in CSS)
+      setTimeout(() => {
+        revealWrapper.classList.add("is-visible");
+      }, 100);
+
+      // Step 2: Start typewriter animation sequence after fade-in
+      setTimeout(() => {
+        const text1 = "Gourmet";
+        const text2 = "Popcornica";
+        const serifSpan = document.getElementById("reveal-serif");
+        const brandSpan = document.getElementById("reveal-brand");
+        
+        if (!serifSpan || !brandSpan) return;
+
+        let index = 0;
+
+        function typeSerif() {
+          if (index < text1.length) {
+            serifSpan.textContent += text1[index];
+            index++;
+            setTimeout(typeSerif, 75 + Math.random() * 45);
+          } else {
+            // Append the space and move to the brand word
+            serifSpan.textContent += " ";
+            index = 0;
+            setTimeout(typeBrand, 180);
+          }
+        }
+
+        function typeBrand() {
+          if (index < text2.length) {
+            brandSpan.textContent += text2[index];
+            index++;
+            setTimeout(typeBrand, 75 + Math.random() * 45);
+          } else {
+            // Typing complete: transition cursor out and enable shimmer
+            revealWrapper.classList.add("is-typing-done");
+            setTimeout(() => {
+              revealWrapper.classList.add("is-complete");
+            }, 200);
+          }
+        }
+
+        typeSerif();
+      }, 500);
 
       setTimeout(() => {
         // Step 1: Start fading out the intro overlay

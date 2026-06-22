@@ -2385,7 +2385,8 @@ body[data-page="home"] .testimonial-title {
   overflow: hidden;
 }
 
-.intro-video-container iframe {
+.intro-video-container iframe,
+.intro-video-container video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2398,4 +2399,112 @@ body[data-page="home"] .testimonial-title {
   pointer-events: none;
   border: none;
   background: transparent;
+  object-fit: cover;
+}
+
+/* Homepage Fullscreen Intro Video Brand Reveal Overlay */
+.intro-brand-reveal-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Above the video frame */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.intro-brand-reveal-wrapper.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.intro-brand-reveal-scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(12, 20, 51, 0.45) 0%, rgba(7, 13, 34, 0.75) 100%);
+  z-index: 1;
+}
+
+.intro-brand-reveal {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-inline: 24px;
+}
+
+.brand-reveal-text {
+  margin: 0;
+  font-size: clamp(24px, 5.8vw, 76px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.brand-reveal-text .type-serif {
+  color: var(--ivory);
+  font-family: var(--font-serif-display);
+}
+
+.brand-reveal-text .type-brand {
+  color: var(--gold-warm);
+  font-family: var(--font-brand);
+  margin-left: 0.18em;
+}
+
+/* Elegant typing cursor */
+.reveal-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.15em;
+  background: var(--gold-warm);
+  margin-left: 8px;
+  opacity: 1;
+  animation: cursor-blink 0.95s step-end infinite;
+  box-shadow: 0 0 12px var(--gold-warm);
+  border-radius: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.intro-brand-reveal-wrapper.is-typing-done .reveal-cursor {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes cursor-blink {
+  from, to { background-color: transparent; }
+  50% { background-color: var(--gold-warm); }
+}
+
+/* Subtle premium golden shimmer animation */
+.intro-brand-reveal-wrapper.is-complete .brand-reveal-text {
+  animation: premium-shimmer 3s ease-in-out infinite alternate;
+}
+
+@keyframes premium-shimmer {
+  0% {
+    text-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.75),
+      0 0 10px rgba(206, 160, 59, 0);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.8),
+      0 0 25px rgba(254, 219, 137, 0.45);
+    filter: brightness(1.08);
+  }
+  100% {
+    text-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.75),
+      0 0 10px rgba(206, 160, 59, 0);
+    filter: brightness(1);
+  }
 }

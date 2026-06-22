@@ -156,12 +156,12 @@ Heading:
 The Vision Behind the Movement
 
 Subheading:
-SBP Pattabhi Rama Rao, Managing Director, Corn Man
+Mr. S.B.P. Pattabhi Rama Rao, Managing Director
 
 Body Copy:
-With a bold vision to transform India’s popcorn industry, Pattabhi Rama Rao has built an integrated ecosystem connecting farmers, innovation, and large-scale supply.
-His work has played a key role in strengthening domestic production and reducing reliance on imports.
-A journey driven by persistence, innovation, and a commitment to quality.
+S.B.P. Pattabhi Rama Rao, Managing Director of Chennai-based Gourmet Popcornica Pvt. Ltd., is pioneering the complete popcorn value chain in India—from hybrid seed cultivation and kernel processing to cinema supplies, retail, and premium branded gourmet popcorn.
+Since incorporating the company in 2014, Pattabhi has transformed it into a farmer-centric powerhouse, delivering international-quality gourmet popcorn to discerning Indian consumers.
+With a stellar track record in food & beverage and retail, he previously spearheaded SPI Cinemas' operations and drove the successful launch and expansion of CookieMan, the iconic Australian cookie brand, across India.
 
 CTA:
 Know His Story

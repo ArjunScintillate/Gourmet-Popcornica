@@ -1694,7 +1694,6 @@ h3 .type-brand {
   content: "";
   position: absolute;
   inset: 12px;
-  border: 1px solid rgba(229, 184, 79, 0.2);
   border-radius: clamp(18px, 2.8vw, 24px);
   pointer-events: none;
   z-index: 3;
