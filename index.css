@@ -812,7 +812,9 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
 /* Packs */
 .cluster-packs .bk-pack-a {
   right: -230px;
+  left: auto;
   top: 20px;
+  bottom: auto;
   width: 540px;
   opacity: 0.36;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
@@ -820,7 +822,9 @@ body[data-page="home"] .kernel-cluster .brand-kernel:nth-child(2) {
 
 .cluster-packs .bk-pack-b {
   left: -210px;
+  right: auto;
   bottom: -50px;
+  top: auto;
   width: 500px;
   opacity: 0.32;
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
@@ -2354,4 +2358,44 @@ body[data-page="home"] .testimonial-title {
     max-width: 480px;
     margin-inline: auto;
   }
+}
+
+/* Homepage Fullscreen Intro Video Overlay */
+.intro-video-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998; /* Under preloader (9999) but above content */
+  background: #000000;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: auto;
+}
+
+.intro-video-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.intro-video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(100vh * (16 / 9)));
+  height: max(100%, calc(100vw * (9 / 16)));
+  width: max(100%, calc(100dvh * (16 / 9)));
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+  background: transparent;
 }

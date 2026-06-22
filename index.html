@@ -27,19 +27,16 @@
       <div class="preloader-progress-text" id="preloader-progress">0%</div>
     </div>
   </div>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div data-site-header></div>
+  <div id="intro-video-overlay" class="intro-video-overlay">
+    <div class="intro-video-container" id="intro-video-container"></div>
+  </div>
+  <div id="homepage-content" style="display: none;">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div data-site-header></div>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-video-bg">
-        <iframe
-          src="https://www.youtube.com/embed/MTdUfuu2CXU?si=BE6PWlZ8hj4qQHpE&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=MTdUfuu2CXU&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;disablekb=1&amp;fs=0&amp;playsinline=1"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media"></iframe>
-      </div>
-      <div class="hero-video-overlay"></div>
+
       <div class="hero-glow"></div>
       <img class="float-kernel home-kernel home-kernel-1" src="assets/popcorn-kernel-01.png" alt=""
         aria-hidden="true" />
@@ -653,7 +650,8 @@
     </section>
   </main>
 
-  <div data-site-footer></div>
+    <div data-site-footer></div>
+  </div>
 
   <script src="vendor/lenis.min.js"></script>
   <script src="vendor/gsap.min.js"></script>

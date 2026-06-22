@@ -247,6 +247,7 @@ body[data-page="about"] #contact .final-card>* {
 /* Section containment — kernels stay within their section boundaries */
 body[data-page="about"] .about-intro-section,
 body[data-page="about"] .founder-legacy-section,
+body[data-page="about"] .media-leadership-section,
 body[data-page="about"] .ecosystem-editorial-section,
 body[data-page="about"] .husk-legacy-section,
 body[data-page="about"] .scale-band,

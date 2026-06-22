@@ -250,9 +250,9 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
   margin-top: 32px;
 }
 
-/* Portrait aspect ratio for the Krug & Co branded box packshot */
+/* Optimized aspect ratio for the Krug & Co mobile cart portrait image */
 .krug-kiosks-visual .krug-image-frame {
-  aspect-ratio: 0.78;
+  aspect-ratio: 0.7;
 }
 
 .krug-kiosk-img {

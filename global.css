@@ -56,6 +56,9 @@
   --fs-h1: clamp(40px, 5.6vw + 10px, 108px);
   --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Centralized hero kernel blur & shadow visual styles */
+  --hero-kernel-blur: 6px;
+  --hero-kernel-shadow: 0 15px 30px rgba(12, 20, 51, 0.22);
 }
 
 * {
@@ -909,7 +912,7 @@ h3 .type-brand {
   width: clamp(40px, 6vw, 72px);
   aspect-ratio: 1;
   opacity: 1;
-  filter: drop-shadow(0 9px 12px rgba(12, 20, 51, 0.18));
+  filter: blur(var(--hero-kernel-blur)) drop-shadow(var(--hero-kernel-shadow)) !important;
   animation: kernelDrift 6.4s ease-in-out infinite;
   pointer-events: none;
   user-select: none;
@@ -3594,6 +3597,11 @@ section:has(> .about-intro-ambient)>.shell {
   flex-direction: column;
   align-items: center;
   gap: 32px;
+}
+
+body.is-playing-intro {
+  overflow: hidden !important;
+  pointer-events: none;
 }
 
 .preloader-brand {

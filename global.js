@@ -77,6 +77,7 @@ const initPreloader = () => {
     setTimeout(() => {
       preloader.classList.add("is-hidden");
       document.body.classList.remove("is-loading");
+      window.dispatchEvent(new CustomEvent("site-loader-complete"));
       setTimeout(() => {
         preloader.remove();
       }, 800); // Wait for fade out

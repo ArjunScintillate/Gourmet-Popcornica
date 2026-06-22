@@ -856,6 +856,227 @@ body[data-page="solutions"] .final-cta {
   filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
 }
 
+
+/* Seasoning section kernel decorators */
+.sol-bk-9 {
+  left: -220px;
+  top: 10%;
+  width: 500px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.sol-bk-10 {
+  right: -200px;
+  bottom: 8%;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.4px);
+}
+
+body[data-page="solutions"] .seasoning-metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, rgba(229, 184, 79, 0.14) 0%, rgba(206, 160, 59, 0.08) 100%);
+  border: 1px solid rgba(206, 160, 59, 0.35);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 16px rgba(12, 20, 51, 0.18);
+}
+
+body[data-page="solutions"] .seasoning-volume {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.5vw + 8px, 38px);
+  font-weight: 700;
+  color: var(--brand-maize);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+body[data-page="solutions"] .seasoning-period {
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--brand-tertiary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+body[data-page="solutions"] .seasoning-highlights-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+body[data-page="solutions"] .seasoning-clients,
+body[data-page="solutions"] .seasoning-outlook {
+  padding: clamp(18px, 2.5vw, 24px);
+  border-radius: var(--radius-lg);
+  background: var(--solution-card-bg);
+  border: 1px solid rgba(88, 124, 180, 0.55);
+  border-top: 2px solid rgba(241, 191, 87, 0.55);
+  box-shadow: var(--solution-card-shadow);
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk),
+    background 420ms var(--ease-silk);
+}
+
+body[data-page="solutions"] :is(.seasoning-clients, .seasoning-outlook):hover {
+  transform: translateY(-6px);
+  background: var(--solution-card-hover-bg);
+  border-color: rgba(206, 160, 59, 0.55);
+  box-shadow: var(--brand-glow-ring), 0 20px 40px rgba(0, 0, 0, 0.36);
+}
+
+body[data-page="solutions"] :is(.seasoning-clients, .seasoning-outlook) p {
+  font-size: var(--fs-body);
+  color: var(--brand-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+body[data-page="solutions"] .seasoning-clients p {
+  margin-bottom: 12px;
+}
+
+body[data-page="solutions"] .seasoning-subhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: clamp(14px, 0.8vw + 11px, 16px);
+  font-weight: 600;
+  color: var(--brand-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+}
+
+body[data-page="solutions"] .seasoning-subhead i,
+body[data-page="solutions"] .seasoning-subhead svg {
+  width: 16px;
+  height: 16px;
+  color: var(--brand-tertiary);
+  flex-shrink: 0;
+}
+
+body[data-page="solutions"] .seasoning-brands {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+body[data-page="solutions"] .seasoning-brands li {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-maize);
+  padding: 5px 12px;
+  background: rgba(206, 160, 59, 0.15);
+  border: 1px solid rgba(206, 160, 59, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+body[data-page="solutions"] .seasoning-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vh, 32px);
+  width: 100%;
+}
+
+body[data-page="solutions"] .seasoning-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 8px 16px;
+  background: rgba(12, 20, 51, 0.86);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(206, 160, 59, 0.48);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+body[data-page="solutions"] .seasoning-badge span:first-child {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-tertiary);
+}
+
+body[data-page="solutions"] .seasoning-badge span:last-child {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-maize);
+  line-height: 1.1;
+}
+
+body[data-page="solutions"] .seasoning-flavours {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+body[data-page="solutions"] .flavour-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(88, 124, 180, 0.35);
+  background: rgba(30, 45, 92, 0.50);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 380ms var(--ease-silk),
+    box-shadow 380ms var(--ease-silk),
+    border-color 380ms var(--ease-silk),
+    background 380ms var(--ease-silk);
+  cursor: default;
+}
+
+body[data-page="solutions"] .flavour-chip:hover {
+  transform: translateY(-4px);
+  background: rgba(48, 80, 128, 0.75);
+  border-color: var(--gold);
+  box-shadow: var(--brand-glow-soft), 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+body[data-page="solutions"] .flavour-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+body[data-page="solutions"] .flavour-mexicana .flavour-dot { background: #e8c442; box-shadow: 0 0 8px rgba(232, 196, 66, 0.8); }
+body[data-page="solutions"] .flavour-bbq .flavour-dot      { background: #d44a2b; box-shadow: 0 0 8px rgba(212, 74, 43, 0.8); }
+body[data-page="solutions"] .flavour-sour .flavour-dot     { background: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.8); }
+body[data-page="solutions"] .flavour-caramel .flavour-dot  { background: #c07825; box-shadow: 0 0 8px rgba(192, 120, 37, 0.8); }
+
+body[data-page="solutions"] .flavour-name {
+  font-family: var(--sans);
+  font-size: clamp(12px, 0.6vw + 10px, 14px);
+  font-weight: 600;
+  color: var(--brand-maize);
+  letter-spacing: 0.01em;
+}
+
 /* Partnership section kernels */
 .cluster-partnerships .bk-partner-a {
   left: -230px;
@@ -1057,5 +1278,35 @@ body[data-page="solutions"] .final-cta {
 
   body[data-page="solutions"] .hero-actions .btn {
     width: 100%;
+  }
+}
+
+/* ── Seasoning section responsive ── */
+@media (max-width: 1024px) {
+  body[data-page="solutions"] .seasoning-metric {
+    margin-inline: auto;
+  }
+  
+  body[data-page="solutions"] .seasoning-subhead {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body[data-page="solutions"] .seasoning-brands {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-page="solutions"] .seasoning-flavours {
+    grid-template-columns: 1fr;
+  }
+  
+  body[data-page="solutions"] .seasoning-metric {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
   }
 }
