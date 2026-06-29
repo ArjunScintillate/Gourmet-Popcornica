@@ -1,0 +1,414 @@
+:root {
+  --navy: #0c1433;
+  --gold: #cea03b;
+  --cream: #dfd3e3;
+  --navy-deep: #070d22;
+  --gold-warm: #e5b84f;
+  --ivory: #f7f3ec;
+  --beige-muted: #cfc4b5;
+  --text-body: #1d1d1d;
+  --text-muted: #4a4a4a;
+  --bg: var(--ivory);
+  --border-light: rgba(12, 20, 51, 0.1);
+  
+  --font-serif-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-brand: "Bellota", cursive;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ivory);
+  color: var(--text-body);
+  font-family: var(--sans);
+  line-height: 1.7;
+  font-size: 10pt;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  font-family: var(--font-serif-display);
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+h1 { font-size: 42pt; letter-spacing: -0.5px; }
+h2 { font-size: 28pt; margin-bottom: 6pt; letter-spacing: -0.5px; }
+h3 { font-size: 16pt; margin-bottom: 12pt; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; }
+h4 { font-size: 18pt; margin-bottom: 6pt; color: var(--navy); font-weight: 500; }
+h5 { font-size: 12pt; text-transform: uppercase; letter-spacing: 1px; color: var(--beige-muted); }
+
+p { margin-top: 0; margin-bottom: 14pt; color: var(--text-muted); }
+.lead { font-size: 14pt; color: var(--navy); font-weight: 400; line-height: 1.6; }
+
+/* Typography styling from global */
+.type-serif { font-family: var(--font-serif-display); font-weight: 300; }
+.type-brand { font-family: var(--font-brand); color: var(--gold); }
+.heading-rule {
+  width: 80px;
+  height: 2px;
+  background-color: var(--gold);
+  margin-top: 16pt;
+  margin-bottom: 32pt;
+}
+
+/* Utilities */
+.mt-sm { margin-top: 12pt; }
+.mt-md { margin-top: 16pt; }
+.mt-lg { margin-top: 32pt; }
+.mt-xl { margin-top: 48pt; }
+.text-center { text-align: center; }
+
+/* Print page setup */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  background: white;
+}
+.page-inner {
+  padding: 30mm 24mm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page footer element for branding */
+.page::after {
+  content: "GOURMET POPCORNICA — MEDIA KIT 2026";
+  position: absolute;
+  bottom: 15mm;
+  left: 24mm;
+  right: 24mm;
+  font-family: var(--sans);
+  font-size: 7pt;
+  color: var(--beige-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-top: 1px solid var(--border-light);
+  padding-top: 4mm;
+}
+
+.page-cover::after {
+  display: none;
+}
+
+/* Cover Page Redesign (Split Layout) */
+.page-cover {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-deep);
+}
+.cover-top {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20mm;
+  text-align: center;
+}
+.cover-logo {
+  max-width: 180px;
+  margin-bottom: 25mm;
+  filter: brightness(0) invert(1);
+}
+.cover-title {
+  color: white;
+  margin-bottom: 8pt;
+}
+.cover-date {
+  font-size: 11pt;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+.cover-bottom {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Two-column text layout */
+.two-col-text {
+  column-count: 2;
+  column-gap: 12mm;
+}
+
+.mission-statement {
+  background: var(--ivory);
+  padding: 20mm 15mm;
+  border-left: 6px solid var(--gold);
+  margin-top: 20mm;
+}
+.mission-statement p {
+  font-family: var(--font-serif-display);
+  font-size: 22pt;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Profile / Leadership Layout (Editorial Style) */
+.profile-editorial-layout {
+  margin-top: 12mm;
+}
+.profile-editorial-image {
+  float: left;
+  width: 75mm;
+  aspect-ratio: 3/4;
+  margin-right: 12mm;
+  margin-bottom: 6mm;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.profile-editorial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.1);
+}
+.designation {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 16pt;
+  text-transform: uppercase;
+  font-size: 9pt;
+  letter-spacing: 1.5px;
+}
+.responsibilities {
+  margin-top: 20mm;
+  border-top: 1px solid var(--border-light);
+  padding-top: 8mm;
+}
+.responsibilities ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.responsibilities li {
+  margin-bottom: 6pt;
+  font-size: 10pt;
+  color: var(--navy);
+  position: relative;
+  padding-left: 12pt;
+}
+.responsibilities li::before {
+  content: "•";
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+  font-size: 14pt;
+  line-height: 1;
+}
+
+/* Stats Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15mm 10mm;
+  margin-top: 20mm;
+}
+.stat-card {
+  padding: 0;
+  border-top: 2px solid var(--gold);
+  padding-top: 12pt;
+}
+.stat-value {
+  display: block;
+  font-family: var(--font-serif-display);
+  font-size: 32pt;
+  color: var(--navy);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 4pt;
+}
+.stat-label {
+  display: block;
+  font-size: 9pt;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Milestones Layout */
+.milestone-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20mm;
+}
+.milestone-list li {
+  display: flex;
+  gap: 12mm;
+  margin-bottom: 16mm;
+}
+.milestone-year {
+  flex: 0 0 30mm;
+  font-family: var(--font-serif-display);
+  font-size: 22pt;
+  color: var(--gold);
+  font-weight: 300;
+  line-height: 1;
+  border-right: 1px solid var(--border-light);
+  padding-right: 10mm;
+}
+.milestone-desc {
+  flex: 1;
+  font-size: 11pt;
+}
+
+/* Awards */
+.awards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12mm;
+}
+.award-item {
+  border-left: 4px solid var(--gold);
+  padding-left: 12mm;
+}
+.award-meta {
+  display: flex;
+  align-items: center;
+  gap: 10mm;
+  margin-bottom: 4pt;
+}
+.award-meta h4 {
+  margin: 0;
+  font-size: 14pt;
+}
+.award-year {
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 10pt;
+}
+.award-title {
+  font-family: var(--font-serif-display);
+  font-size: 18pt;
+  color: var(--navy);
+  margin-bottom: 8pt;
+  font-weight: 300;
+}
+.awards-image {
+  margin-top: auto;
+  margin-bottom: 15mm;
+}
+.awards-image img {
+  width: 100%;
+  border-radius: 4px;
+  height: 80mm;
+  object-fit: cover;
+  object-position: left center;
+}
+
+/* Brand Assets */
+.assets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12mm;
+  margin-top: 20mm;
+}
+.asset-guideline {
+  display: flex;
+  flex-direction: column;
+}
+.asset-preview {
+  background: var(--ivory);
+  height: 70mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10mm;
+  margin-bottom: 8pt;
+}
+.asset-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.asset-preview.image-preview {
+  padding: 0;
+  overflow: hidden;
+}
+.asset-preview.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.download-link {
+  margin-top: auto;
+  margin-bottom: 15mm;
+  background: var(--navy);
+  color: white;
+  padding: 8mm;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 10pt;
+  letter-spacing: 0.5px;
+}
+
+/* Contact */
+.page-contact .page-inner {
+  justify-content: center;
+}
+.contact-block {
+  text-align: center;
+  max-width: 130mm;
+  margin: 0 auto;
+}
+.contact-block .lead {
+  margin-bottom: 20mm;
+}
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15mm;
+  text-align: left;
+}
+.contact-card {
+  padding: 8mm;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  background: var(--ivory);
+}
+.contact-card h5 {
+  margin-bottom: 6pt;
+}
+.contact-card p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 11pt;
+}
+.contact-footer {
+  margin-top: 30mm;
+}
+.contact-logo {
+  max-width: 180px;
+  opacity: 0.8;
+}
