@@ -384,26 +384,21 @@ p { margin-top: 0; margin-bottom: 14pt; color: var(--text-muted); }
 .contact-block .lead {
   margin-bottom: 20mm;
 }
-.contact-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15mm;
-  text-align: left;
+.contact-info-simple {
+  margin: 15mm 0;
 }
-.contact-card {
-  padding: 8mm;
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
-  background: var(--ivory);
-}
-.contact-card h5 {
-  margin-bottom: 6pt;
-}
-.contact-card p {
-  margin: 0;
+.contact-name {
+  font-family: var(--font-serif-display);
+  font-size: 24pt;
   color: var(--navy);
+  font-weight: 400;
+  margin-bottom: 4pt;
+}
+.contact-email {
+  font-family: var(--sans);
+  font-size: 14pt;
+  color: var(--gold);
   font-weight: 500;
-  font-size: 11pt;
 }
 .contact-footer {
   margin-top: 30mm;
