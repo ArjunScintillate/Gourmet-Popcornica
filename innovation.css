@@ -825,3 +825,102 @@ body[data-page="innovation"] #contact .final-card>* {
     transform: none;
   }
 }
+
+/* ── Secondary Seasoning (Innovation Flavour R&D) ── */
+.innov-flavour-rd {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.rd-flavour-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.4vw, 14px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.rd-flavour-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 18px);
+  padding: clamp(14px, 1.8vw, 20px) clamp(18px, 2.4vw, 26px);
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(247, 243, 236, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 3px solid rgba(206, 160, 59, 0.4);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 20px rgba(12, 20, 51, 0.08);
+  font-family: var(--sans);
+  overflow: hidden;
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk);
+}
+
+.rd-flavour-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(12, 20, 51, 0.14);
+  border-left-color: var(--gold);
+}
+
+.rd-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-mexicana { background: #e8c442; box-shadow: 0 0 8px rgba(232, 196, 66, 0.5); }
+.dot-bbq      { background: #d44a2b; box-shadow: 0 0 8px rgba(212, 74, 43, 0.5); }
+.dot-sour     { background: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); }
+.dot-caramel  { background: #c07825; box-shadow: 0 0 8px rgba(192, 120, 37, 0.5); }
+
+.rd-name {
+  font-weight: 600;
+  font-size: var(--fs-body);
+  color: var(--brown);
+  flex: 1;
+}
+
+.rd-status {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  background: rgba(206, 160, 59, 0.12);
+  border: 1px solid rgba(206, 160, 59, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Responsive: Flavour R&D */
+@media (max-width: 1024px) {
+  .innov-flavour-rd .innov-split-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .innov-flavour-rd .innov-split-copy > * {
+    margin-inline: auto;
+  }
+
+  .innov-flavour-rd .innov-split-copy .heading-rule.align-left {
+    margin-inline: auto;
+  }
+
+  .innov-flavour-rd .innov-split-visual {
+    order: -1;
+  }
+
+  .rd-flavour-item {
+    text-align: left;
+  }
+}

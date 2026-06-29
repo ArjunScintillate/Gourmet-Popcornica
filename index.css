@@ -588,12 +588,12 @@ body[data-page="home"] .hero {
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  height: 100svh;
   min-height: 100vh;
   padding-bottom: 0;
   position: relative;
   background: linear-gradient(180deg, #0c1433 0%, #121938 50%, #0c1433 100%);
   color: var(--home-maize);
+  padding-top: var(--header-h, 100px);
 }
 
 /* Background Video Cover */
@@ -648,18 +648,22 @@ body[data-page="home"] .hero-video-overlay {
 body[data-page="home"] .hero .shell.hero-grid {
   flex: 1 1 auto;
   min-height: 0;
-  align-self: stretch;
   display: grid;
   align-content: center;
-  padding-bottom: 25vh;
-}
-
-
-
-body[data-page="home"] .hero .hero-grid,
-body[data-page="home"] .hero .metric-strip {
   position: relative;
   z-index: 3;
+}
+
+/* ── Trust Bar (Metrics + Awards) ── */
+body[data-page="home"] .hero-trust-bar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+  padding-top: clamp(24px, 4vw, 40px);
+  padding-bottom: clamp(32px, 5vw, 48px);
+  margin-top: auto;
 }
 
 /* Home hero — smaller type than the site-wide h1 ramp (other pages unchanged) */
@@ -1082,16 +1086,12 @@ body[data-page="home"] .husk-texture {
    (Other pages keep global intro-card / scale-stats / metric-pill defaults.)
    ------------------------------------------------------------------------- */
 
-/* Hero metrics — absolute floating strip at bottom */
+/* Hero metrics — no longer absolutely positioned */
 body[data-page="home"] .hero .metric-strip {
-  position: absolute;
-  bottom: clamp(16px, 3vh, 32px);
-  left: 0;
-  right: 0;
-  width: 100%;
+  position: relative;
   z-index: 10;
+  width: 100%;
   margin-inline: auto;
-  padding: clamp(16px, 2.5vw, 28px) var(--shell-pad) clamp(8px, 2vw, 20px);
   overflow-x: visible;
   scroll-snap-type: none;
   scrollbar-width: auto;
@@ -1934,23 +1934,14 @@ body[data-page="home"] .founder-header h2 {
   /* ── MOBILE HERO RESTRUCTURE ──
      On mobile, the hero is a true full-screen section containing ONLY
      headline, description, and CTA buttons. The bucket image is hidden.
-     The metric strip is pulled below the hero viewport boundary via
-     absolute positioning, appearing as its own dedicated section.
-     The hero's overflow:visible + margin-bottom make space for it. */
+     The metric strip flows naturally below the hero viewport boundary.
+  */
 
-  /* 1. Hero container: fixed 100dvh, overflow-visible for stats overflow */
+  /* 1. Hero container: min-height 100dvh, flows naturally */
   body[data-page="home"] .hero {
-    height: 100dvh;
-    height: 100svh; /* fallback for browsers without dvh */
-    min-height: 0;
-    max-height: 100dvh;
-    overflow: visible;
-    position: relative;
-    padding-top: var(--header-h);
-    padding-bottom: 0;
-    /* Space below hero for the metric strip that overflows.
-       3-col × 2 rows ≈ 280px at 1024px. Adjusted at smaller breakpoints. */
-    margin-bottom: clamp(240px, 32vw, 300px);
+    min-height: 100dvh;
+    height: auto;
+    overflow: hidden;
   }
 
   /* 2. Hero grid: only center the text content, ignore art + metrics */
@@ -1962,7 +1953,6 @@ body[data-page="home"] .founder-header h2 {
     justify-content: center;
     padding-bottom: 0;
     min-height: 0;
-    height: 100%;
   }
 
   /* 3. Hero copy: vertically centered, well-spaced */
@@ -1981,19 +1971,10 @@ body[data-page="home"] .founder-header h2 {
     display: none !important;
   }
 
-  /* 5. Metric strip: positioned just below the hero viewport,
-        creating its own visual "section" below the hero */
-  body[data-page="home"] .hero .metric-strip {
-    position: absolute;
-    top: 100%; /* sits right below the 100dvh hero */
-    left: 0;
-    right: 0;
-    bottom: auto;
-    z-index: 10;
-    width: 100%;
+  /* 5. Trust Bar: Dark surface to visually separate from hero */
+  body[data-page="home"] .hero-trust-bar {
     padding: clamp(24px, 4vw, 40px) var(--shell-pad);
     margin: 0;
-    /* Dark surface to visually separate from hero */
     background: linear-gradient(180deg,
         rgba(12, 20, 51, 0.98) 0%,
         #0c1433 100%);
@@ -2003,19 +1984,17 @@ body[data-page="home"] .founder-header h2 {
     min-height: 0;
   }
 
-  /* 6. Video background: lock to 100dvh so it covers the hero perfectly */
+  /* 6. Video background: lock to 100% so it covers the hero perfectly */
   body[data-page="home"] .hero-video-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100dvh;
-    height: 100svh; /* fallback */
+    height: 100%;
   }
 
   body[data-page="home"] .hero-video-overlay {
-    height: 100dvh;
-    height: 100svh;
+    height: 100%;
   }
 
   .metric-strip {
@@ -2506,5 +2485,172 @@ body[data-page="home"] .testimonial-title {
       0 8px 30px rgba(0, 0, 0, 0.75),
       0 0 10px rgba(206, 160, 59, 0);
     filter: brightness(1);
+  }
+}
+
+/* ── Homepage Awards & Recognition Section ── */
+body[data-page="home"] .home-achievements-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #0c1433; /* Dark background to match the theme */
+  padding-top: clamp(60px, 8vw, 100px);
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+body[data-page="home"] .home-press-achievements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.8vw, 32px);
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: clamp(24px, 4vw, 40px);
+  position: relative;
+  z-index: 3;
+}
+
+body[data-page="home"] .home-press-achievement {
+  position: relative;
+  background: var(--home-card-bg);
+  border: 1px solid var(--home-card-border);
+  border-top: 2px solid var(--home-card-accent);
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: clamp(16px, 2vw, 22px);
+  box-shadow: var(--home-card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk),
+    background 420ms var(--ease-silk);
+}
+
+body[data-page="home"] .home-press-achievement::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg,
+    rgba(206, 160, 59, 0.05) 0%,
+    transparent 50%);
+  pointer-events: none;
+}
+
+body[data-page="home"] .home-press-achievement:hover {
+  transform: translateY(-8px);
+  background: var(--home-card-hover-bg);
+  border-color: rgba(206, 160, 59, 0.45);
+  box-shadow: var(--home-glow-ring), 0 22px 44px rgba(0, 0, 0, 0.32);
+}
+
+body[data-page="home"] .home-press-achievement-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body[data-page="home"] .home-press-org {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--home-tertiary);
+  padding: 3px 10px;
+  background: rgba(229, 184, 79, 0.12);
+  border: 1px solid rgba(206, 160, 59, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+body[data-page="home"] .home-press-date {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 238, 216, 0.54);
+}
+
+body[data-page="home"] .home-press-achievement-meta::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(88, 124, 180, 0.28);
+  margin-left: 8px;
+}
+
+body[data-page="home"] .home-press-award-title {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.2vw + 10px, 24px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--home-maize);
+  margin: 0;
+}
+
+body[data-page="home"] .home-press-award-desc {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--home-muted);
+  margin: 0;
+}
+
+body[data-page="home"] .home-press-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(88, 124, 180, 0.28);
+}
+
+body[data-page="home"] .home-press-seal i,
+body[data-page="home"] .home-press-seal svg {
+  width: 14px;
+  height: 14px;
+  color: var(--home-tertiary);
+  flex-shrink: 0;
+}
+
+body[data-page="home"] .home-press-seal span {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 238, 216, 0.44);
+}
+
+/* Kernels for achievements */
+body[data-page="home"] .cluster-achievements .bk-ach-a {
+  left: -240px;
+  top: 40px;
+  width: 500px;
+  opacity: 0.35;
+  filter: blur(1.8px);
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body[data-page="home"] .cluster-achievements .bk-ach-b {
+  right: -210px;
+  bottom: -20px;
+  width: 480px;
+  opacity: 0.32;
+  filter: blur(2px);
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  body[data-page="home"] .home-press-achievements {
+    grid-template-columns: 1fr;
+    max-width: 560px;
   }
 }

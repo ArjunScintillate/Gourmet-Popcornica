@@ -873,3 +873,158 @@ body[data-page="media"] .final-card::after {
     transform: none;
   }
 }
+
+/* ── Secondary Awards (Media Company Achievements) ── */
+.media-achievements-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.press-achievements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.8vw, 32px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.press-achievement {
+  position: relative;
+  background: var(--brand-card-bg);
+  border: 1px solid var(--brand-card-border);
+  border-top: 2px solid var(--brand-card-accent);
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: clamp(16px, 2vw, 22px);
+  box-shadow: var(--brand-card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  transition:
+    transform 420ms var(--ease-silk),
+    box-shadow 420ms var(--ease-silk),
+    border-color 420ms var(--ease-silk),
+    background 420ms var(--ease-silk);
+}
+
+.press-achievement::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg,
+    rgba(206, 160, 59, 0.06) 0%,
+    transparent 50%);
+  pointer-events: none;
+}
+
+.press-achievement:hover {
+  transform: translateY(-8px);
+  background: var(--brand-card-hover-bg);
+  border-color: rgba(206, 160, 59, 0.45);
+  box-shadow: var(--brand-glow-ring), 0 22px 44px rgba(0, 0, 0, 0.32);
+}
+
+.press-achievement-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.press-org {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-tertiary);
+  padding: 3px 10px;
+  background: rgba(229, 184, 79, 0.12);
+  border: 1px solid rgba(206, 160, 59, 0.35);
+  border-radius: var(--radius-pill);
+}
+
+.press-date {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 238, 216, 0.54);
+}
+
+.press-achievement-meta::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(88, 124, 180, 0.28);
+  margin-left: 8px;
+}
+
+.press-award-title {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.2vw + 10px, 24px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--brand-maize);
+  margin: 0;
+}
+
+.press-award-desc {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--brand-muted);
+  margin: 0;
+}
+
+.press-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(88, 124, 180, 0.28);
+}
+
+.press-seal i,
+.press-seal svg {
+  width: 14px;
+  height: 14px;
+  color: var(--brand-tertiary);
+  flex-shrink: 0;
+}
+
+.press-seal span {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 238, 216, 0.44);
+}
+
+.media-cluster-achievements .media-brand-ach-a {
+  left: -240px;
+  top: 40px;
+  width: 500px;
+  opacity: 0.35;
+  filter: blur(1.8px);
+}
+
+.media-cluster-achievements .media-brand-ach-b {
+  right: -210px;
+  bottom: -20px;
+  width: 480px;
+  opacity: 0.32;
+  filter: blur(2px);
+}
+
+/* Responsive: Press Achievements */
+@media (max-width: 768px) {
+  .press-achievements {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
