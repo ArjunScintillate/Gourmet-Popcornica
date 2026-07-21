@@ -2,7 +2,7 @@ Gourmet Popcornica Private Limited – Company Overview
 Gourmet Popcornica Private Limited is India’s leading premium popcorn brand, known for
 transforming popcorn from a commodity snack into a gourmet, experiential product.
 Founded in 2014 in Chennai, India, the company was created with a simple but ambitious
-vision: to elevate the cinema and snacking experience through high-quality ingredients,
+vision: to elevate the cinema and snacking experience through high quality ingredients,
 innovative flavours, and consistent product excellence, while ensuring that farmers are
 central to the growth story.
 The journey of Gourmet Popcornica started with a strategic partnership with Preferred
