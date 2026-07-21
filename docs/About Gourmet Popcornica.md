@@ -2,7 +2,7 @@ About Gourmet Popcornica
 Gourmet Popcornica is a Chennai-based agri-to-consumer company building India’s
 popcorn value chain – from hybrid seed and farmer partnerships to kernel processing,
 storage, cinema supply and branded retail products. Founded in 2014, Gourmet Popcornica
-combines global popcorn knowhow with local cultivation to deliver consistent, high-quality
+combines global popcorn knowhow with local cultivation to deliver consistent, high quality
 kernels and readytoeat gourmet popcorn for cinemas, foodservice, retail and ecommerce.
 The company prioritises product integrity, supply reliability and farmer impact through
 contract farming and capacitybuilding programmes, and pursues sustainable packaging and
@@ -12,7 +12,7 @@ states in India, making it the number one producer of popcorn maize and the four
 the world.
 With a vision to be India’s most trusted gourmet popcorn brand, Gourmet Popcornica is
 creating a vibrant, aatmanirbhar ecosystem where farmers prosper, institutions excel, and
-consumers everywhere enjoy unforgettable, high-quality popcorn experiences, rooted in
+consumers everywhere enjoy unforgettable, high quality popcorn experiences, rooted in
 sustainability and innovation.
 For more information, visit https://gourmetpopcornica.in
 Mr. SBP Pattabhi Rama Rao, Managing Director, Gourmet Popcornica

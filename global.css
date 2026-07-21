@@ -1091,11 +1091,7 @@ h3 .type-brand {
 }
 
 .heading-rule {
-  position: relative;
-  display: block;
-  width: 178px;
-  height: 18px;
-  margin: 0 auto;
+  display: none !important;
 }
 
 .heading-rule::before,
@@ -1663,7 +1659,7 @@ h3 .type-brand {
 }
 
 /* Unified Premium Image Card System (Based on Our Solutions) */
-:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame) {
+:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame) {
   position: relative;
   width: 100%;
   max-width: 480px;
@@ -1690,7 +1686,7 @@ h3 .type-brand {
   z-index: 2;
 }
 
-:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame)::before {
+:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame)::before {
   content: "";
   position: absolute;
   inset: 12px;
@@ -1699,7 +1695,7 @@ h3 .type-brand {
   z-index: 3;
 }
 
-:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame) :is(img, .pouch-img, .husk-portrait) {
+:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame) :is(img, .pouch-img, .husk-portrait, .flavour-img) {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -1709,17 +1705,17 @@ h3 .type-brand {
   transition: transform 520ms var(--ease-silk);
 }
 
-:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame):hover :is(img, .pouch-img, .husk-portrait) {
+:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame):hover :is(img, .pouch-img, .husk-portrait, .flavour-img) {
   transform: scale(1.04);
 }
 
-:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame):hover {
+:is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame):hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 40px 80px rgba(12, 20, 51, 0.45);
 }
 
 @media (max-width: 560px) {
-  :is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame) {
+  :is(.pouch-frame, .husk-frame, .farmer-image-frame, .innov-visual-frame, .krug-image-frame, .flavour-image-frame) {
     max-width: 360px;
   }
 }

@@ -876,10 +876,9 @@ body[data-page="innovation"] #contact .final-card>* {
   flex-shrink: 0;
 }
 
-.dot-mexicana { background: #e8c442; box-shadow: 0 0 8px rgba(232, 196, 66, 0.5); }
+.dot-peri     { background: #e63946; box-shadow: 0 0 8px rgba(230, 57, 70, 0.5); }
 .dot-bbq      { background: #d44a2b; box-shadow: 0 0 8px rgba(212, 74, 43, 0.5); }
-.dot-sour     { background: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); }
-.dot-caramel  { background: #c07825; box-shadow: 0 0 8px rgba(192, 120, 37, 0.5); }
+.dot-moroccan { background: #e09f3e; box-shadow: 0 0 8px rgba(224, 159, 62, 0.5); }
 
 .rd-name {
   font-weight: 600;
@@ -922,5 +921,105 @@ body[data-page="innovation"] #contact .final-card>* {
 
   .rd-flavour-item {
     text-align: left;
+  }
+}
+/* Flavour Showcase Grid */
+.flavour-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  margin-top: clamp(40px, 6vw, 60px);
+}
+
+.flavour-product-card {
+  position: relative;
+  z-index: 5;
+  background: var(--bg);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid rgba(207, 196, 181, 0.36);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.flavour-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(12, 20, 51, 0.15);
+}
+
+.flavour-product-card::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  width: 34px;
+  aspect-ratio: 1;
+  background: url("assets/popcorn-kernel-01.png") center / contain no-repeat;
+  opacity: 0;
+  transform: translate3d(0, 8px, 0) rotate(-8deg);
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+  pointer-events: none;
+}
+
+.flavour-product-card:hover::after {
+  opacity: 0.5;
+  transform: translate3d(-3px, 0, 0) rotate(0deg);
+}
+
+.flavour-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.flavour-badge {
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--gold-warm);
+  background: rgba(206, 160, 59, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(206, 160, 59, 0.2);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+}
+
+.flavour-product-card:hover .flavour-badge {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 10px 20px rgba(12, 20, 51, 0.1);
+  border-color: rgba(206, 160, 59, 0.56);
+}
+
+.flavour-info h3 {
+  font-family: var(--font-serif-display);
+  font-size: clamp(20px, 2vw, 24px);
+  color: var(--text-base);
+  margin: 0;
+}
+
+.flavour-info p {
+  font-size: var(--fs-body);
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .flavour-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .flavour-showcase-grid {
+    grid-template-columns: 1fr;
   }
 }
