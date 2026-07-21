@@ -876,10 +876,9 @@ body[data-page="innovation"] #contact .final-card>* {
   flex-shrink: 0;
 }
 
-.dot-mexicana { background: #e8c442; box-shadow: 0 0 8px rgba(232, 196, 66, 0.5); }
+.dot-peri     { background: #e63946; box-shadow: 0 0 8px rgba(230, 57, 70, 0.5); }
 .dot-bbq      { background: #d44a2b; box-shadow: 0 0 8px rgba(212, 74, 43, 0.5); }
-.dot-sour     { background: #4caf50; box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); }
-.dot-caramel  { background: #c07825; box-shadow: 0 0 8px rgba(192, 120, 37, 0.5); }
+.dot-moroccan { background: #e09f3e; box-shadow: 0 0 8px rgba(224, 159, 62, 0.5); }
 
 .rd-name {
   font-weight: 600;

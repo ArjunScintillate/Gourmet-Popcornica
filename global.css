@@ -1091,11 +1091,7 @@ h3 .type-brand {
 }
 
 .heading-rule {
-  position: relative;
-  display: block;
-  width: 178px;
-  height: 18px;
-  margin: 0 auto;
+  display: none !important;
 }
 
 .heading-rule::before,

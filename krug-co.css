@@ -125,39 +125,75 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
   box-shadow: var(--shadow-card);
 }
 
+.signature-flavours-heading h3 {
+  font-family: var(--font-serif-display);
+  font-size: clamp(32px, 3.2vw + 14px, 52px) !important;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
 .krug-tins-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--grid-gap);
-  margin-top: 24px;
+  gap: clamp(20px, 2.5vw, 32px);
+  margin-top: 28px;
 }
 
 .krug-tin-card {
+  position: relative;
   background: var(--krug-card-bg);
   border: 1px solid rgba(88, 124, 180, 0.4);
-  border-top: 2px solid rgba(241, 191, 87, 0.55);
-  border-radius: var(--radius-lg);
-  padding: 24px;
+  border-top: 2px solid rgba(241, 191, 87, 0.65);
+  border-radius: clamp(16px, 2vw, 24px);
+  padding: clamp(24px, 3vw, 36px) clamp(20px, 2.4vw, 28px);
   text-align: center;
   box-shadow: var(--krug-card-shadow);
-  transition: transform 420ms var(--ease-silk), box-shadow 420ms var(--ease-silk), background 420ms var(--ease-silk);
+  transition: transform 420ms var(--ease-silk), box-shadow 420ms var(--ease-silk), background 420ms var(--ease-silk), border-color 420ms var(--ease-silk);
 }
 
 .krug-tin-card:hover {
   transform: translateY(-8px) scale(1.02);
   background: var(--krug-card-hover-bg);
-  box-shadow: var(--krug-gold-glow), var(--shadow-card);
+  border-color: rgba(206, 160, 59, 0.55);
+  box-shadow: var(--krug-gold-glow), 0 24px 48px rgba(0, 0, 0, 0.38);
+}
+
+.tin-badge-wrapper {
+  margin-bottom: 14px;
+}
+
+.tin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--home-tertiary);
+  background: rgba(229, 184, 79, 0.14);
+  border: 1px solid rgba(206, 160, 59, 0.4);
+  border-radius: var(--radius-pill);
+}
+
+.tin-badge i,
+.tin-badge svg {
+  width: 13px;
+  height: 13px;
+  color: var(--home-tertiary);
 }
 
 .krug-tin-card .tin-icon {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   margin: 0 auto 16px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(206, 160, 59, 0.12);
-  border: 1px solid rgba(206, 160, 59, 0.3);
+  background: rgba(206, 160, 59, 0.14);
+  border: 1px solid rgba(206, 160, 59, 0.35);
   color: var(--home-tertiary);
   transition: transform 380ms var(--ease-silk);
 }
@@ -170,22 +206,23 @@ body[data-page="krug-co"] .krug-about-content .editorial-lead {
 
 .krug-tin-card .tin-icon i,
 .krug-tin-card .tin-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 }
 
 .krug-tin-card h4 {
   margin: 0 0 10px;
   font-family: var(--font-serif-display);
-  font-size: 20px;
+  font-size: clamp(22px, 1.5vw + 12px, 28px);
+  font-weight: 600;
   color: var(--home-maize);
 }
 
 .krug-tin-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--home-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* Expanded Flavors Tag Cloud */
