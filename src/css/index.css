@@ -2779,7 +2779,7 @@ body[data-page="home"] .cluster-achievements .bk-ach-b {
 body[data-page="home"] .hero {
   background-image: url('/assets/images/hero-bg.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
