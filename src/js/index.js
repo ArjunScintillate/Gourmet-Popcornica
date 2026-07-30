@@ -1,4 +1,3 @@
-import homeVideoUrl from '../assets/videos/home-video.mp4';
 /* Index-specific scripts */
 
 const initIndexScripts = () => {
@@ -92,7 +91,7 @@ const initIndexScripts = () => {
 
     // Preload & Autoplay the local video immediately
     container.innerHTML = `
-      <video src="${homeVideoUrl}" autoplay muted playsinline></video>
+      <video src="/assets/videos/home-video.mp4" autoplay muted playsinline></video>
     `;
 
     // Create Brand Reveal overlay elements
