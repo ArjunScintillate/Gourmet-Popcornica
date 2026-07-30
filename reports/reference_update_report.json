@@ -1,0 +1,282 @@
+[
+  {
+    "file": "about-us.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "venkateswara-babu.webp",
+        "newAsset": "venkateswara-babu.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "pattabhi.webp",
+        "newAsset": "pattabhi.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/global.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/index.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "hero-bg.png",
+        "newAsset": "hero-bg.png",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/innovation.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/media.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/partner-with-us.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "css/solutions.css",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "enhancing-farmer-lives.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "farm-with-owner.webp",
+        "newAsset": "farm-with-owner.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "corn-farm.webp",
+        "newAsset": "corn-farm.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "index.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "venkateswara-babu.webp",
+        "newAsset": "venkateswara-babu.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "pattabhi.webp",
+        "newAsset": "pattabhi.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "innovation.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-factory-2.webp",
+        "newAsset": "popcorn-factory-2.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-cleaning.webp",
+        "newAsset": "popcorn-cleaning.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "krug-co.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "media-kit.html",
+    "changes": [
+      {
+        "oldAsset": "artboard-mediakit.webp",
+        "newAsset": "artboard-mediakit.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "pattabhi.webp",
+        "newAsset": "pattabhi.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "media.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-cleaning.webp",
+        "newAsset": "popcorn-cleaning.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-factory.webp",
+        "newAsset": "popcorn-factory.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "pattabhi.webp",
+        "newAsset": "pattabhi.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "partner-with-us.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "farm-in-harvest.webp",
+        "newAsset": "farm-in-harvest.webp",
+        "occurrences": 3
+      }
+    ]
+  },
+  {
+    "file": "solutions.html",
+    "changes": [
+      {
+        "oldAsset": "popcorn-kernel-01.webp",
+        "newAsset": "popcorn-kernel-01.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-kernel-02.webp",
+        "newAsset": "popcorn-kernel-02.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-cleaning.webp",
+        "newAsset": "popcorn-cleaning.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn-factory.webp",
+        "newAsset": "popcorn-factory.webp",
+        "occurrences": 3
+      },
+      {
+        "oldAsset": "popcorn.webp",
+        "newAsset": "popcorn.webp",
+        "occurrences": 3
+      }
+    ]
+  }
+]

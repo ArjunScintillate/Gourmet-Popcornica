@@ -1,0 +1,338 @@
+/* About Us-specific styles */
+
+/* About page hero-specific hook scale and corn opacity */
+body[data-page="about"] .about-hero-hook h1 {
+  overflow-wrap: break-word;
+}
+
+body[data-page="about"] .about-hero-hook h1 .type-serif,
+body[data-page="about"] .about-hero-hook h1 .type-brand {
+  display: inline;
+}
+
+body[data-page="about"] .hero {
+  padding-top: var(--header-h);
+  padding-bottom: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body[data-page="about"] .hero::before,
+body[data-page="about"] .hero::after {
+  content: none;
+}
+
+body[data-page="about"] .hero .shell {
+  min-height: calc(100svh - var(--header-h));
+  display: grid;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+body[data-page="about"] .about-hero-hook.section-heading {
+  margin: 0 auto;
+}
+
+body[data-page="about"] .about-hero-hook.section-heading {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+body[data-page="about"] .about-hero-hook .hero-lede {
+  max-width: 720px;
+  margin-inline: auto;
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+body[data-page="about"] .about-hero-hook .hero-support {
+  max-width: 680px;
+  margin-inline: auto;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+body[data-page="about"] .hero .hero-corn-left,
+body[data-page="about"] .hero .corn-corner.corner-left,
+body[data-page="about"] .corn-corner.corner-left,
+body[data-page="about"] .corn-corner.corner-right {
+  opacity: 0.4;
+}
+
+body[data-page="about"] .about-kernel {
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+}
+
+body[data-page="about"] .about-kernel-1 {
+  left: -3%;
+  bottom: 10%;
+  width: clamp(240px, 30vw, 420px);
+  opacity: 0.58;
+  z-index: 0;
+  transform: rotate(-18deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation-delay: -0.8s;
+}
+
+body[data-page="about"] .about-kernel-2 {
+  right: -4%;
+  top: 18%;
+  width: clamp(200px, 26vw, 380px);
+  opacity: 0.54;
+  z-index: 0;
+  transform: rotate(14deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation-delay: -3.4s;
+}
+
+body[data-page="about"] .about-kernel-3 {
+  left: 20%;
+  top: -12%;
+  width: clamp(160px, 20vw, 320px);
+  opacity: 0.46;
+  z-index: 0;
+  transform: rotate(42deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
+  animation-delay: -1.4s;
+}
+
+body[data-page="about"] .about-kernel-4 {
+  right: 22%;
+  bottom: -10%;
+  width: clamp(180px, 22vw, 340px);
+  opacity: 0.50;
+  z-index: 0;
+  transform: rotate(-34deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+  animation-delay: -5.7s;
+}
+
+body[data-page="about"] .about-kernel-5 {
+  left: 40%;
+  bottom: 2%;
+  width: clamp(140px, 18vw, 280px);
+  opacity: 0.42;
+  z-index: 0;
+  transform: rotate(56deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+  animation-delay: -2.6s;
+}
+
+body[data-page="about"] .about-kernel-6 {
+  right: 36%;
+  top: 4%;
+  width: clamp(120px, 16vw, 180px);
+  opacity: 0.52;
+  z-index: 0;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(0.8px);
+  animation-delay: -4.1s;
+}
+
+/* Kernels 7-12 hidden — reduced density to match Innovation pattern */
+body[data-page="about"] .about-kernel-7,
+body[data-page="about"] .about-kernel-8,
+body[data-page="about"] .about-kernel-9,
+body[data-page="about"] .about-kernel-10,
+body[data-page="about"] .about-kernel-11,
+body[data-page="about"] .about-kernel-12 {
+  display: none;
+}
+
+/* About intro section kernels — large atmospheric (matches Innovation section kernels) */
+body[data-page="about"] .about-intro-kernel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  min-width: 340px;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+}
+
+.about-intro-kernel.kernel-a {
+  left: -210px;
+  top: 36px;
+  width: 520px;
+  opacity: 0.42;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.about-intro-kernel.kernel-b {
+  right: -200px;
+  bottom: -36px;
+  width: 480px;
+  opacity: 0.40;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.5px);
+}
+
+.about-intro-kernel.kernel-c {
+  left: 42%;
+  top: -100px;
+  width: 400px;
+  opacity: 0.30;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+body[data-page="about"] .husk-visual .husk-frame {
+  aspect-ratio: 1 / 1;
+  display: flex;
+}
+
+body[data-page="about"] .husk-logo-animated {
+  object-fit: cover;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes husk-logo-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-2deg) scale(1.02);
+  }
+}
+/* ============== ABOUT RESPONSIVE BREAKPOINTS ============== */
+
+@media (max-width: 1024px) {
+  body[data-page="about"] .hero .shell {
+    min-height: auto;
+    padding-block: clamp(40px, 8vw, 60px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Reduce to 2 hero kernels on tablets */
+  body[data-page="about"] .about-kernel-3,
+  body[data-page="about"] .about-kernel-4,
+  body[data-page="about"] .about-kernel-5,
+  body[data-page="about"] .about-kernel-6 {
+    display: none;
+  }
+
+  body[data-page="about"] .about-kernel-1 {
+    width: clamp(160px, 22vw, 260px);
+    opacity: 0.45;
+  }
+
+  body[data-page="about"] .about-kernel-2 {
+    width: clamp(140px, 20vw, 240px);
+    opacity: 0.40;
+  }
+}
+
+@media (max-width: 560px) {
+
+  body[data-page="about"] .about-kernel-2 {
+    display: none;
+  }
+
+  body[data-page="about"] .about-kernel-1 {
+    width: clamp(120px, 18vw, 200px);
+    opacity: 0.35;
+  }
+}
+
+/* Final CTA — layout only; visual theme from pages-theme.css */
+
+body[data-page="about"] #contact .final-card {
+  position: relative;
+  max-width: min(920px, 100%);
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 48px);
+  border-radius: clamp(24px, 4vw, 36px);
+  transition:
+    transform 480ms var(--ease-silk),
+    box-shadow 480ms var(--ease-silk),
+    border-color 480ms var(--ease-silk),
+    background 480ms var(--ease-silk);
+}
+
+body[data-page="about"] #contact .final-card>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override global 4-col feature-rail to balance new 3-item content on desktop */
+@media (min-width: 1181px) {
+  body[data-page="about"] .commitment-section .feature-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Section containment — kernels stay within their section boundaries */
+body[data-page="about"] .about-intro-section,
+body[data-page="about"] .founder-legacy-section,
+body[data-page="about"] .media-leadership-section,
+body[data-page="about"] .ecosystem-editorial-section,
+body[data-page="about"] .husk-legacy-section,
+body[data-page="about"] .scale-band,
+body[data-page="about"] .commitment-section,
+body[data-page="about"] .self-reliance-section,
+body[data-page="about"] .about-closing-section,
+body[data-page="about"] .final-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Ecosystem kernel cluster positioning */
+.cluster-ecosystem .bk-eco-a {
+  left: -240px;
+  top: 30px;
+  width: 560px;
+  opacity: 0.36;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-ecosystem .bk-eco-b {
+  right: -220px;
+  bottom: -40px;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+.cluster-ecosystem .bk-eco-c {
+  left: 40%;
+  top: -120px;
+  width: 420px;
+  opacity: 0.28;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2.2px);
+}
+
+/* Husk kernel cluster positioning */
+.cluster-husk .bk-husk-a {
+  left: -230px;
+  top: 20%;
+  width: 540px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.cluster-husk .bk-husk-b {
+  right: -210px;
+  bottom: -50px;
+  width: 500px;
+  opacity: 0.32;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.6px);
+}
+
+/* Closing kernel cluster positioning */
+.cluster-closing .bk-closing-a {
+  left: -6%;
+  top: 18%;
+  width: clamp(160px, 22vw, 300px);
+  opacity: 0.42;
+}
+
+.cluster-closing .bk-closing-b {
+  right: -4%;
+  bottom: 6%;
+  width: clamp(140px, 18vw, 260px);
+  opacity: 0.36;
+  animation-delay: -3.5s;
+}

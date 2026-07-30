@@ -1,0 +1,58 @@
+:root {
+  /* Brand palette */
+  --navy: #0c1433;
+  --gold: #cea03b;
+  --cream: #dfd3e3;
+  --navy-deep: #070d22;
+  --gold-warm: #e5b84f;
+  --ivory: #f7f3ec;
+  --beige-muted: #cfc4b5;
+  --text-body: #1d1d1d;
+  /* Semantic tokens */
+  --bg: var(--ivory);
+  --bg-warm: #f3efe8;
+  --paper: var(--cream);
+  --paper-strong: #ffffff;
+  --ink: var(--navy);
+  --muted: rgba(29, 29, 29, 0.72);
+  --gold-2: var(--gold-warm);
+  --amber: var(--gold-warm);
+  --brown: var(--navy);
+  --brown-2: var(--navy-deep);
+  --line: var(--beige-muted);
+  --shadow-soft: 0 10px 30px rgba(12, 20, 51, 0.08);
+  --shadow-card: 0 20px 40px rgba(12, 20, 51, 0.15);
+  /* Typography: Strict adherence to Bellota as per local font policy */
+  --font-serif-display: "Bellota", system-ui, -apple-system, sans-serif;
+  --font-brand: "Bellota", system-ui, -apple-system, sans-serif;
+  --serif: var(--font-serif-display);
+  --sans: "Bellota", system-ui, -apple-system, sans-serif;
+  --shell: 1380px;
+  /* Fluid spacing & layout */
+  --shell-pad: clamp(16px, 4vw, 32px);
+  --section-pad: clamp(64px, 9vw, 120px);
+  --section-gap: clamp(40px, 6vw, 80px);
+  --card-pad: clamp(20px, 3vw, 36px);
+  --grid-gap: clamp(16px, 3vw, 32px);
+  --header-h: clamp(64px, 9vw, 98px);
+  /* Shared rounding — buttons, cards, rails, inputs */
+  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+  /* Fluid type ramp */
+  --fs-eyebrow: 10px;
+  --fs-body: clamp(14px, 0.35vw + 13px, 15px);
+  --fs-lead: clamp(16px, 0.6vw + 14px, 20px);
+  --fs-h3: clamp(22px, 1vw + 16px, 28px);
+  /* Primary section titles — one ramp site-wide (section-heading, intros, etc.) */
+  --fs-h2: clamp(28px, 2.75vw + 14px, 48px);
+  /* Hero / page display title — identical on every page at each viewport */
+  --fs-h1: clamp(40px, 5.6vw + 10px, 108px);
+  --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Centralized hero kernel blur & shadow visual styles */
+  --hero-kernel-blur: 6px;
+  --hero-kernel-shadow: 0 15px 30px rgba(12, 20, 51, 0.22);
+}

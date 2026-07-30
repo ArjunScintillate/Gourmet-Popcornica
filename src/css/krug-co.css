@@ -1,0 +1,765 @@
+/* Krug & Co page-specific styles */
+
+body[data-page="krug-co"] {
+  --krug-gold-glow: 0 0 20px rgba(206, 160, 59, 0.25);
+  --krug-card-bg: linear-gradient(165deg,
+      rgba(96, 136, 204, 0.42) 0%,
+      rgba(44, 66, 124, 0.94) 54%,
+      rgba(26, 40, 84, 0.98) 100%);
+  --krug-card-hover-bg: linear-gradient(165deg,
+      rgba(112, 156, 224, 0.55) 0%,
+      rgba(52, 78, 140, 0.98) 100%);
+  --krug-card-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(247, 238, 216, 0.16),
+    0 0 0 1px rgba(88, 124, 180, 0.32);
+}
+
+/* ── HERO SECTION ── */
+body[data-page="krug-co"] .hero {
+  padding-top: var(--header-h);
+  padding-bottom: 0;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body[data-page="krug-co"] .hero .shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+body[data-page="krug-co"] .krug-hero-hook.section-heading {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body[data-page="krug-co"] .krug-hero-hook h1 {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-bottom: 20px;
+  font-size: clamp(36px, 4.8vw + 12px, 84px);
+}
+
+body[data-page="krug-co"] .krug-hero-hook .hero-lede {
+  max-width: 800px;
+  margin-inline: auto;
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+body[data-page="krug-co"] .hero-actions {
+  justify-content: center;
+}
+
+/* ── ABOUT / BRAND SECTION ── */
+.krug-about-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(40px, 5vw, 80px);
+}
+
+/* Portrait aspect ratio for the Krug & Co poster */
+.krug-about-visual .krug-image-frame {
+  aspect-ratio: 0.68;
+  max-width: 360px;
+}
+
+.krug-about-content {
+  padding-left: clamp(20px, 3vw, 40px);
+}
+
+body[data-page="krug-co"] .krug-about-content.section-heading {
+  text-align: left;
+  max-width: none;
+  margin: 0;
+}
+
+body[data-page="krug-co"] .krug-about-content.section-heading .heading-rule.align-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body[data-page="krug-co"] .krug-about-content.section-heading p {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body[data-page="krug-co"] .krug-about-content .editorial-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Brand Value Badges */
+.krug-brand-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.krug-value-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--home-maize);
+  background: var(--krug-card-bg);
+  border: 1px solid rgba(88, 124, 180, 0.55);
+  border-top: 2px solid rgba(241, 191, 87, 0.55);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--krug-card-shadow);
+  transition: transform 320ms var(--ease-silk), border-color 320ms var(--ease-silk);
+}
+
+.krug-value-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(206, 160, 59, 0.65);
+}
+
+.krug-value-badge i {
+  width: 14px;
+  height: 14px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── PRODUCT CARDS — Image-Forward ── */
+.signature-flavours-heading h3 {
+  font-family: var(--font-serif-display);
+  font-size: clamp(32px, 3.2vw + 14px, 52px) !important;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.signature-flavours-heading h3 .type-brand {
+  color: var(--gold);
+}
+
+.krug-tins-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 32px);
+  margin-top: 28px;
+}
+
+.krug-tin-card {
+  position: relative;
+  background: var(--krug-card-bg);
+  border: 1px solid rgba(88, 124, 180, 0.4);
+  border-top: 2px solid rgba(241, 191, 87, 0.65);
+  border-radius: clamp(16px, 2vw, 24px);
+  overflow: hidden;
+  box-shadow: var(--krug-card-shadow);
+  transition: transform 420ms var(--ease-silk), box-shadow 420ms var(--ease-silk), background 420ms var(--ease-silk), border-color 420ms var(--ease-silk);
+  display: flex;
+  flex-direction: column;
+}
+
+.krug-tin-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--krug-card-hover-bg);
+  border-color: rgba(206, 160, 59, 0.55);
+  box-shadow: var(--krug-gold-glow), 0 24px 48px rgba(0, 0, 0, 0.38);
+}
+
+/* Product image frame at card top */
+.tin-img-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(12, 20, 51, 0.3);
+  border-bottom: 1px solid rgba(88, 124, 180, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.tin-product-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 480ms var(--ease-silk);
+}
+
+.krug-tin-card:hover .tin-product-img {
+  transform: scale(1.06) translateY(-4px);
+}
+
+/* Card body below image */
+.tin-card-body {
+  padding: clamp(16px, 2vw, 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tin-badge-wrapper {
+  margin-bottom: 4px;
+}
+
+.tin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--home-tertiary);
+  background: rgba(229, 184, 79, 0.14);
+  border: 1px solid rgba(206, 160, 59, 0.4);
+  border-radius: var(--radius-pill);
+}
+
+.tin-badge i,
+.tin-badge svg {
+  width: 13px;
+  height: 13px;
+  color: var(--home-tertiary);
+}
+
+.krug-tin-card h4 {
+  margin: 0 0 6px;
+  font-family: var(--font-serif-display);
+  font-size: clamp(20px, 1.5vw + 10px, 26px);
+  font-weight: 600;
+  color: var(--home-maize);
+}
+
+.krug-tin-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--home-muted);
+  line-height: 1.55;
+}
+
+/* ── EXPANDED FLAVOURS TAG CLOUD ── */
+.krug-expanded-flavors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(12, 20, 51, 0.4);
+  border: 1px solid rgba(48, 80, 128, 0.28);
+  border-radius: var(--radius-xl);
+}
+
+.expanded-flavor-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(30, 45, 92, 0.65);
+  border: 1px solid rgba(88, 124, 180, 0.35);
+  border-radius: var(--radius-pill);
+  color: var(--home-maize);
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 380ms var(--ease-silk);
+}
+
+.expanded-flavor-tag:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: rgba(48, 80, 128, 0.85);
+  border-color: var(--gold);
+  color: var(--home-tertiary);
+  box-shadow: 0 8px 20px rgba(206, 160, 59, 0.2);
+}
+
+.expanded-flavor-tag .flavor-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.expanded-flavor-tag .flavor-emoji svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+/* ── KIOSKS SECTION ── */
+.krug-kiosks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: clamp(32px, 5vw, 64px);
+  margin-top: 32px;
+}
+
+/* 3D mockup image — no overflow clipping */
+.krug-kiosk-3d-frame {
+  aspect-ratio: unset !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.krug-kiosk-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 20px 40px rgba(12, 20, 51, 0.25));
+  transition: transform 500ms var(--ease-silk);
+}
+
+.krug-kiosks-visual:hover .krug-kiosk-img {
+  transform: scale(1.02) translateY(-4px);
+}
+
+/* Right content column */
+.krug-kiosks-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: clamp(0px, 2vw, 24px);
+}
+
+/* Feature card with icon */
+.krug-kiosk-feature {
+  background: var(--krug-card-bg);
+  border: 1px solid rgba(88, 124, 180, 0.55);
+  border-top: 2px solid rgba(241, 191, 87, 0.55);
+  border-radius: clamp(16px, 2vw, 22px);
+  padding: clamp(20px, 2.5vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--krug-card-shadow);
+  transition: transform 380ms var(--ease-silk), border-color 380ms var(--ease-silk);
+}
+
+.krug-kiosk-feature:hover {
+  transform: translateY(-4px);
+  border-color: rgba(206, 160, 59, 0.6);
+}
+
+.krug-kiosk-feature-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg,
+      rgba(112, 156, 224, 0.42) 0%,
+      rgba(52, 78, 140, 0.88) 100%);
+  border: 1px solid rgba(206, 160, 59, 0.55);
+  box-shadow: inset 0 1px 0 rgba(247, 238, 216, 0.14), 0 8px 22px rgba(0, 0, 0, 0.28);
+  color: var(--gold);
+  transition: background 360ms var(--ease-silk), color 360ms var(--ease-silk), box-shadow 360ms var(--ease-silk);
+}
+
+.krug-kiosk-feature:hover .krug-kiosk-feature-icon {
+  background: var(--gold);
+  color: var(--navy);
+  box-shadow: 0 8px 24px rgba(206, 160, 59, 0.35);
+}
+
+.krug-kiosk-feature-icon i {
+  width: 22px;
+  height: 22px;
+}
+
+.krug-kiosk-feature h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-serif-display);
+  font-size: clamp(18px, 1.2vw + 10px, 22px);
+  line-height: 1.2;
+}
+
+.krug-kiosk-feature h3 .type-serif {
+  color: var(--home-maize);
+  display: block;
+}
+
+.krug-kiosk-feature h3 .type-brand {
+  color: var(--home-tertiary);
+  display: block;
+  font-family: var(--font-brand);
+}
+
+.krug-kiosk-feature p {
+  margin: 0;
+  font-size: var(--fs-body);
+  color: var(--home-muted);
+  line-height: 1.6;
+}
+
+.krug-kiosk-cta {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ── KIOSK GALLERY STRIP ── */
+.krug-kiosk-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: clamp(40px, 5vw, 60px);
+}
+
+.krug-gallery-item {
+  margin: 0;
+  position: relative;
+  border-radius: clamp(14px, 1.8vw, 20px);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(88, 124, 180, 0.3);
+  border-top: 2px solid rgba(241, 191, 87, 0.4);
+  transition: transform 420ms var(--ease-silk), box-shadow 420ms var(--ease-silk), border-color 420ms var(--ease-silk);
+  aspect-ratio: 4 / 3;
+}
+
+.krug-gallery-item:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.32);
+  border-color: rgba(206, 160, 59, 0.55);
+}
+
+.krug-gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease-silk);
+}
+
+.krug-gallery-item:hover .krug-gallery-img {
+  transform: scale(1.06);
+}
+
+.krug-gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 16px 14px;
+  background: linear-gradient(to top, rgba(12, 20, 51, 0.88) 0%, transparent 100%);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(247, 238, 216, 0.92);
+  letter-spacing: 0.04em;
+}
+
+/* ── FLOATING KERNELS ── */
+body[data-page="krug-co"] .krug-kernel {
+  animation-duration: 9.5s;
+  animation-timing-function: var(--ease-silk);
+  backdrop-filter: blur(1px);
+}
+
+body[data-page="krug-co"] .krug-kernel-1 {
+  left: -5%;
+  top: 15%;
+  width: clamp(240px, 30vw, 420px);
+  opacity: 0.55;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation: floatKernel1 15s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-2 {
+  right: -4%;
+  top: 55%;
+  width: clamp(200px, 26vw, 380px);
+  opacity: 0.50;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation: floatKernel2 18s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-3 {
+  left: 35%;
+  top: -8%;
+  width: clamp(160px, 20vw, 320px);
+  opacity: 0.42;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
+  animation: floatKernel3 16s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-4 {
+  right: -6%;
+  top: 8%;
+  width: clamp(180px, 22vw, 340px);
+  opacity: 0.48;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22));
+  animation: floatKernel4 14s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-5 {
+  left: 40%;
+  bottom: 2%;
+  width: clamp(140px, 18vw, 280px);
+  opacity: 0.42;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.4px);
+  animation: floatKernel5 13s var(--ease-silk) infinite;
+}
+
+body[data-page="krug-co"] .krug-kernel-6 {
+  right: 36%;
+  top: 4%;
+  width: clamp(120px, 16vw, 180px);
+  opacity: 0.52;
+  z-index: 1;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(0.8px);
+  animation: floatKernel6 17s var(--ease-silk) infinite;
+}
+
+/* ── SECTION CONTAINMENT ── */
+body[data-page="krug-co"] .krug-about-section,
+body[data-page="krug-co"] .krug-products-section,
+body[data-page="krug-co"] .krug-kiosks-section,
+body[data-page="krug-co"] .krug-final-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Kernel cluster positioning — intro */
+.krug-cluster-intro .bk-krug-a {
+  left: -210px;
+  top: 36px;
+  width: 520px;
+  opacity: 0.42;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+.krug-cluster-intro .bk-krug-b {
+  right: -200px;
+  bottom: -36px;
+  width: 480px;
+  opacity: 0.40;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.5px);
+}
+
+/* Kernel cluster — products */
+.krug-cluster-services .bk-krug-c {
+  left: -250px;
+  bottom: 10%;
+  width: 580px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.krug-cluster-services .bk-krug-d {
+  right: -230px;
+  top: 12%;
+  width: 540px;
+  opacity: 0.36;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+/* Kernel cluster — kiosks */
+.krug-cluster-kiosks .bk-krug-e {
+  left: -240px;
+  top: 20%;
+  width: 560px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(2px);
+}
+
+.krug-cluster-kiosks .bk-krug-f {
+  right: -220px;
+  bottom: 8%;
+  width: 520px;
+  opacity: 0.34;
+  filter: drop-shadow(0 22px 40px rgba(12, 20, 51, 0.22)) blur(1.8px);
+}
+
+/* ── CTA SECTION ── */
+body[data-page="krug-co"] #contact .final-card {
+  position: relative;
+  max-width: min(920px, 100%);
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 48px);
+  border-radius: clamp(24px, 4vw, 36px);
+  transition:
+    transform 480ms var(--ease-silk),
+    box-shadow 480ms var(--ease-silk),
+    border-color 480ms var(--ease-silk),
+    background 480ms var(--ease-silk);
+}
+
+body[data-page="krug-co"] #contact .final-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── RESPONSIVE BREAKPOINTS ── */
+@media (max-width: 1024px) {
+  body[data-page="krug-co"] .hero {
+    min-height: auto;
+    padding-top: clamp(96px, 14vw, 120px);
+    padding-bottom: clamp(44px, 7vw, 70px);
+  }
+
+  .krug-hero-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .krug-hero-hook {
+    text-align: center;
+    order: 1;
+  }
+
+  body[data-page="krug-co"] .krug-hero-hook .hero-lede {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  body[data-page="krug-co"] .krug-hero-hook .hero-actions {
+    justify-content: center;
+  }
+
+  .krug-hero-product-panel {
+    order: 0;
+  }
+
+  .krug-hero-collage-frame {
+    max-width: 400px;
+    transform: none;
+  }
+
+  .krug-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .krug-about-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .krug-about-visual .krug-image-frame {
+    max-width: 280px;
+  }
+
+  .krug-about-content {
+    padding-left: 0;
+  }
+
+  .krug-kiosks-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .krug-kiosk-cta {
+    align-self: center;
+  }
+
+  .krug-tins-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .krug-kiosk-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .krug-kiosk-gallery .krug-gallery-item:last-child {
+    grid-column: span 2;
+    max-width: 540px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .krug-tins-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .krug-kiosk-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .krug-kiosk-gallery .krug-gallery-item:last-child {
+    grid-column: span 1;
+    max-width: none;
+  }
+
+  .krug-brand-values {
+    justify-content: center;
+  }
+
+  body[data-page="krug-co"] .krug-kernel-3,
+  body[data-page="krug-co"] .krug-kernel-4,
+  body[data-page="krug-co"] .krug-kernel-5,
+  body[data-page="krug-co"] .krug-kernel-6 {
+    display: none;
+  }
+
+  body[data-page="krug-co"] :is(.krug-about-content.section-heading, .krug-kiosks-content) {
+    text-align: center;
+  }
+
+  body[data-page="krug-co"] .krug-about-content.section-heading .heading-rule.align-left {
+    margin-inline: auto;
+  }
+
+  body[data-page="krug-co"] .krug-about-content.section-heading p {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .krug-tins-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="krug-co"] .krug-hero-hook .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  body[data-page="krug-co"] .krug-hero-hook .hero-actions .btn {
+    width: 100%;
+  }
+
+  .krug-expanded-flavors {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .expanded-flavor-tag {
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

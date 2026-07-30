@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "puppeteer": "^22.0.0"
+    "puppeteer": "^22.0.0",
+    "sharp": "^0.35.3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.1.5",
+    "vite-plugin-handlebars": "^2.0.3"
   }
 }

@@ -1,0 +1,56 @@
+/* Typography System
+   ========================================================================== */
+
+/* Bellota - Light */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bellota - Light Italic */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bellota - Regular */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bellota - Italic */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bellota - Bold */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bellota - Bold Italic */
+@font-face {
+  font-family: 'Bellota';
+  src: url('/font/Bellota-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
