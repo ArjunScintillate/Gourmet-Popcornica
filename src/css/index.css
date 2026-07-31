@@ -2499,13 +2499,27 @@ body[data-page="home"] .home-achievements-section {
 
 body[data-page="home"] .home-press-achievements {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(20px, 2.8vw, 32px);
-  max-width: 900px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 28px);
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: clamp(24px, 4vw, 40px);
   position: relative;
   z-index: 3;
+}
+
+body[data-page="home"] .home-press-achievement:nth-child(1) {
+  grid-column: span 7;
+}
+
+body[data-page="home"] .home-press-achievement:nth-child(2) {
+  grid-column: span 5;
+}
+
+body[data-page="home"] .home-press-achievement:nth-child(3),
+body[data-page="home"] .home-press-achievement:nth-child(4),
+body[data-page="home"] .home-press-achievement:nth-child(5) {
+  grid-column: span 4;
 }
 
 body[data-page="home"] .home-press-achievement {
@@ -2573,6 +2587,7 @@ body[data-page="home"] .home-press-date {
   text-transform: uppercase;
   color: rgba(247, 238, 216, 0.54);
 }
+
 
 body[data-page="home"] .home-press-achievement-meta::after {
   content: "";
@@ -2790,3 +2805,4 @@ body[data-page="home"] .hero-trust-section {
   position: relative;
   z-index: 5;
 }
+

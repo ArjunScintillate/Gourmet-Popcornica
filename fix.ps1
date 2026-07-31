@@ -1,0 +1,1 @@
+$css = Get-Content -Path "src\css\index.css" -Raw; $fix = Get-Content -Path "src\css\fix.txt" -Raw; $pattern = '(?s)  font-weight: 700;\r?\n\s*letter-spacing: 0\.08em;\r?\n\s*text-transform: uppercase;\r?\n\s*color: rgba\(247, 238, 216, 0\.54\);\r?\n\}'; $css = $css -replace $pattern, $fix; Set-Content -Path "src\css\index.css" -Value $css; Remove-Item -Path "src\css\fix.txt"

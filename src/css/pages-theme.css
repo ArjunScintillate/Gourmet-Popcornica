@@ -2348,13 +2348,27 @@ body[data-page="krug-co"] .krug-capabilities-band .scale-stats span {
   filter: drop-shadow(0 22px 40px rgba(206, 160, 59, 0.12)) blur(3px);
 }
 
-/* Award cards grid */
+/* Award cards grid - True Bento Layout */
 .award-cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 3.5vw, 40px);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 28px);
   position: relative;
   z-index: 2;
+}
+
+.award-card:nth-child(1) {
+  grid-column: span 7;
+}
+
+.award-card:nth-child(2) {
+  grid-column: span 5;
+}
+
+.award-card:nth-child(3),
+.award-card:nth-child(4),
+.award-card:nth-child(5) {
+  grid-column: span 4;
 }
 
 .award-card {
@@ -2554,6 +2568,11 @@ body[data-page="krug-co"] .krug-capabilities-band .scale-stats span {
     grid-template-columns: 1fr;
     max-width: 560px;
     margin-inline: auto;
+  }
+  
+  .award-card:nth-child(n) {
+    grid-column: span 1;
+    grid-row: auto;
   }
 }
 
